@@ -94,7 +94,7 @@
     }
 
     .d-article-item{
-        border: 1px lightgray solid;
+        border-left: 1px lightgray solid;
         background-color: white;
         color: gray;
         padding: 10px;
