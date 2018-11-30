@@ -97,7 +97,7 @@
         border-left: 1px lightgray solid;
         background-color: white;
         color: gray;
-        padding: 10px;
+        padding: 5px 10px;
         margin-bottom: 3px;
     }
 
@@ -107,7 +107,7 @@
     }
 
     .article-select{
-        background-color: lightseagreen;
+        background-color: rgb(165, 103, 223);
         color: white;
     }
 }
