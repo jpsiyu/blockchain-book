@@ -48,7 +48,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: gray;
+        background-color: black;
+        color: white;
     }
 
     .e-panel{
@@ -72,36 +73,24 @@
     }
 
     .d-left{
-        flex: 2;
-        border-right: 2px white solid;
+        flex: 1;
+        border-right: 1px white solid;
         overflow: scroll;
         background-color: lightgray;
     }
 
     .d-right{
-        flex: 3;
+        flex: 2;
     }
 
     .d-item{
         margin-bottom: 3px;
         background-color: white;
         color: gray;
-        border: 1px lightgray solid;
     }
 
     .d-itemname{
         padding: 10px 5px;
-    }
-
-    .d-panel{
-        background-color: lightgray;
-        margin-left: 20px;
-    }
-
-    .d-subitem{
-        background-color: white;
-        border-top: 1px lightgray solid;
-        padding: 5px 0;
     }
 
     .d-article-item{
@@ -110,5 +99,15 @@
         color: gray;
         padding: 10px;
         margin-bottom: 3px;
+    }
+
+    .item-select{
+        background-color: blueviolet;
+        color: white;
+    }
+
+    .article-select{
+        background-color: lightseagreen;
+        color: white;
     }
 }

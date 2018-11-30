@@ -54,6 +54,10 @@ class Entry extends React.Component {
 
     onSelectArticle(args) {
         this.setState({ articleCfg: args })
+        setTimeout(
+            () => { this.setState({ showDirectory: false }) },
+            300,
+        )
     }
 
     onDirectoryClick() {

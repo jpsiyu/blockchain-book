@@ -7,31 +7,16 @@ const cfgMainIndex = [
     { id: 3, name: 'Wallet' },
 ]
 
-const cfgSecondIndex = [
-    { id: 1, mainIndex: 1, name: 'Web3js' },
-    { id: 2, mainIndex: 2, name: 'POW' },
-    { id: 3, mainIndex: 3, name: 'POS' },
-]
-
 const cfgArticles = [
-    { id: 1, secondIndex: 1, name: 'Welcome', article: ArticleWelcome },
-    { id: 2, secondIndex: 1, name: 'Hemingway', article: ArticleHemingway },
-    { id: 3, secondIndex: 2, name: 'Hally Potter', article: ArticleHemingway },
+    { id: 1, mainIndex: 1, name: 'Welcome', article: ArticleWelcome },
+    { id: 2, mainIndex: 1, name: 'Hemingway', article: ArticleHemingway },
+    { id: 3, mainIndex: 2, name: 'Hally Potter', article: ArticleHemingway },
 ]
 
-const getSecondIndex = (mainIndex) => {
-    const seconds = []
-    cfgSecondIndex.forEach(cfg => {
-        if (cfg.mainIndex == mainIndex)
-            seconds.push(cfg)
-    })
-    return seconds
-}
-
-const getArticlesBySecondIndex = (secondIndex) => {
+const getArticlesByIndex = (index) => {
     const articles = []
     cfgArticles.forEach(cfg => {
-        if (cfg.secondIndex == secondIndex)
+        if (cfg.mainIndex == index)
             articles.push(cfg)
     })
     return articles
@@ -43,9 +28,7 @@ const getFirstArticle = () => {
 
 export {
     cfgMainIndex,
-    cfgSecondIndex,
     cfgArticles,
-    getSecondIndex,
-    getArticlesBySecondIndex,
+    getArticlesByIndex,
     getFirstArticle,
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {  cfgMainIndex, getArticlesBySecondIndex } from './config'
+import { cfgMainIndex, getArticlesByIndex } from './config'
 import { DirectoryMainItem, DirectoryArticleItem } from './directory-item'
 import { MacroEvent } from './macro'
 
@@ -7,6 +7,8 @@ class Directory extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            mainIndexCfg: null,
+            articleCfg: null,
             articles: [],
         }
     }
@@ -26,7 +28,10 @@ class Directory extends React.Component {
         const items = []
         for (let i = 0; i < cfgMainIndex.length; i++) {
             const cfg = cfgMainIndex[i]
-            items.push(<DirectoryMainItem key={i} cfg={cfg} />)
+            const selected = this.state.mainIndexCfg
+                ? this.state.mainIndexCfg.id == cfg.id
+                : false
+            items.push(<DirectoryMainItem key={i} cfg={cfg} selected={selected} />)
         }
         return items
     }
@@ -35,23 +40,33 @@ class Directory extends React.Component {
         const items = []
         for (let i = 0; i < this.state.articles.length; i++) {
             const cfg = this.state.articles[i]
-            items.push(<DirectoryArticleItem key={i} cfg={cfg}></DirectoryArticleItem>)
+            const selected = this.state.articleCfg
+                ? this.state.articleCfg.id == cfg.id
+                : false
+            items.push(<DirectoryArticleItem key={i} cfg={cfg} selected={selected} />)
         }
         return items
     }
 
     componentDidMount() {
-        app.eventMgr.subscribe(MacroEvent.SelectSecondIndex, this, this.receiveSelectEvent.bind(this))
+        app.eventMgr.subscribe(MacroEvent.SelectMainIndex, this, this.receiveMainIndexEvent.bind(this))
+        app.eventMgr.subscribe(MacroEvent.SelectArticle, this, this.receiveArticleEvent.bind(this))
     }
 
-    componentWillUnmount(){
-        app.eventMgr.unsubscribe(MacroEvent.SelectSecondIndex, this)
+    componentWillUnmount() {
+        app.eventMgr.unsubscribe(MacroEvent.SelectMainIndex, this)
+        app.eventMgr.unsubscribe(MacroEvent.SelectArticle, this)
     }
 
-    receiveSelectEvent(args) {
+    receiveMainIndexEvent(args) {
         const cfg = args
-        const articles = getArticlesBySecondIndex(cfg.id)
-        this.setState({ articles })
+        const articles = getArticlesByIndex(cfg.id)
+        this.setState({ articles, mainIndexCfg: cfg })
+    }
+
+    receiveArticleEvent(args) {
+        const cfg = args
+        this.setState({ articleCfg: cfg })
     }
 }
 

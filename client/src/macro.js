@@ -1,5 +1,5 @@
 const MacroEvent = {
-    SelectSecondIndex: 'SelectSecondIndex',
+    SelectMainIndex: 'SelectMainIndex',
     SelectArticle: 'SelectArticle',
 }
 

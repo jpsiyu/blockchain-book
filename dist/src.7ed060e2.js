@@ -24284,7 +24284,7 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getFirstArticle = exports.getArticlesBySecondIndex = exports.getSecondIndex = exports.cfgArticles = exports.cfgSecondIndex = exports.cfgMainIndex = void 0;
+exports.getFirstArticle = exports.getArticlesByIndex = exports.cfgArticles = exports.cfgMainIndex = void 0;
 
 var _articleHemingway = _interopRequireDefault(require("./writings/article-hemingway"));
 
@@ -24303,57 +24303,33 @@ var cfgMainIndex = [{
   name: 'Wallet'
 }];
 exports.cfgMainIndex = cfgMainIndex;
-var cfgSecondIndex = [{
-  id: 1,
-  mainIndex: 1,
-  name: 'Web3js'
-}, {
-  id: 2,
-  mainIndex: 2,
-  name: 'POW'
-}, {
-  id: 3,
-  mainIndex: 3,
-  name: 'POS'
-}];
-exports.cfgSecondIndex = cfgSecondIndex;
 var cfgArticles = [{
   id: 1,
-  secondIndex: 1,
+  mainIndex: 1,
   name: 'Welcome',
   article: _articleWelcome.default
 }, {
   id: 2,
-  secondIndex: 1,
+  mainIndex: 1,
   name: 'Hemingway',
   article: _articleHemingway.default
 }, {
   id: 3,
-  secondIndex: 2,
+  mainIndex: 2,
   name: 'Hally Potter',
   article: _articleHemingway.default
 }];
 exports.cfgArticles = cfgArticles;
 
-var getSecondIndex = function getSecondIndex(mainIndex) {
-  var seconds = [];
-  cfgSecondIndex.forEach(function (cfg) {
-    if (cfg.mainIndex == mainIndex) seconds.push(cfg);
-  });
-  return seconds;
-};
-
-exports.getSecondIndex = getSecondIndex;
-
-var getArticlesBySecondIndex = function getArticlesBySecondIndex(secondIndex) {
+var getArticlesByIndex = function getArticlesByIndex(index) {
   var articles = [];
   cfgArticles.forEach(function (cfg) {
-    if (cfg.secondIndex == secondIndex) articles.push(cfg);
+    if (cfg.mainIndex == index) articles.push(cfg);
   });
   return articles;
 };
 
-exports.getArticlesBySecondIndex = getArticlesBySecondIndex;
+exports.getArticlesByIndex = getArticlesByIndex;
 
 var getFirstArticle = function getFirstArticle() {
   return cfgArticles[0];
@@ -24368,7 +24344,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.MacroEvent = void 0;
 var MacroEvent = {
-  SelectSecondIndex: 'SelectSecondIndex',
+  SelectMainIndex: 'SelectMainIndex',
   SelectArticle: 'SelectArticle'
 };
 exports.MacroEvent = MacroEvent;
@@ -24381,8 +24357,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.DirectoryArticleItem = exports.DirectoryMainItem = void 0;
 
 var _react = _interopRequireDefault(require("react"));
-
-var _config = require("./config");
 
 var _macro = require("./macro");
 
@@ -24412,51 +24386,26 @@ function (_React$Component) {
   _inherits(DirectoryMainItem, _React$Component);
 
   function DirectoryMainItem(props) {
-    var _this;
-
     _classCallCheck(this, DirectoryMainItem);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(DirectoryMainItem).call(this, props));
-    _this.state = {
-      showSubitem: false
-    };
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(DirectoryMainItem).call(this, props));
   }
 
   _createClass(DirectoryMainItem, [{
     key: "render",
     value: function render() {
+      var ifSelected = this.props.selected ? 'item-select' : '';
       return _react.default.createElement("div", {
-        className: "d-item"
-      }, _react.default.createElement("p", {
-        className: "noselect d-itemname",
+        className: "d-item ".concat(ifSelected),
         onClick: this.onMainClick.bind(this)
-      }, this.props.cfg.name), this.state.showSubitem ? _react.default.createElement("div", {
-        className: "d-panel"
-      }, this.renderSubitem()) : null);
-    }
-  }, {
-    key: "renderSubitem",
-    value: function renderSubitem() {
-      var items = [];
-      var seconds = (0, _config.getSecondIndex)(this.props.cfg.id);
-
-      for (var i = 0; i < seconds.length; i++) {
-        var cfg = seconds[i];
-        items.push(_react.default.createElement(DirectorySecondItem, {
-          key: i,
-          cfg: cfg
-        }));
-      }
-
-      return items;
+      }, _react.default.createElement("h3", {
+        className: "noselect d-itemname"
+      }, this.props.cfg.name));
     }
   }, {
     key: "onMainClick",
     value: function onMainClick() {
-      this.setState({
-        showSubitem: !this.state.showSubitem
-      });
+      app.eventMgr.dispatch(_macro.MacroEvent.SelectMainIndex, this.props.cfg);
     }
   }]);
 
@@ -24465,41 +24414,10 @@ function (_React$Component) {
 
 exports.DirectoryMainItem = DirectoryMainItem;
 
-var DirectorySecondItem =
-/*#__PURE__*/
-function (_React$Component2) {
-  _inherits(DirectorySecondItem, _React$Component2);
-
-  function DirectorySecondItem(props) {
-    _classCallCheck(this, DirectorySecondItem);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(DirectorySecondItem).call(this, props));
-  }
-
-  _createClass(DirectorySecondItem, [{
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("div", {
-        className: "d-subitem",
-        onClick: this.onItemClick.bind(this)
-      }, _react.default.createElement("p", {
-        className: "noselect"
-      }, this.props.cfg.name));
-    }
-  }, {
-    key: "onItemClick",
-    value: function onItemClick() {
-      app.eventMgr.dispatch(_macro.MacroEvent.SelectSecondIndex, this.props.cfg);
-    }
-  }]);
-
-  return DirectorySecondItem;
-}(_react.default.Component);
-
 var DirectoryArticleItem =
 /*#__PURE__*/
-function (_React$Component3) {
-  _inherits(DirectoryArticleItem, _React$Component3);
+function (_React$Component2) {
+  _inherits(DirectoryArticleItem, _React$Component2);
 
   function DirectoryArticleItem(props) {
     _classCallCheck(this, DirectoryArticleItem);
@@ -24510,8 +24428,9 @@ function (_React$Component3) {
   _createClass(DirectoryArticleItem, [{
     key: "render",
     value: function render() {
+      var ifSelected = this.props.selected ? 'article-select' : '';
       return _react.default.createElement("div", {
-        className: "d-article-item",
+        className: "d-article-item ".concat(ifSelected),
         onClick: this.onItemClick.bind(this)
       }, _react.default.createElement("p", {
         className: "noselect"
@@ -24528,7 +24447,7 @@ function (_React$Component3) {
 }(_react.default.Component);
 
 exports.DirectoryArticleItem = DirectoryArticleItem;
-},{"react":"../../node_modules/react/index.js","./config":"../src/config.js","./macro":"../src/macro.js"}],"../src/directory.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","./macro":"../src/macro.js"}],"../src/directory.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24576,6 +24495,8 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Directory).call(this, props));
     _this.state = {
+      mainIndexCfg: null,
+      articleCfg: null,
       articles: []
     };
     return _this;
@@ -24599,9 +24520,11 @@ function (_React$Component) {
 
       for (var i = 0; i < _config.cfgMainIndex.length; i++) {
         var cfg = _config.cfgMainIndex[i];
+        var selected = this.state.mainIndexCfg ? this.state.mainIndexCfg.id == cfg.id : false;
         items.push(_react.default.createElement(_directoryItem.DirectoryMainItem, {
           key: i,
-          cfg: cfg
+          cfg: cfg,
+          selected: selected
         }));
       }
 
@@ -24614,9 +24537,11 @@ function (_React$Component) {
 
       for (var i = 0; i < this.state.articles.length; i++) {
         var cfg = this.state.articles[i];
+        var selected = this.state.articleCfg ? this.state.articleCfg.id == cfg.id : false;
         items.push(_react.default.createElement(_directoryItem.DirectoryArticleItem, {
           key: i,
-          cfg: cfg
+          cfg: cfg,
+          selected: selected
         }));
       }
 
@@ -24625,20 +24550,31 @@ function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      app.eventMgr.subscribe(_macro.MacroEvent.SelectSecondIndex, this, this.receiveSelectEvent.bind(this));
+      app.eventMgr.subscribe(_macro.MacroEvent.SelectMainIndex, this, this.receiveMainIndexEvent.bind(this));
+      app.eventMgr.subscribe(_macro.MacroEvent.SelectArticle, this, this.receiveArticleEvent.bind(this));
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      app.eventMgr.unsubscribe(_macro.MacroEvent.SelectSecondIndex, this);
+      app.eventMgr.unsubscribe(_macro.MacroEvent.SelectMainIndex, this);
+      app.eventMgr.unsubscribe(_macro.MacroEvent.SelectArticle, this);
     }
   }, {
-    key: "receiveSelectEvent",
-    value: function receiveSelectEvent(args) {
+    key: "receiveMainIndexEvent",
+    value: function receiveMainIndexEvent(args) {
       var cfg = args;
-      var articles = (0, _config.getArticlesBySecondIndex)(cfg.id);
+      var articles = (0, _config.getArticlesByIndex)(cfg.id);
       this.setState({
-        articles: articles
+        articles: articles,
+        mainIndexCfg: cfg
+      });
+    }
+  }, {
+    key: "receiveArticleEvent",
+    value: function receiveArticleEvent(args) {
+      var cfg = args;
+      this.setState({
+        articleCfg: cfg
       });
     }
   }]);
@@ -24760,9 +24696,16 @@ function (_React$Component) {
   }, {
     key: "onSelectArticle",
     value: function onSelectArticle(args) {
+      var _this3 = this;
+
       this.setState({
         articleCfg: args
       });
+      setTimeout(function () {
+        _this3.setState({
+          showDirectory: false
+        });
+      }, 300);
     }
   }, {
     key: "onDirectoryClick",
@@ -24822,7 +24765,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49232" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62833" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
