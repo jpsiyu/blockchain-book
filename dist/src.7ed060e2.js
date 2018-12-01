@@ -24484,7 +24484,9 @@ function (_React$Component3) {
       }, _react.default.createElement("div", {
         className: "left-dir-itemname ".concat(ifSelected),
         onClick: this.onMainClick.bind(this)
-      }, _react.default.createElement("h3", {
+      }, _react.default.createElement("img", {
+        src: "/images/chapter.png"
+      }), _react.default.createElement("h3", {
         className: "noselect"
       }, this.props.cfg.name)), this.state.showSubitem ? this.renderSubitem() : null);
     }
@@ -24524,10 +24526,8 @@ function (_React$Component3) {
     key: "receiveMainIndexEvent",
     value: function receiveMainIndexEvent(cfg) {
       var selected = this.props.cfg.id == cfg.id;
-      var showSubitem = selected ? this.state.selected ? !this.state.showSubitem : true : false;
       this.setState({
-        selected: selected,
-        showSubitem: showSubitem
+        selected: selected
       });
     }
   }, {
@@ -24540,6 +24540,9 @@ function (_React$Component3) {
   }, {
     key: "onMainClick",
     value: function onMainClick() {
+      this.setState({
+        showSubitem: !this.state.showSubitem
+      });
       app.eventMgr.dispatch(_macro.MacroEvent.SelectMainIndex, this.props.cfg);
     }
   }]);
@@ -24925,14 +24928,6 @@ function (_React$Component) {
 
       return items;
     }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var firstIndex = (0, _config.getfirstMainIndex)();
-      app.eventMgr.dispatch(_macro.MacroEvent.SelectMainIndex, firstIndex);
-      var firstArticle = (0, _config.getFirstArticle)();
-      app.eventMgr.dispatch(_macro.MacroEvent.SelectArticle, firstArticle);
-    }
   }]);
 
   return LeftDirectory;
@@ -25027,7 +25022,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49389" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49273" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -26,13 +26,6 @@ class LeftDirectory extends React.Component {
         return items
     }
 
-    componentDidMount() {
-        const firstIndex = getfirstMainIndex()
-        app.eventMgr.dispatch(MacroEvent.SelectMainIndex, firstIndex)
-        const firstArticle = getFirstArticle()
-        app.eventMgr.dispatch(MacroEvent.SelectArticle, firstArticle)
-    }
-
 }
 
 export default LeftDirectory

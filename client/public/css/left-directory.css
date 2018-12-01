@@ -15,24 +15,24 @@
     color: gray;
 }
 
+.left-dir-item img{
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+}
+
+
 .left-dir-itemname{
     height: 50px;
     display: flex;
     align-items: center;
 }
 
-.left-dir-item h3{
-    padding: 0 10px;
-}
-
-.left-dir-item-select{
-    background-color: black;
-    color: white;
-}
-
 .left-dir-expend{
     margin-left: 30px;
     border-left: 1px gray solid;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .left-dir-expend-item{

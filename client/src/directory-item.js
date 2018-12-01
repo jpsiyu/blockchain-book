@@ -51,6 +51,7 @@ class DirectoryExpendItem extends React.Component {
         const ifSelected = this.state.selected ? 'left-dir-item-select' : ''
         return <div className='left-dir-item'>
             <div className={`left-dir-itemname ${ifSelected}`} onClick={this.onMainClick.bind(this)}>
+                <img src='/images/chapter.png'></img>
                 <h3 className='noselect'>{this.props.cfg.name}</h3>
             </div>
             {this.state.showSubitem ? this.renderSubitem() : null}
@@ -82,12 +83,7 @@ class DirectoryExpendItem extends React.Component {
 
     receiveMainIndexEvent(cfg) {
         const selected = this.props.cfg.id == cfg.id
-        const showSubitem = selected
-            ? this.state.selected
-                ? !this.state.showSubitem
-                : true
-            : false
-        this.setState({ selected, showSubitem })
+        this.setState({ selected })
     }
 
     receiveSelectArticleEvent(cfg) {
@@ -95,6 +91,7 @@ class DirectoryExpendItem extends React.Component {
     }
 
     onMainClick() {
+        this.setState({ showSubitem: !this.state.showSubitem })
         app.eventMgr.dispatch(MacroEvent.SelectMainIndex, this.props.cfg)
     }
 }
