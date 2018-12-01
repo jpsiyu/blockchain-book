@@ -1,5 +1,5 @@
 import React from 'react'
-import Directory from './directory'
+import BottomDirectory from './bottom-directory'
 import { MacroEvent } from './macro'
 import { getFirstArticle } from './config'
 
@@ -26,7 +26,7 @@ class Entry extends React.Component {
 
         return <div className='entry'>
             <div className='e-title'>
-                <p className='noselect'>{title}</p>
+                <h3 className='noselect'>{title}</h3>
             </div>
             <div className='e-content'>
                 {getArticle()}
@@ -34,7 +34,7 @@ class Entry extends React.Component {
             <div className='e-bottom' onClick={this.onDirectoryClick.bind(this)}>
                 <p className='noselect'>Directory</p>
             </div>
-            <div className='e-panel' style={{ display: displayValue }}><Directory /></div>
+            <div className='e-panel' style={{ display: displayValue }}><BottomDirectory /></div>
         </div>
     }
 

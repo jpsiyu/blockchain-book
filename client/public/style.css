@@ -1,9 +1,12 @@
+@import './css//entry.css';
+@import './css/left-directory.css';
+@import './css/bottom-drectory.css';
+
 *{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
-
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -14,98 +17,16 @@
     user-select: none; /* Non-prefixed version, currently */
 }
 
-@media screen and (max-width: 768px){
+.index{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    background-color: rgba(240, 240, 240, 0.8);
+}
 
-    .entry{
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .e-title{
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        color: white;
-    }
-
-    .e-content{
-        flex: 10;
-        background-color: rgba(240, 240, 240, 0.8);
-        border: 1px lightgray solid;
-        overflow: scroll;
-        padding: 0 5px;
-    }
-
-    .e-bottom{
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        color: white;
-    }
-
-    .e-panel{
-        position: absolute;
-        height: 91.7%;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .paragraph{
-        padding: 10px 0;
-    }
-
-    .directory{
-        background-color: lightgray;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 50%;
-        display: flex;
-        border-top: 5px black solid;
-    }
-
-    .d-left{
-        flex: 1;
-        border-right: 5px black solid;
-        overflow: scroll;
-        background-color: lightgray;
-    }
-
-    .d-right{
-        flex: 2;
-    }
-
-    .d-item{
-        margin-bottom: 3px;
-        color: gray;
-    }
-
-    .d-itemname{
-        padding: 10px 5px;
-    }
-
-    .d-article-item{
-        color: gray;
-        padding: 5px 10px;
-        margin-bottom: 3px;
-    }
-
-    .item-select{
-        background-color: black;
-        color: white;
-    }
-
-    .article-select{
-        background-color: seagreen;
-        color: white;
-    }
+.paragraph{
+    padding: 10px 0;
 }

@@ -22,6 +22,10 @@ const getArticlesByIndex = (index) => {
     return articles
 }
 
+const getfirstMainIndex = () => {
+    return cfgMainIndex[0]
+}
+
 const getFirstArticle = () => {
     return cfgArticles[0]
 }
@@ -30,5 +34,6 @@ export {
     cfgMainIndex,
     cfgArticles,
     getArticlesByIndex,
+    getfirstMainIndex,
     getFirstArticle,
 }

@@ -24284,7 +24284,7 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getFirstArticle = exports.getArticlesByIndex = exports.cfgArticles = exports.cfgMainIndex = void 0;
+exports.getFirstArticle = exports.getfirstMainIndex = exports.getArticlesByIndex = exports.cfgArticles = exports.cfgMainIndex = void 0;
 
 var _articleHemingway = _interopRequireDefault(require("./writings/article-hemingway"));
 
@@ -24331,6 +24331,12 @@ var getArticlesByIndex = function getArticlesByIndex(index) {
 
 exports.getArticlesByIndex = getArticlesByIndex;
 
+var getfirstMainIndex = function getfirstMainIndex() {
+  return cfgMainIndex[0];
+};
+
+exports.getfirstMainIndex = getfirstMainIndex;
+
 var getFirstArticle = function getFirstArticle() {
   return cfgArticles[0];
 };
@@ -24354,11 +24360,13 @@ exports.MacroEvent = MacroEvent;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.DirectoryArticleItem = exports.DirectoryMainItem = void 0;
+exports.DirectoryExpendItem = exports.DirectoryArticleItem = exports.DirectoryMainItem = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 var _macro = require("./macro");
+
+var _config = require("./config");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24394,12 +24402,12 @@ function (_React$Component) {
   _createClass(DirectoryMainItem, [{
     key: "render",
     value: function render() {
-      var ifSelected = this.props.selected ? 'item-select' : '';
+      var ifSelected = this.props.selected ? 'bottom-dir-item-select' : '';
       return _react.default.createElement("div", {
-        className: "d-item ".concat(ifSelected),
+        className: "bottom-dir-item ".concat(ifSelected),
         onClick: this.onMainClick.bind(this)
       }, _react.default.createElement("h3", {
-        className: "noselect d-itemname"
+        className: "noselect bottom-dir-itemname"
       }, this.props.cfg.name));
     }
   }, {
@@ -24428,9 +24436,9 @@ function (_React$Component2) {
   _createClass(DirectoryArticleItem, [{
     key: "render",
     value: function render() {
-      var ifSelected = this.props.selected ? 'article-select' : '';
+      var ifSelected = this.props.selected ? 'bottom-dir-article-select' : '';
       return _react.default.createElement("div", {
-        className: "d-article-item ".concat(ifSelected),
+        className: "bottom-dir-article-item ".concat(ifSelected),
         onClick: this.onItemClick.bind(this)
       }, _react.default.createElement("p", {
         className: "noselect"
@@ -24447,7 +24455,132 @@ function (_React$Component2) {
 }(_react.default.Component);
 
 exports.DirectoryArticleItem = DirectoryArticleItem;
-},{"react":"../../node_modules/react/index.js","./macro":"../src/macro.js"}],"../src/directory.js":[function(require,module,exports) {
+
+var DirectoryExpendItem =
+/*#__PURE__*/
+function (_React$Component3) {
+  _inherits(DirectoryExpendItem, _React$Component3);
+
+  function DirectoryExpendItem(props) {
+    var _this;
+
+    _classCallCheck(this, DirectoryExpendItem);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(DirectoryExpendItem).call(this, props));
+    _this.state = {
+      selected: false,
+      articleCfg: null,
+      showSubitem: false
+    };
+    return _this;
+  }
+
+  _createClass(DirectoryExpendItem, [{
+    key: "render",
+    value: function render() {
+      var ifSelected = this.state.selected ? 'left-dir-item-select' : '';
+      return _react.default.createElement("div", {
+        className: "left-dir-item"
+      }, _react.default.createElement("div", {
+        className: "left-dir-itemname ".concat(ifSelected),
+        onClick: this.onMainClick.bind(this)
+      }, _react.default.createElement("h3", {
+        className: "noselect"
+      }, this.props.cfg.name)), this.state.showSubitem ? this.renderSubitem() : null);
+    }
+  }, {
+    key: "renderSubitem",
+    value: function renderSubitem() {
+      var articls = (0, _config.getArticlesByIndex)(this.props.cfg.id);
+      var items = [];
+
+      for (var i = 0; i < articls.length; i++) {
+        var cfg = articls[i];
+        var selected = this.state.articleCfg ? this.state.articleCfg.id == cfg.id : false;
+        items.push(_react.default.createElement(DirectoryExpendSubItem, {
+          key: i,
+          cfg: cfg,
+          selected: selected
+        }));
+      }
+
+      return _react.default.createElement("div", {
+        className: "left-dir-expend"
+      }, items);
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      app.eventMgr.subscribe(_macro.MacroEvent.SelectMainIndex, this, this.receiveMainIndexEvent.bind(this));
+      app.eventMgr.subscribe(_macro.MacroEvent.SelectArticle, this, this.receiveSelectArticleEvent.bind(this));
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      app.eventMgr.unscribe(_macro.MacroEvent.SelectMainIndex, this);
+      app.eventMgr.unscribe(_macro.MacroEvent.SelectArticle, this);
+    }
+  }, {
+    key: "receiveMainIndexEvent",
+    value: function receiveMainIndexEvent(cfg) {
+      var selected = this.props.cfg.id == cfg.id;
+      var showSubitem = selected ? this.state.selected ? !this.state.showSubitem : true : false;
+      this.setState({
+        selected: selected,
+        showSubitem: showSubitem
+      });
+    }
+  }, {
+    key: "receiveSelectArticleEvent",
+    value: function receiveSelectArticleEvent(cfg) {
+      this.setState({
+        articleCfg: cfg
+      });
+    }
+  }, {
+    key: "onMainClick",
+    value: function onMainClick() {
+      app.eventMgr.dispatch(_macro.MacroEvent.SelectMainIndex, this.props.cfg);
+    }
+  }]);
+
+  return DirectoryExpendItem;
+}(_react.default.Component);
+
+exports.DirectoryExpendItem = DirectoryExpendItem;
+
+var DirectoryExpendSubItem =
+/*#__PURE__*/
+function (_React$Component4) {
+  _inherits(DirectoryExpendSubItem, _React$Component4);
+
+  function DirectoryExpendSubItem(props) {
+    _classCallCheck(this, DirectoryExpendSubItem);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(DirectoryExpendSubItem).call(this, props));
+  }
+
+  _createClass(DirectoryExpendSubItem, [{
+    key: "render",
+    value: function render() {
+      var ifSelected = this.props.selected ? 'left-dir-expend-select' : '';
+      return _react.default.createElement("div", {
+        className: "left-dir-expend-item ".concat(ifSelected),
+        onClick: this.onItemClick.bind(this)
+      }, _react.default.createElement("p", {
+        className: "noselect"
+      }, this.props.cfg.name));
+    }
+  }, {
+    key: "onItemClick",
+    value: function onItemClick() {
+      app.eventMgr.dispatch(_macro.MacroEvent.SelectArticle, this.props.cfg);
+    }
+  }]);
+
+  return DirectoryExpendSubItem;
+}(_react.default.Component);
+},{"react":"../../node_modules/react/index.js","./macro":"../src/macro.js","./config":"../src/config.js"}],"../src/bottom-directory.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24483,17 +24616,17 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Directory =
+var BottomDirectory =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Directory, _React$Component);
+  _inherits(BottomDirectory, _React$Component);
 
-  function Directory(props) {
+  function BottomDirectory(props) {
     var _this;
 
-    _classCallCheck(this, Directory);
+    _classCallCheck(this, BottomDirectory);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Directory).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(BottomDirectory).call(this, props));
     _this.state = {
       mainIndexCfg: null,
       articleCfg: null,
@@ -24502,15 +24635,15 @@ function (_React$Component) {
     return _this;
   }
 
-  _createClass(Directory, [{
+  _createClass(BottomDirectory, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("div", {
-        className: "directory"
+        className: "bottom-dir"
       }, _react.default.createElement("div", {
-        className: "d-left"
+        className: "bottom-dir-left"
       }, this.renderMainIndex()), _react.default.createElement("div", {
-        className: "d-right"
+        className: "bottom-dir-right"
       }, this.renderArticleItem()));
     }
   }, {
@@ -24579,10 +24712,10 @@ function (_React$Component) {
     }
   }]);
 
-  return Directory;
+  return BottomDirectory;
 }(_react.default.Component);
 
-var _default = Directory;
+var _default = BottomDirectory;
 exports.default = _default;
 },{"react":"../../node_modules/react/index.js","./config":"../src/config.js","./directory-item":"../src/directory-item.js","./macro":"../src/macro.js"}],"../src/entry.js":[function(require,module,exports) {
 "use strict";
@@ -24594,7 +24727,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _directory = _interopRequireDefault(require("./directory"));
+var _bottomDirectory = _interopRequireDefault(require("./bottom-directory"));
 
 var _macro = require("./macro");
 
@@ -24658,7 +24791,7 @@ function (_React$Component) {
         className: "entry"
       }, _react.default.createElement("div", {
         className: "e-title"
-      }, _react.default.createElement("p", {
+      }, _react.default.createElement("h3", {
         className: "noselect"
       }, title)), _react.default.createElement("div", {
         className: "e-content"
@@ -24672,7 +24805,7 @@ function (_React$Component) {
         style: {
           display: displayValue
         }
-      }, _react.default.createElement(_directory.default, null)));
+      }, _react.default.createElement(_bottomDirectory.default, null)));
     }
   }, {
     key: "componentDidMount",
@@ -24721,7 +24854,93 @@ function (_React$Component) {
 
 var _default = Entry;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","./directory":"../src/directory.js","./macro":"../src/macro.js","./config":"../src/config.js"}],"../src/index.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","./bottom-directory":"../src/bottom-directory.js","./macro":"../src/macro.js","./config":"../src/config.js"}],"../src/left-directory.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _config = require("./config");
+
+var _directoryItem = require("./directory-item");
+
+var _macro = require("./macro");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var LeftDirectory =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(LeftDirectory, _React$Component);
+
+  function LeftDirectory(props) {
+    _classCallCheck(this, LeftDirectory);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(LeftDirectory).call(this, props));
+  }
+
+  _createClass(LeftDirectory, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        className: "left-dir"
+      }, _react.default.createElement("div", {
+        className: "left-dir-title"
+      }, _react.default.createElement("h3", null, "Directory")), this.renderMainIndex());
+    }
+  }, {
+    key: "renderMainIndex",
+    value: function renderMainIndex() {
+      var items = [];
+
+      for (var i = 0; i < _config.cfgMainIndex.length; i++) {
+        var cfg = _config.cfgMainIndex[i];
+        items.push(_react.default.createElement(_directoryItem.DirectoryExpendItem, {
+          key: i,
+          cfg: cfg
+        }));
+      }
+
+      return items;
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var firstIndex = (0, _config.getfirstMainIndex)();
+      app.eventMgr.dispatch(_macro.MacroEvent.SelectMainIndex, firstIndex);
+      var firstArticle = (0, _config.getFirstArticle)();
+      app.eventMgr.dispatch(_macro.MacroEvent.SelectArticle, firstArticle);
+    }
+  }]);
+
+  return LeftDirectory;
+}(_react.default.Component);
+
+var _default = LeftDirectory;
+exports.default = _default;
+},{"react":"../../node_modules/react/index.js","./config":"../src/config.js","./directory-item":"../src/directory-item.js","./macro":"../src/macro.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -24732,13 +24951,56 @@ var _app = _interopRequireDefault(require("./app"));
 
 var _entry = _interopRequireDefault(require("./entry"));
 
+var _leftDirectory = _interopRequireDefault(require("./left-directory"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Index =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Index, _React$Component);
+
+  function Index(props) {
+    _classCallCheck(this, Index);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Index).call(this, props));
+  }
+
+  _createClass(Index, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        className: "index"
+      }, _react.default.createElement(_leftDirectory.default, null), _react.default.createElement(_entry.default, null));
+    }
+  }]);
+
+  return Index;
+}(_react.default.Component);
 
 var app = new _app.default();
 app.start();
 
-_reactDom.default.render(_react.default.createElement(_entry.default, null), document.getElementById('root'));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","./app":"../src/app.js","./entry":"../src/entry.js"}],"../../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render(_react.default.createElement(Index, null), document.getElementById('root'));
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","./app":"../src/app.js","./entry":"../src/entry.js","./left-directory":"../src/left-directory.js"}],"../../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

@@ -3,7 +3,7 @@ import { cfgMainIndex, getArticlesByIndex } from './config'
 import { DirectoryMainItem, DirectoryArticleItem } from './directory-item'
 import { MacroEvent } from './macro'
 
-class Directory extends React.Component {
+class BottomDirectory extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -14,11 +14,11 @@ class Directory extends React.Component {
     }
 
     render() {
-        return <div className='directory'>
-            <div className='d-left'>
+        return <div className='bottom-dir'>
+            <div className='bottom-dir-left'>
                 {this.renderMainIndex()}
             </div>
-            <div className='d-right'>
+            <div className='bottom-dir-right'>
                 {this.renderArticleItem()}
             </div>
         </div>
@@ -70,4 +70,4 @@ class Directory extends React.Component {
     }
 }
 
-export default Directory
+export default BottomDirectory
