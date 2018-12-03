@@ -11,7 +11,7 @@ class LeftDirectory extends React.Component {
     render() {
         return <div className='left-dir'>
             <div className='left-dir-title'>
-                <h3>Directory</h3>
+                <h3>目录</h3>
             </div>
             {this.renderMainIndex()}
         </div>

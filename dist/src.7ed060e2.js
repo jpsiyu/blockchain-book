@@ -24120,7 +24120,7 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Paragraph = void 0;
+exports.Indentation = exports.Paragraph = exports.Abstract = exports.Article = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -24144,10 +24144,35 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Paragraph =
+var Article =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Paragraph, _React$Component);
+  _inherits(Article, _React$Component);
+
+  function Article(props) {
+    _classCallCheck(this, Article);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Article).call(this, props));
+  }
+
+  _createClass(Article, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        className: "article"
+      }, this.props.children);
+    }
+  }]);
+
+  return Article;
+}(_react.default.Component);
+
+exports.Article = Article;
+
+var Paragraph =
+/*#__PURE__*/
+function (_React$Component2) {
+  _inherits(Paragraph, _React$Component2);
 
   function Paragraph(props) {
     _classCallCheck(this, Paragraph);
@@ -24168,62 +24193,57 @@ function (_React$Component) {
 }(_react.default.Component);
 
 exports.Paragraph = Paragraph;
-},{"react":"../../node_modules/react/index.js"}],"../src/writings/article-hemingway.js":[function(require,module,exports) {
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _articleWidget = require("../article-widget");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-var ArticleHemingway =
+var Abstract =
 /*#__PURE__*/
-function (_React$Component) {
-  _inherits(ArticleHemingway, _React$Component);
+function (_React$Component3) {
+  _inherits(Abstract, _React$Component3);
 
-  function ArticleHemingway(props) {
-    _classCallCheck(this, ArticleHemingway);
+  function Abstract(props) {
+    _classCallCheck(this, Abstract);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(ArticleHemingway).call(this, props));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Abstract).call(this, props));
   }
 
-  _createClass(ArticleHemingway, [{
+  _createClass(Abstract, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Article"), _react.default.createElement(_articleWidget.Paragraph, null, "Hemingway watched him go, and then turned to me. \u201CAfter you finish a book, you know, you\u2019re dead,\u201D he said moodily. \u201CBut no one knows you\u2019re dead. All they see is the irresponsibility that comes in after the terrible responsibility of writing.\u201D He said he felt tired but was in good shape physically; he had brought his weight down to two hundred and eight, and his blood pressure was down too. He had considerable rewriting to do on his book, and he was determined to keep at it until he was absolutely satisfied. \u201CThey can\u2019t yank novelist like they can pitcher,\u201D he said. \u201CNovelist has to go the full nine, even if it kills him.\u201D"), _react.default.createElement(_articleWidget.Paragraph, null, "We were joined by Hemingway\u2019s wife, Mary, a small, energetic, cheerful woman with close-cropped blond hair, who was wearing a long, belted mink coat. A porter pushing a cart heaped with luggage followed her. \u201CPapa, everything is here,\u201D she said to Hemingway. \u201CNow we ought to get going, Papa.\u201D He assumed the air of a man who was not going to be rushed. Slowly, he counted the pieces of luggage. There were fourteen, half of them, Mrs. Hemingway told me, extra-large Valpaks designed by her husband and bearing his coat of arms, also designed by him\u2014a geometric design. When Hemingway had finished counting, his wife suggested that he tell the porter where to put the luggage. Hemingway told the porter to stay right there and watch it; then he turned to his wife and said, \u201CLet\u2019s not crowd, honey. Order of the day is to have a drink first.\u201D"), _react.default.createElement(_articleWidget.Paragraph, null, "A few statements like these would clear up matters. Newspaper readers would then realize that the reason the first man lived twenty years was because he had carefully preserved his health through abstaining from vacations. The reason that the other splendid fellows had dropped like ripened grapefruit at the end of their thirty years, mayoralty t erms or lifetimes was the fact that they had never visited such places as Lake Screaming Water or picturesque Bum View. Just a few seasons at Giggling Perch Inn or the New Nokomis, American plan, would have cut them off like flies in the pride of their young manhood."));
+      return _react.default.createElement("div", {
+        className: "abstract"
+      }, _react.default.createElement("h2", null, this.props.children));
     }
   }]);
 
-  return ArticleHemingway;
+  return Abstract;
 }(_react.default.Component);
 
-var _default = ArticleHemingway;
-exports.default = _default;
-},{"react":"../../node_modules/react/index.js","../article-widget":"../src/article-widget.js"}],"../src/writings/article-welcome.js":[function(require,module,exports) {
+exports.Abstract = Abstract;
+
+var Indentation =
+/*#__PURE__*/
+function (_React$Component4) {
+  _inherits(Indentation, _React$Component4);
+
+  function Indentation(props) {
+    _classCallCheck(this, Indentation);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Indentation).call(this, props));
+  }
+
+  _createClass(Indentation, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        className: "indentation"
+      }, _react.default.createElement("p", null, this.props.children));
+    }
+  }]);
+
+  return Indentation;
+}(_react.default.Component);
+
+exports.Indentation = Indentation;
+},{"react":"../../node_modules/react/index.js"}],"../src/writings/article-welcome.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24269,7 +24289,7 @@ function (_React$Component) {
   _createClass(ArticleWelcome, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Welcome visit Blockchain Book"), _react.default.createElement(_articleWidget.Paragraph, null, "Hemingway watched him go, and then turned to me. \u201CAfter you finish a book, you know, you\u2019re dead,\u201D he said moodily. \u201CBut no one knows you\u2019re dead. All they see is the irresponsibility that comes in after the terrible responsibility of writing.\u201D He said he felt tired but was in good shape physically; he had brought his weight down to two hundred and eight, and his blood pressure was down too. He had considerable rewriting to do on his book, and he was determined to keep at it until he was absolutely satisfied. \u201CThey can\u2019t yank novelist like they can pitcher,\u201D he said. \u201CNovelist has to go the full nine, even if it kills him.\u201D"), _react.default.createElement(_articleWidget.Paragraph, null, "We were joined by Hemingway\u2019s wife, Mary, a small, energetic, cheerful woman with close-cropped blond hair, who was wearing a long, belted mink coat. A porter pushing a cart heaped with luggage followed her. \u201CPapa, everything is here,\u201D she said to Hemingway. \u201CNow we ought to get going, Papa.\u201D He assumed the air of a man who was not going to be rushed. Slowly, he counted the pieces of luggage. There were fourteen, half of them, Mrs. Hemingway told me, extra-large Valpaks designed by her husband and bearing his coat of arms, also designed by him\u2014a geometric design. When Hemingway had finished counting, his wife suggested that he tell the porter where to put the luggage. Hemingway told the porter to stay right there and watch it; then he turned to his wife and said, \u201CLet\u2019s not crowd, honey. Order of the day is to have a drink first.\u201D"), _react.default.createElement(_articleWidget.Paragraph, null, "A few statements like these would clear up matters. Newspaper readers would then realize that the reason the first man lived twenty years was because he had carefully preserved his health through abstaining from vacations. The reason that the other splendid fellows had dropped like ripened grapefruit at the end of their thirty years, mayoralty t erms or lifetimes was the fact that they had never visited such places as Lake Screaming Water or picturesque Bum View. Just a few seasons at Giggling Perch Inn or the New Nokomis, American plan, would have cut them off like flies in the pride of their young manhood."));
+      return _react.default.createElement(_articleWidget.Article, null, _react.default.createElement(_articleWidget.Abstract, null, "\u6B22\u8FCE\u9605\u8BFB\u672C\u5C0F\u518C\u5B50"), _react.default.createElement(_articleWidget.Paragraph, null, "Blockchain\uFF0C\u662F\u4E00\u7CFB\u5217\u6280\u672F\u878D\u5408\u521B\u9020\u7684\u7ED3\u679C\u3002\u5982\u5BC6\u7801\u5B66\uFF0C\u5206\u5E03\u5F0F\u7CFB\u7EDF\uFF0C\u7535\u5B50\u8D27\u5E01\u7B49\uFF0C\u6BCF\u4E00\u9879 \u6280\u672F\u90FD\u5BF9\u5E94\u7740\u6DF1\u523B\u7684\u4E13\u4E1A\u77E5\u8BC6\uFF0C\u5404\u81EA\u6709\u7740\u5E7F\u6CDB\u7684\u5E94\u7528\u57FA\u7840\u3002\u800CBlockchain\uFF0C\u65E0\u8BBA\u662F\u6280\u672F\u590D\u6742\u5EA6\uFF0C \u6216\u662F\u5E94\u7528\u5E7F\u6CDB\u6027\uFF0C\u90FD\u5C06\u63D0\u5347\u5230\u66F4\u9AD8\u7684\u4E00\u4E2A\u5C42\u6B21\u3002\u5B83\u88AB\u89C6\u4E3A\u201C\u4E0B\u4E00\u4EE3\u4E92\u8054\u7F51\u201D\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u4E3A\u4E86\u66F4\u597D\u5730\u7406\u89E3\u5B83\uFF0C\u8FD0\u7528\u5B83\uFF1B\u4E3A\u4E86\u52A0\u5FEB\u5C5E\u4E8E\u5B83\u7684\u65F6\u4EE3\u7684\u6765\u4E34\uFF0C\u672C\u518C\u5B50\u6536\u7EB3\uFF0C\u5438\u53D6\u548C\u6574\u7406\u7F51\u7EDC \u4E0A\u4F18\u79C0\u7684\u6587\u7AE0\uFF0C\u4E66\u7C4D\u53CA\u8BA8\u8BBA\uFF0C\u5C1D\u8BD5\u7528\u66F4\u52A0\u901A\u4FD7\u7684\u8868\u8FBE\uFF0C\u4F7F\u5F97\u5B83\u7684\u7406\u5FF5\u5F97\u4EE5\u66F4\u5E7F\u6CDB\u5730\u4F20\u64AD\u3002\u7531\u4E8E \u4E13\u4E1A\u4E0A\u7684\u9650\u5236\uFF0C\u672C\u518C\u5B50\u5C06\u4EE5Ethereum blockchain\u4E3A\u4E3B\u7EBF\uFF0C\u5BF9\u4E2A\u4E3B\u9898\u4E00\u4E00\u5C55\u5F00\u9610\u8FF0\u3002"));
     }
   }]);
 
@@ -24278,46 +24298,93 @@ function (_React$Component) {
 
 var _default = ArticleWelcome;
 exports.default = _default;
+},{"react":"../../node_modules/react/index.js","../article-widget":"../src/article-widget.js"}],"../src/writings/article-what.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _articleWidget = require("../article-widget");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var ArticleWhat =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ArticleWhat, _React$Component);
+
+  function ArticleWhat(props) {
+    _classCallCheck(this, ArticleWhat);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ArticleWhat).call(this, props));
+  }
+
+  _createClass(ArticleWhat, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_articleWidget.Article, null, _react.default.createElement(_articleWidget.Abstract, null, "Ethereum\u662F\u4EC0\u4E48"), _react.default.createElement(_articleWidget.Paragraph, null, "Ethereum\u4FD7\u79F0\u201C\u5168\u7403\u8BA1\u7B97\u673A\u201C\u3002\u4ECE\u8BA1\u7B97\u673A\u79D1\u5B66\u7684\u89D2\u5EA6\u6765\u770B\uFF0C\u5B83\u672C\u8D28\u4E0A\u662F\u4E00\u53F0\u72B6\u6001\u673A\uFF0C\u62E5\u6709\u65E0\u9650\u79CD\u72B6\u6001\uFF0C \u6BCF\u4E00\u6B21\u72B6\u6001\u7684\u53D8\u5316\u53EA\u80FD\u7531\u4E00\u4E2A\u7279\u5B9A\u7684\u5BF9\u8C61\u5B8C\u6210\uFF0C\u8FD9\u4E9B\u5BF9\u8C61\u8FD0\u884C\u5728\u865A\u62DF\u673A\u5F53\u4E2D\u3002\u8FD9\u5C31\u662F\u5B83\u6700\u57FA\u672C\u7684\u6784\u6210\u3002 \u4ECE\u5B9E\u7528\u6027\u7684\u89D2\u5EA6\u6765\u770B\uFF0C\u5B83\u662F\u5168\u7403\u5316\uFF0C\u53BB\u4E2D\u5FC3\u5316\u57FA\u7840\u8FD0\u7B97\u8BBE\u65BD\uFF0C\u8FD0\u884C\u5176\u4E0A\u7684\u7A0B\u5E8F\u88AB\u79F0\u4F5Csmart contract. small contract\u72B6\u6001\u7684\u5B58\u50A8\uFF0C\u66F4\u6539\uFF0C\u540C\u6B65\uFF0C\u7531\u5E95\u5C42\u7684blockchain\u5B9E\u73B0\u3002\u6267\u884C\u8FD9\u4E9B\u64CD\u4F5C\u4F1A\u6D88\u8017\u4E00\u5B9A\u7684 \u8BA1\u7B97\u8D44\u6E90\uFF0C\u56E0\u6B64\u9700\u8981\u4E3A\u6B64\u652F\u4ED8\u4E00\u7B14\u5C0F\u8D39\uFF0C\u7528\u52A0\u5BC6\u8D27\u5E01ether\u4F5C\u4E3A\u652F\u4ED8\u5A92\u4ECB\u3002Ethereum\u7684\u8FD0\u884C\u751F\u6001\u5177\u6709 \u9AD8\u53EF\u7528\u6027\uFF0C\u53EF\u8BA4\u8BC1\u6027\uFF0C\u9AD8\u900F\u660E\u5EA6\uFF0C\u4E2D\u7ACB\u6027\u7B49\u7B49\u4F18\u70B9\uFF0C\u540C\u65F6\u964D\u4F4E\u4E86\u5BA1\u67E5\uFF0C\u964D\u4F4E\u4E86\u4EA4\u6613\u5BF9\u624B\u4E0D\u786E\u5B9A\u6027\u7684\u98CE\u9669, \u4F7F\u5F97\u5F00\u53D1\u8005\u5F97\u4EE5\u6784\u5EFA\u5F3A\u5927\u7684\u53BB\u4E2D\u5FC3\u5316\u7684\u5E94\u7528."), _react.default.createElement(_articleWidget.Abstract, null, "\u5BF9\u6BD4Bitcoin"), _react.default.createElement(_articleWidget.Paragraph, null, "\u5F88\u591A\u4EBA\u5728\u63A5\u89E6Ethereum\u4E4B\u524D\uFF0C\u5DF2\u7ECF\u6709\u4F7F\u7528\u52A0\u5BC6\u8D27\u5E01\u7684\u7ECF\u9A8C\uFF0C\u7279\u522B\u662FBitcoin\u3002Ethereum\u4E0E\u5176\u5B83\u516C\u5171 \u7684blockchain\u6709\u7740\u5F88\u591A\u76F8\u4F3C\u7684\u4E4B\u5904\uFF1A\u4F7F\u7528\u70B9\u5BF9\u70B9\u8FDE\u63A5\u7F51\u7EDC\uFF0C\u4F7F\u7528\u62DC\u5360\u5EAD\u5BB9\u9519\u7684\u4E00\u81F4\u6027\u7B97\u6CD5\u7528\u4E8E\u540C\u6B65\u66F4 \u65B0\u72B6\u6001\uFF0C\u5E7F\u6CDB\u8FD0\u7528\u5BC6\u7801\u5B66\u57FA\u672C\u5143\u7D20\uFF0C\u5982\u7535\u5B50\u7B7E\u540D\uFF0C\u54C8\u5E0C\u51FD\u6570\uFF0C\u52A0\u5BC6\u8D27\u5E01\u7B49\u3002\u4F46\u5728\u5F88\u591A\u65B9\u9762\uFF0C\u5305\u62EC\u5B83\u7684\u76EE \u7684\u548C\u67B6\u6784\uFF0CEthereum\u4E0E\u4E4B\u524D\u7684\u5176\u5B83\u516C\u5171blockchain\u90FD\u6709\u7740\u60CA\u4EBA\u7684\u5DEE\u5F02\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "Bitcoin\u662F\u4E00\u4E2A\u7535\u5B50\u52A0\u5BC6\u8D27\u5E01\u7CFB\u7EDF\uFF0C\u5B83\u7684\u811A\u672C\u8BED\u8A00\u7684\u529F\u80FD\u6027\u975E\u5E38\u6709\u9650\uFF0C\u53EA\u80FD\u505A\u7B80\u5355\u7684true/false\u6761\u4EF6\u5224\u65AD. Ethereum\u7684\u4E3B\u8981\u76EE\u7684\u4E0D\u662F\u6210\u4E3A\u4E00\u4E2A\u7535\u5B50\u652F\u4ED8\u7F51\u7EDC\u3002\u7535\u5B50\u8D27\u5E01ether\u81EA\u8EAB\u662F\u4E00\u4E2A\u8FD0\u884C\u6574\u4F53\uFF0C\u662FEthereum \u8FD0\u884C\u7684\u5FC5\u8981\u56E0\u7D20\u3002\u4F46\u4ECE\u8BBE\u8BA1\u4E0A\uFF0C\u5B83\u4E3A\u4E86Ethereum\u8FD9\u53F0\u201C\u5168\u7403\u8BA1\u7B97\u673A\u201C\u7684\u8FD0\u884C\u9700\u8981\u800C\u751F\uFF0C\u4EC5\u4EC5\u662F\u4E00\u5DE5\u5177\u8D27\u5E01 \u800C\u5DF2\u3002Ethereum\u7684\u76EE\u6807\u662F\u8BBE\u8BA1\u5177\u6709\u666E\u904D\u6027\u7684\u53EF\u7F16\u7A0B\u7684blockchain\uFF0C\u5728\u5176\u4E0A\u8FD0\u884C\u865A\u62DF\u673A\uFF0C\u6267\u884C\u6570\u5B66\u8FD0\u7B97 \u548C\u590D\u6742\u7684\u903B\u8F91\u64CD\u505A\u3002Ethereum\u4E0A\u7684\u811A\u672C\u8BED\u8A00\u662F\u56FE\u7075\u5B8C\u6574\u7684\uFF0CEthereum\u4ECE\u529F\u80FD\u6027\u4E0A\u662F\u4E00\u53F0\u5177\u6709\u666E\u904D\u5B9E\u7528 \u6027\u7684\u8BA1\u7B97\u673A\u3002"), _react.default.createElement(_articleWidget.Abstract, null, "blockchain\u6784\u6210\u7EC4\u4EF6"), _react.default.createElement(_articleWidget.Paragraph, null, "\u4E00\u4E2A\u5F00\u653E\u7684\uFF0C\u516C\u5171\u7684blockchain\u901A\u5E38\u5177\u6709\u4EE5\u4E0B\u7EC4\u4EF6:", _react.default.createElement("ul", null, _react.default.createElement("li", null, "\u70B9\u5BF9\u70B9\u7684\u7F51\u7EDC(P2P)\uFF0C\u8FDE\u63A5\u5404\u4E2A\u53C2\u4E0E\u8005\uFF0C\u5728\u5176\u4E2D\u5E7F\u64AD\u4EA4\u6613\u6D88\u606F\u548C\u9A8C\u8BC1\u6570\u636E"), _react.default.createElement("li", null, "\u6D88\u606F\uFF0C\u7C7B\u4F3C\u4EA4\u6613\u6570\u636E\u7684\u683C\u5F0F\uFF0C\u662F\u6700\u540E\u5F62\u6210\u72B6\u6001\u7684\u4E2D\u95F4\u8FC7\u6E21\u6570\u636E"), _react.default.createElement("li", null, "\u4E00\u81F4\u6027\u89C4\u5219\uFF0C\u89C4\u5B9A\u4EA4\u6613\u7684\u7EC4\u6210\u5143\u7D20\uFF0C\u5224\u5B9A\u4EA4\u6613\u7684\u5408\u6CD5\u6027"), _react.default.createElement("li", null, "\u72B6\u6001\u673A\uFF0C\u5728\u4E00\u81F4\u6027\u89C4\u5219\u4E0B\u6267\u884C\u5404\u79CD\u4EA4\u6613"), _react.default.createElement("li", null, "\u591A\u4E2A\u4EA4\u6613\u6570\u636E\u7EC4\u5408\u6210\u7684\uFF0C\u7ECF\u8FC7\u52A0\u5BC6\u7684\u5757\u6570\u636E\uFF0C\u5F62\u6210\u6570\u636E\u94FE\uFF0C\u8BB0\u5F55\u4E86\u6240\u6709\u7684\u7ECF\u8FC7\u9A8C\u8BC1\u4E14\u88AB\u63A5\u53D7\u7684\u4EA4\u6613\u4FE1\u606F"), _react.default.createElement("li", null, "\u4E00\u81F4\u6027\u7B97\u6CD5\uFF0C\u5F3A\u5236\u6240\u6709\u53C2\u4E0E\u8005\u9075\u5B88\u4E00\u81F4\u6027\u89C4\u5219\uFF0C\u4ECE\u800C\u8FBE\u5230\u53BB\u4E2D\u5FC3\u5316"), _react.default.createElement("li", null, "\u8FD0\u7528\u535A\u5F08\u8BBA\u7684\u6FC0\u52B1\u673A\u5236\uFF0C\u7ED9\u4E88\u53C2\u4E0E\u9A8C\u8BC1\u7684\u4E3B\u4F53\u4E00\u5B9A\u7684\u5956\u52B1\uFF0C\u9632\u6B62blockchain\u88AB\u79C1\u4EBA\u7BE1\u6539"), _react.default.createElement("li", null, "\u5B9E\u73B0\u4E0A\u8FF0\u529F\u80FD\u7684\u5BA2\u6237\u7AEF\u8F6F\u4EF6"))), _react.default.createElement(_articleWidget.Abstract, null, "Ethereum: \u901A\u7528\u578Bblockchain"), _react.default.createElement(_articleWidget.Paragraph, null, "\u6700\u539F\u59CB\u7684blockchain\u662FBitcoin blockchain\uFF0C\u5B83\u8FFD\u8E2ABitcoin\u7684\u6240\u6709\u6743\u548C\u72B6\u6001\u53D8\u5316\u3002Bitcoin \u672C\u8D28\u4E0A\u662F\u4E00\u4E2A\u5206\u5E03\u5F0F\u7684\u4E00\u81F4\u6027\u7684\u72B6\u6001\u673A\uFF0C\u6BCF\u4E00\u4E2A\u4EA4\u6613\u90FD\u5BFC\u81F4\u4E86\u72B6\u6001\u7684\u5207\u6362\uFF0C\u6700\u7EC8\u6539\u53D8\u7684\u662F\u8D27\u5E01\u6240\u6709\u6743\u7684 \u66F4\u53D8\u3002\u6BCF\u6B21\u72B6\u6001\u7684\u5207\u6362\uFF0C\u5FC5\u987B\u5728\u4E00\u81F4\u6027\u89C4\u5219\u7EA6\u675F\u4E0B\u5B8C\u6210\uFF0C\u540C\u65F6\u6240\u6709\u7684\u53C2\u4E0E\u8005\u90FD\u4F1A\u8FDB\u5165\u76F8\u540C\u7684\u72B6\u6001\u4E0B\u3002Ethereum \u4E5F\u662F\u4E00\u4E2A\u5206\u5E03\u5F0F\u7684\u72B6\u6001\u673A\uFF0C\u4E0D\u540C\u4E8EBitcoin\u8FFD\u8E2A\u8D27\u5E01\u5728\u67D0\u4E00\u72B6\u6001\u4E0B\u7684\u6240\u6709\u6743\uFF0CEthereum\u8FFD\u8E2A\u7684\u6570\u636E\u5177\u6709 \u4E00\u822C\u666E\u904D\u6027\uFF0C\u5305\u62EC\u6240\u6709\u53EF\u4EE5\u7528\u952E\u503C\u5BF9\u8868\u793A\u7684\u6570\u636E\u3002\u6362\u53E5\u8BDD\u8BF4\uFF0C\u8DDF\u666E\u901A\u8BA1\u7B97\u673A\u4F7F\u7528\u7684RAM\u6570\u636E\u5B58\u50A8\u6A21\u578B\u662F\u4E00\u6837\u7684\u3002 Ethereum\u5B58\u50A8\u7740\u6570\u636E\u548C\u4EE3\u7801\uFF0C\u4F7F\u7528blockchain\u6765\u8DDF\u8E2A\u8FD9\u4E9B\u5B58\u50A8\u7684\u53D8\u5316\uFF0C\u80FD\u591F\u5C06\u4EE3\u7801\u52A0\u8F7D\u8FDB\u865A\u62DF\u673A\u4E2D\u8FD0\u884C\uFF0C \u5E76\u5C06\u4EA7\u751F\u7684\u7ED3\u679C\u5199\u5165blockchain\u4E4B\u4E2D\u3002Ethereum\u8DDF\u666E\u901A\u8BA1\u7B97\u673A\u6709\u4E24\u4E2A\u5173\u952E\u6027\u7684\u533A\u522B\uFF0C\u5176\u4E00\uFF0CEthereum \u7684\u8FD0\u884C\u5FC5\u987B\u9075\u5FAA\u4E00\u81F4\u6027\u89C4\u5219\uFF1B\u5176\u4E8C\uFF0CEthereum\u7684\u72B6\u6001\u662F\u5168\u7403\u5316\u5206\u5E03\u5F0F\u7684\u3002Ethereum\u89E3\u51B3\u7684\u662F\u8FD9\u6837\u7684\u95EE\u9898\uFF1A \u5982\u679C\u6211\u4EEC\u80FD\u591F\u5728\u7279\u5B9A\u7684\u5171\u8BC6\u4E0B\uFF0C\u8FFD\u8E2A\u7A0B\u5E8F\u7684\u4EFB\u610F\u72B6\u6001\uFF0C\u5E76\u4E14\u5BF9\u72B6\u6001\u673A\u8FDB\u884C\u7F16\u7A0B\uFF0C\u521B\u9020\u4E00\u4E2A\u5168\u7403\u5316\u7684\u8BA1\u7B97\u673A\u7CFB \u7EDF\uFF0C\u4F1A\u53D1\u751F\u4EC0\u4E48\u5462\uFF1F"), _react.default.createElement(_articleWidget.Abstract, null, "Ethereum\u7684\u7EC4\u4EF6"), _react.default.createElement(_articleWidget.Paragraph, null, "Ethereum blockchain\u7684\u7EC4\u4EF6\uFF0C\u5177\u4F53\u6765\u8BF4\uFF0C\u5305\u62EC\u4EE5\u4E0B\u90E8\u5206\uFF1A"), _react.default.createElement(_articleWidget.Paragraph, null, "P2P\u7F51\u7EDC"), _react.default.createElement(_articleWidget.Indentation, null, "Ethereum\u7684\u4E3B\u7F51\u7684\u534F\u8BAE\u53EB\u505ADEVp2p\uFF0C\u8FD0\u884C\u5728TCP\u4E4B\u4E0A\uFF0C\u7AEF\u53E3\u4E3A30303"), _react.default.createElement(_articleWidget.Paragraph, null, "\u4E00\u81F4\u6027\u89C4\u5219"), _react.default.createElement(_articleWidget.Indentation, null, "Ethereum\u7684\u4E00\u81F4\u6027\u89C4\u5219\u5B9A\u4E49\u5728\u5176\u9EC4\u9875\u7684\u53C2\u8003\u89C4\u683C\u4E2D"), _react.default.createElement(_articleWidget.Paragraph, null, "\u4EA4\u6613"), _react.default.createElement(_articleWidget.Indentation, null, "Ethereum\u7684\u4EA4\u6613\u7528\u7F51\u7EDC\u6D88\u606F\u5B9E\u73B0\uFF0C\u5305\u542B\u53D1\u9001\u8005\uFF0C\u63A5\u53D7\u8005\uFF0C\u4EF7\u503C\uFF0C\u6570\u636E\u8D1F\u8F7D\u7B49"), _react.default.createElement(_articleWidget.Paragraph, null, "\u72B6\u6001\u673A"), _react.default.createElement(_articleWidget.Indentation, null, "Ethereum\u7684\u72B6\u6001\u5207\u6362\u7531Ethereum\u865A\u62DF\u673A(EVM)\u5904\u7406\uFF0CEVM\u57FA\u4E8E\u5806\u6808\u7684\u67B6\u6784\uFF0C\u6267\u884C\u5B57\u8282\u7801\u3002EVM\u8FD0\u884C\u7684 \u7A0B\u5E8F\u53EB\u505A\"smart contract\"\uFF0C\u7531\u9AD8\u7EA7\u8BED\u8A00\uFF0C\u6BD4\u5982Solidity\u7F16\u5199\u800C\u6210\uFF0C\u7ECF\u8FC7\u7F16\u8BD1\uFF0C\u7F16\u7A0B\u5B57\u8282\u7801\uFF0C\u518D\u7531 EVM\u6267\u884C"), _react.default.createElement(_articleWidget.Paragraph, null, "\u6570\u636E\u7ED3\u6784"), _react.default.createElement(_articleWidget.Indentation, null, "Ethereum\u7684\u72B6\u6001\u5B58\u50A8\u5728\u6BCF\u4E2A\u8282\u70B9\u672C\u5730\u7684\u6570\u636E\u5E93\u4E4B\u4E2D\uFF0C\u901A\u5E38\u662FGoogle LevelDB\uFF0C\u5B58\u50A8\u7684\u6570\u636E\u5305\u62EC\u4EA4\u6613 \u6570\u636E\u548C\u7CFB\u7EDF\u72B6\u6001\uFF0C\u7ECF\u8FC7\u54C8\u5E0C\u51FD\u6570\u5E8F\u5217\u5316\uFF0C\u5F62\u6210Merkle Particia Tree\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u4E00\u81F4\u6027\u7B97\u6CD5"), _react.default.createElement(_articleWidget.Indentation, null, "Ethereum\u4F7F\u7528Bitcoin\u7684Nakamoto\u4E00\u81F4\u6027\u6A21\u578B\uFF0C\u7528PoW\u7B97\u6CD5\u5BF9\u6309\u987A\u5E8F\u6392\u5217\u7684\u5355\u72EC\u7B7E\u540D\u7684\u4FE1\u606F\u5757\u52A0 \u6743\u91CD\uFF0C\u51B3\u5B9A\u51FA\u6700\u957F\u7684\u533A\u5757\u94FE\uFF0C\u4E3A\u5F53\u524D\u7684\u5408\u6CD5\u72B6\u6001\u3002\u7136\u800C\uFF0CEthereum\u6B63\u8BA1\u5212\u7528PoS\u52A0\u6743\u6295\u7968\u7CFB\u7EDF\u6765\u4EE3 \u66FF\u5B83."), _react.default.createElement(_articleWidget.Paragraph, null, "\u7ECF\u6D4E\u5B89\u5168\u6027"), _react.default.createElement(_articleWidget.Indentation, null, "Ethereum\u76EE\u524D\u4F7F\u7528\u540D\u4E3AEthash\u7684PoW\u7B97\u6CD5\u4FDD\u8BC1\u81EA\u8EAB\u7684\u5B89\u5168\uFF0C\u4F46\u5728\u4E0D\u4E45\u7684\u5C06\u6765\u4F1A\u7528PoS\u7B97\u6CD5\u53D6\u66FF"), _react.default.createElement(_articleWidget.Paragraph, null, "\u5BA2\u6237\u7AEF"), _react.default.createElement(_articleWidget.Indentation, null, "Ethereum\u6709\u591A\u4E2A\u4F7F\u7528\u4E0D\u540C\u8BED\u8A00\u5F00\u53D1\u7684\u5BA2\u6237\u7AEF\u7A0B\u5E8F\uFF0C\u6700\u6D41\u884C\u7684\u662FGeth\u548CParity"));
+    }
+  }]);
+
+  return ArticleWhat;
+}(_react.default.Component);
+
+var _default = ArticleWhat;
+exports.default = _default;
 },{"react":"../../node_modules/react/index.js","../article-widget":"../src/article-widget.js"}],"../src/config.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getFirstArticle = exports.getfirstMainIndex = exports.getArticlesByIndex = exports.cfgArticles = exports.cfgMainIndex = void 0;
-
-var _articleHemingway = _interopRequireDefault(require("./writings/article-hemingway"));
+exports.getArticleById = exports.getFirstMainIndex = exports.getArticlesByIndex = exports.cfgArticles = exports.cfgMainIndex = void 0;
 
 var _articleWelcome = _interopRequireDefault(require("./writings/article-welcome"));
+
+var _articleWhat = _interopRequireDefault(require("./writings/article-what"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var cfgMainIndex = [{
   id: 1,
-  name: 'Blockchain'
+  name: '前言'
 }, {
   id: 2,
-  name: 'Ethereum'
-}, {
-  id: 3,
-  name: 'Wallet'
+  name: 'Ethereum定义'
 }];
 exports.cfgMainIndex = cfgMainIndex;
 var cfgArticles = [{
   id: 1,
   mainIndex: 1,
-  name: 'Welcome',
+  name: '欢迎',
   article: _articleWelcome.default
 }, {
   id: 2,
-  mainIndex: 1,
-  name: 'Hemingway',
-  article: _articleHemingway.default
-}, {
-  id: 3,
   mainIndex: 2,
-  name: 'Hally Potter',
-  article: _articleHemingway.default
+  name: 'Ethereum是什么',
+  article: _articleWhat.default
 }];
 exports.cfgArticles = cfgArticles;
 
@@ -24331,18 +24398,29 @@ var getArticlesByIndex = function getArticlesByIndex(index) {
 
 exports.getArticlesByIndex = getArticlesByIndex;
 
-var getfirstMainIndex = function getfirstMainIndex() {
+var getFirstMainIndex = function getFirstMainIndex() {
   return cfgMainIndex[0];
 };
 
-exports.getfirstMainIndex = getfirstMainIndex;
+exports.getFirstMainIndex = getFirstMainIndex;
 
-var getFirstArticle = function getFirstArticle() {
-  return cfgArticles[0];
+var getArticleById = function getArticleById(id) {
+  var target;
+
+  for (var i = 0; i < cfgArticles.length; i++) {
+    var cfg = cfgArticles[i];
+
+    if (cfg.id == id) {
+      target = cfg;
+      break;
+    }
+  }
+
+  return target;
 };
 
-exports.getFirstArticle = getFirstArticle;
-},{"./writings/article-hemingway":"../src/writings/article-hemingway.js","./writings/article-welcome":"../src/writings/article-welcome.js"}],"../src/macro.js":[function(require,module,exports) {
+exports.getArticleById = getArticleById;
+},{"./writings/article-welcome":"../src/writings/article-welcome.js","./writings/article-what":"../src/writings/article-what.js"}],"../src/macro.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24803,7 +24881,7 @@ function (_React$Component) {
         onClick: this.onDirectoryClick.bind(this)
       }, _react.default.createElement("p", {
         className: "noselect"
-      }, "Directory")), _react.default.createElement("div", {
+      }, "\u76EE\u5F55")), _react.default.createElement("div", {
         className: "e-panel",
         style: {
           display: displayValue
@@ -24824,10 +24902,8 @@ function (_React$Component) {
   }, {
     key: "initArticle",
     value: function initArticle() {
-      var cfg = (0, _config.getFirstArticle)();
-      this.setState({
-        articleCfg: cfg
-      });
+      var cfg = (0, _config.getArticleById)(1);
+      app.eventMgr.dispatch(_macro.MacroEvent.SelectArticle, cfg);
     }
   }, {
     key: "onSelectArticle",
@@ -24911,7 +24987,7 @@ function (_React$Component) {
         className: "left-dir"
       }, _react.default.createElement("div", {
         className: "left-dir-title"
-      }, _react.default.createElement("h3", null, "Directory")), this.renderMainIndex());
+      }, _react.default.createElement("h3", null, "\u76EE\u5F55")), this.renderMainIndex());
     }
   }, {
     key: "renderMainIndex",
@@ -25022,7 +25098,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49273" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49346" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

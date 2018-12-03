@@ -18,7 +18,6 @@
     background-color: rgba(240, 240, 240, 0.8);
     overflow: scroll;
     display: flex;
-    padding: 10px;
 }
 
 .e-bottom{
@@ -176,6 +175,25 @@
         background-color: seagreen;
         color: white;
     }
+}.article{
+    padding: 30px 10px 100px 10px;
+    overflow: scroll;
+}
+
+.paragraph{
+    padding: 8px 0;
+}
+
+.abstract{
+    padding: 15px 0;
+}
+
+.paragraph ul{
+    padding: 0 30px;
+}
+
+.indentation{
+    padding: 0 30px;
 }*{
     padding: 0;
     margin: 0;
@@ -201,6 +219,4 @@
     background-color: rgba(240, 240, 240, 0.8);
 }
 
-.paragraph{
-    padding: 10px 0;
-}
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import BottomDirectory from './bottom-directory'
 import { MacroEvent } from './macro'
-import { getFirstArticle } from './config'
+import { getArticleById } from './config'
 
 class Entry extends React.Component {
     constructor(props) {
@@ -32,7 +32,7 @@ class Entry extends React.Component {
                 {getArticle()}
             </div>
             <div className='e-bottom' onClick={this.onDirectoryClick.bind(this)}>
-                <p className='noselect'>Directory</p>
+                <p className='noselect'>目录</p>
             </div>
             <div className='e-panel' style={{ display: displayValue }}><BottomDirectory /></div>
         </div>
@@ -48,8 +48,8 @@ class Entry extends React.Component {
     }
 
     initArticle() {
-        const cfg = getFirstArticle()
-        this.setState({ articleCfg: cfg })
+        const cfg = getArticleById(1)
+        app.eventMgr.dispatch(MacroEvent.SelectArticle, cfg)
     }
 
     onSelectArticle(args) {

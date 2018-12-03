@@ -1,0 +1,20 @@
+.article{
+    padding: 30px 10px 100px 10px;
+    overflow: scroll;
+}
+
+.paragraph{
+    padding: 8px 0;
+}
+
+.abstract{
+    padding: 15px 0;
+}
+
+.paragraph ul{
+    padding: 0 30px;
+}
+
+.indentation{
+    padding: 0 30px;
+}

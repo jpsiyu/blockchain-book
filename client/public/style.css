@@ -1,6 +1,7 @@
 @import './css//entry.css';
 @import './css/left-directory.css';
 @import './css/bottom-drectory.css';
+@import './css/articles.css';
 
 *{
     padding: 0;
@@ -27,6 +28,4 @@
     background-color: rgba(240, 240, 240, 0.8);
 }
 
-.paragraph{
-    padding: 10px 0;
-}
+

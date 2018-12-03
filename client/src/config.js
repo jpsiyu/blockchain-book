@@ -1,16 +1,14 @@
-import ArticleHemingway from './writings/article-hemingway'
 import ArticleWelcome from './writings/article-welcome'
+import ArticleWhat from './writings/article-what'
 
 const cfgMainIndex = [
-    { id: 1, name: 'Blockchain' },
-    { id: 2, name: 'Ethereum' },
-    { id: 3, name: 'Wallet' },
+    { id: 1, name: '前言' },
+    { id: 2, name: 'Ethereum定义' },
 ]
 
 const cfgArticles = [
-    { id: 1, mainIndex: 1, name: 'Welcome', article: ArticleWelcome },
-    { id: 2, mainIndex: 1, name: 'Hemingway', article: ArticleHemingway },
-    { id: 3, mainIndex: 2, name: 'Hally Potter', article: ArticleHemingway },
+    { id: 1, mainIndex: 1, name: '欢迎', article: ArticleWelcome },
+    { id: 2, mainIndex: 2, name: 'Ethereum是什么', article: ArticleWhat },
 ]
 
 const getArticlesByIndex = (index) => {
@@ -22,18 +20,26 @@ const getArticlesByIndex = (index) => {
     return articles
 }
 
-const getfirstMainIndex = () => {
+const getFirstMainIndex = () => {
     return cfgMainIndex[0]
 }
 
-const getFirstArticle = () => {
-    return cfgArticles[0]
+const getArticleById = (id) => {
+    let target
+    for(let i = 0; i < cfgArticles.length; i++){
+        const cfg = cfgArticles[i]
+        if(cfg.id == id){
+            target = cfg 
+            break
+        }
+    }
+    return target
 }
 
 export {
     cfgMainIndex,
     cfgArticles,
     getArticlesByIndex,
-    getfirstMainIndex,
-    getFirstArticle,
+    getFirstMainIndex,
+    getArticleById,
 }

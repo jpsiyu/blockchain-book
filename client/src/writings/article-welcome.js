@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paragraph } from '../article-widget'
+import { Article, Abstract, Paragraph } from '../article-widget'
 
 class ArticleWelcome extends React.Component {
     constructor(props) {
@@ -7,50 +7,19 @@ class ArticleWelcome extends React.Component {
     }
 
     render() {
-        return <div>
-            <h2>Welcome visit Blockchain Book</h2>
+        return <Article>
+            <Abstract>欢迎阅读本小册子</Abstract>
             <Paragraph>
-                Hemingway watched him go, and then turned to me.
-                “After you finish a book, you know, you’re dead,”
-                he said moodily. “But no one knows you’re dead.
-                All they see is the irresponsibility that comes
-                in after the terrible responsibility of writing.”
-                He said he felt tired but was in good shape physically;
-                he had brought his weight down to two hundred and eight,
-                and his blood pressure was down too. He had considerable
-                rewriting to do on his book, and he was determined to
-                keep at it until he was absolutely satisfied. “They can’t
-                yank novelist like they can pitcher,” he said. “Novelist
-                has to go the full nine, even if it kills him.”
+                Blockchain，是一系列技术融合创造的结果。如密码学，分布式系统，电子货币等，每一项
+                技术都对应着深刻的专业知识，各自有着广泛的应用基础。而Blockchain，无论是技术复杂度，
+                或是应用广泛性，都将提升到更高的一个层次。它被视为“下一代互联网”。
             </Paragraph>
             <Paragraph>
-                We were joined by Hemingway’s wife, Mary, a small, energetic,
-                cheerful woman with close-cropped blond hair, who was wearing
-                a long, belted mink coat. A porter pushing a cart heaped with
-                luggage followed her. “Papa, everything is here,” she said to
-                Hemingway. “Now we ought to get going, Papa.” He assumed the
-                air of a man who was not going to be rushed. Slowly, he counted
-                the pieces of luggage. There were fourteen, half of them, Mrs.
-                Hemingway told me, extra-large Valpaks designed by her husband
-                and bearing his coat of arms, also designed by him—a geometric
-                design. When Hemingway had finished counting, his wife suggested
-                that he tell the porter where to put the luggage. Hemingway told
-                the porter to stay right there and watch it; then he turned to
-                his wife and said, “Let’s not crowd, honey. Order of the day is
-                to have a drink first.”
+                为了更好地理解它，运用它；为了加快属于它的时代的来临，本册子收纳，吸取和整理网络
+                上优秀的文章，书籍及讨论，尝试用更加通俗的表达，使得它的理念得以更广泛地传播。由于
+                专业上的限制，本册子将以Ethereum blockchain为主线，对个主题一一展开阐述。
             </Paragraph>
-            <Paragraph>
-                A few statements like these would clear up matters. Newspaper readers 
-                would then realize that the reason the first man lived twenty years 
-                was because he had carefully preserved his health through abstaining 
-                from vacations. The reason that the other splendid fellows had dropped 
-                like ripened grapefruit at the end of their thirty years, mayoralty t
-                erms or lifetimes was the fact that they had never visited such places 
-                as Lake Screaming Water or picturesque Bum View. Just a few seasons at 
-                Giggling Perch Inn or the New Nokomis, American plan, would have cut 
-                them off like flies in the pride of their young manhood.
-            </Paragraph>
-        </div>
+        </Article>
     }
 }
 
