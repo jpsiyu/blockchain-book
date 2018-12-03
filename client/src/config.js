@@ -3,7 +3,7 @@ import ArticleWhat from './writings/article-what'
 
 const cfgMainIndex = [
     { id: 1, name: '前言' },
-    { id: 2, name: 'Ethereum定义' },
+    { id: 2, name: 'Ethereum' },
 ]
 
 const cfgArticles = [
