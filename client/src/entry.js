@@ -48,8 +48,12 @@ class Entry extends React.Component {
     }
 
     initArticle() {
-        const cfg = getArticleById(1)
-        app.eventMgr.dispatch(MacroEvent.SelectArticle, cfg)
+        const timeout = 300
+        setTimeout(() => {
+            const cfg = getArticleById(4)
+            app.eventMgr.dispatch(MacroEvent.SelectArticle, cfg)
+
+        }, (timeout));
     }
 
     onSelectArticle(args) {

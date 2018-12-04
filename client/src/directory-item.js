@@ -77,8 +77,8 @@ class DirectoryExpendItem extends React.Component {
     }
 
     componentWillUnmount() {
-        app.eventMgr.unscribe(MacroEvent.SelectMainIndex, this)
-        app.eventMgr.unscribe(MacroEvent.SelectArticle, this)
+        app.eventMgr.unsubscribe(MacroEvent.SelectMainIndex, this)
+        app.eventMgr.unsubscribe(MacroEvent.SelectArticle, this)
     }
 
     receiveMainIndexEvent(cfg) {

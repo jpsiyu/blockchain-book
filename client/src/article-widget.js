@@ -48,4 +48,16 @@ class Indentation extends React.Component {
     }
 }
 
-export { Article, Abstract, Paragraph, Indentation }
+class ExplainImage extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return <div className='explain-image'>
+            <p>{this.props.children}</p>
+        </div>
+    }
+}
+
+export { Article, Abstract, Paragraph, Indentation, ExplainImage }

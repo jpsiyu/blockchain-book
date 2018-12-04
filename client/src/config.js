@@ -1,5 +1,7 @@
 import ArticleWelcome from './writings/article-welcome'
 import ArticleWhat from './writings/article-what'
+import ArticleBasic from './writings/article-basic'
+import ArticleClient from './writings/article-client'
 
 const cfgMainIndex = [
     { id: 1, name: '前言' },
@@ -9,6 +11,8 @@ const cfgMainIndex = [
 const cfgArticles = [
     { id: 1, mainIndex: 1, name: '欢迎', article: ArticleWelcome },
     { id: 2, mainIndex: 2, name: 'Ethereum是什么', article: ArticleWhat },
+    { id: 3, mainIndex: 2, name: 'Ethereum基础', article: ArticleBasic },
+    { id: 4, mainIndex: 2, name: 'Ethereum客户端', article: ArticleClient },
 ]
 
 const getArticlesByIndex = (index) => {
@@ -26,10 +30,10 @@ const getFirstMainIndex = () => {
 
 const getArticleById = (id) => {
     let target
-    for(let i = 0; i < cfgArticles.length; i++){
+    for (let i = 0; i < cfgArticles.length; i++) {
         const cfg = cfgArticles[i]
-        if(cfg.id == id){
-            target = cfg 
+        if (cfg.id == id) {
+            target = cfg
             break
         }
     }

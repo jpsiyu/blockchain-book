@@ -8,7 +8,6 @@ class ArticleWhat extends React.Component {
 
     render() {
         return <Article>
-            <Abstract>Ethereum是什么</Abstract>
             <Paragraph>
                 Ethereum俗称“全球计算机“。从计算机科学的角度来看，它本质上是一台状态机，拥有无限种状态，
                 每一次状态的变化只能由一个特定的对象完成，这些对象运行在虚拟机当中。这就是它最基本的构成。

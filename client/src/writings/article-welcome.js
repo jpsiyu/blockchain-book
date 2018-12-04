@@ -17,7 +17,7 @@ class ArticleWelcome extends React.Component {
             <Paragraph>
                 为了更好地理解它，运用它；为了加快属于它的时代的来临，本册子收纳，吸取和整理网络
                 上优秀的文章，书籍及讨论，尝试用更加通俗的表达，使得它的理念得以更广泛地传播。由于
-                专业上的限制，本册子将以Ethereum blockchain为主线，对个主题一一展开阐述。
+                专业上的限制，本册子将以Ethereum blockchain为主线，对各个主题一一展开阐述。
             </Paragraph>
         </Article>
     }

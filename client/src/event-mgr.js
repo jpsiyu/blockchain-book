@@ -10,7 +10,7 @@ class EventMgr {
         this.dict[event] = eventList
     }
 
-    dispatch(event, argument={}) {
+    dispatch(event, argument = {}) {
         const eventList = this.dict[event] || []
         eventList.forEach((eventInfo, i) => {
             if (!eventInfo.obj)
@@ -20,10 +20,10 @@ class EventMgr {
         })
     }
 
-    unsubscribe(event, obj){
+    unsubscribe(event, obj) {
         const eventList = this.dict[event] || []
         eventList.forEach((eventInfo, i) => {
-            if(eventInfo.obj === obj){
+            if (eventInfo.obj === obj) {
                 eventList.splice(i, 1)
             }
         })

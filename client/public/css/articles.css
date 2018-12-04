@@ -5,6 +5,7 @@
 
 .paragraph{
     padding: 8px 0;
+    white-space: pre-wrap;
 }
 
 .abstract{
@@ -17,4 +18,18 @@
 
 .indentation{
     padding: 0 30px;
+}
+
+.explain-image{
+    padding: 30px;
+}
+
+.explain-image img{
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    .explain-image{
+        padding: 30px 0;
+    }
 }
