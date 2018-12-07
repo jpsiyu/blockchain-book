@@ -50,7 +50,7 @@ class Entry extends React.Component {
     initArticle() {
         const timeout = 300
         setTimeout(() => {
-            const cfg = getArticleById(7)
+            const cfg = getArticleById(8)
             app.eventMgr.dispatch(MacroEvent.SelectArticle, cfg)
 
         }, (timeout));

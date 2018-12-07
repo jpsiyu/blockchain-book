@@ -154,6 +154,8 @@
     .bottom-dir-item{
         margin-bottom: 3px;
         color: gray;
+        white-space: nowrap;
+        overflow: scroll;
     }
 
     .bottom-dir-itemname{
@@ -181,12 +183,14 @@
 }
 
 .paragraph{
-    padding: 8px 0;
+    padding: 12px 0;
     white-space: pre-wrap;
 }
 
 .abstract{
-    padding: 15px 0;
+    padding: 30px 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .paragraph ul{
@@ -209,12 +213,25 @@
     .explain-image{
         padding: 30px 0;
     }
+
+    .abstract{
+        display: flex;
+        justify-content: center;
+    }
+
+    .abstract h2{
+        background-color: rgb(172, 132, 58);
+        color: white;
+        padding: 5px 20px;
+    }
+
 }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
+    line-height: 28px;
 }
 
 .noselect {

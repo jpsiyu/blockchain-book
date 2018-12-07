@@ -27,6 +27,8 @@
     .bottom-dir-item{
         margin-bottom: 3px;
         color: gray;
+        white-space: nowrap;
+        overflow: scroll;
     }
 
     .bottom-dir-itemname{

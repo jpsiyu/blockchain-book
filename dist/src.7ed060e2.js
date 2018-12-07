@@ -24693,6 +24693,61 @@ function (_React$Component) {
 
 var _default = ArticleSecurity;
 exports.default = _default;
+},{"react":"../../node_modules/react/index.js","../article-widget":"../src/article-widget.js"}],"../src/writings/article-token.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _articleWidget = require("../article-widget");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var ArticleToken =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ArticleToken, _React$Component);
+
+  function ArticleToken(props) {
+    _classCallCheck(this, ArticleToken);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ArticleToken).call(this, props));
+  }
+
+  _createClass(ArticleToken, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_articleWidget.Article, null, _react.default.createElement(_articleWidget.Paragraph, null, "Token\u6D3E\u751F\u4E8E\u65E7\u5355\u8BCDtacen\uFF0C\u610F\u4E3A\u6807\u8BB0\uFF0C\u7B26\u53F7\u3002\u901A\u5E38\u7528\u5B83\u4EE3\u8868\u79C1\u4EBA\u53D1\u884C\u7684\uFF0C \u6709\u7740\u7279\u6B8A\u7528\u9014\u7684\uFF0C\u4EE3\u8868\u4E00\u4E9B\u4E0D\u662F\u90A3\u4E48\u91CD\u8981\u7684\u4E1C\u897F\u7684\u4EF7\u503C\uFF0C\u7C7B\u4F3C\u8D27\u5E01\u7684\u6837\u5B50\u3002 \u4F8B\u5982\u90AE\u7968\uFF0C\u6D17\u8863\u5E97\u7968\uFF0C\u6E38\u620F\u5E01\u7B49\u7B49\u3002Blockchain\u5BF9token\u8D4B\u4E88\u4E86\u65B0\u7684\u610F\u4E49\uFF0C \u5B83\u662F\u8D44\u4EA7\uFF0C\u73B0\u91D1\uFF0C\u6743\u76CA\u5728blockchain\u7684\u62BD\u8C61\u4EE3\u8868\u3002\u8FC7\u53BB\u7269\u7406\u7248\u672C\u7684token \u6709\u5F88\u591A\u9650\u5236\uFF0C\u53EA\u80FD\u7528\u4E8E\u67D0\u4E00\u79CD\u751F\u610F\uFF0C\u5728\u67D0\u4E2A\u7EC4\u7EC7\u5185\u6709\u6548\uFF0C\u6709\u5730\u57DF\u9650\u5236\uFF0C\u901A\u5E38 \u53EA\u6709\u4E00\u4E2A\u7528\u9014\uFF0C\u4EA4\u6613\u56F0\u96BE\u3002Blockchain\u98A0\u8986\u4E86\u8FC7\u5F80token\u7684\u5B9A\u4E49\uFF0C\u5B83\u5E38\u5E38 \u62E5\u6709\u591A\u79CD\u7528\u9014\uFF0C\u5168\u7403\u5316\u901A\u7528\uFF0C\u4EA4\u6613\u65B9\u4FBF\uFF0C\u53EF\u4EE5\u4E0E\u5176\u5B83\u8D27\u5E01\u5151\u6362\uFF0C\u5728\u591A\u4E2A\u5E02\u573A \u6D41\u901A\uFF0C\u518D\u4E5F\u4E0D\u662F\u4EC0\u4E48\u6CA1\u5565\u7528\u7684\u4E1C\u897F\u4E86\u3002"), _react.default.createElement(_articleWidget.Abstract, null, "Token\u5982\u4F55\u4F7F\u7528"), _react.default.createElement(_articleWidget.Paragraph, null, "Token\u6700\u660E\u663E\u7684\u7528\u9014\u662F\u4F5C\u4E3A\u4E00\u79CD\u79C1\u4EBA\u7535\u5B50\u8D27\u5E01\uFF0C\u4F46\u8FD9\u53EA\u662F\u5B83\u6700\u57FA\u672C\u7684\u529F\u80FD\uFF0C \u4EBA\u4EEC\u53EF\u4EE5\u5BF9\u5B83\u7F16\u7A0B\uFF0C\u8D4B\u4E88\u66F4\u591A\u7684\u529F\u80FD\uFF0C\u6EE1\u8DB3\u66F4\u591A\u7684\u9700\u6C42\u3002\u4F8B\u5982\uFF0CToken\u53EF\u4EE5 \u540C\u65F6\u62E5\u6709\u6295\u7968\u6743\uFF0C\u4EA7\u6743\uFF0C\u8D44\u6E90\u7684\u62E5\u6709\u6743\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u8D27\u5E01"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u4F5C\u4E3A\u662F\u4E00\u79CD\u8D27\u5E01\uFF0C\u5176\u4EF7\u503C\u7531\u79C1\u7528\u5B83\u7684\u79C1\u4EBA\u4EA4\u6613\u51B3\u5B9A"), _react.default.createElement(_articleWidget.Paragraph, null, "\u8D44\u6E90"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u4F5C\u4E3A\u4E00\u79CD\u8D44\u6E90\uFF0C\u5728\u5F00\u653E\u7684\u5E02\u573A\u4E2D\u88AB\u5236\u4F5C\u548C\u4EA4\u6613\uFF0C\u4F8B\u5982\uFF0CCPU\uFF0C\u786C\u76D8 token\u53EF\u4EE5\u88AB\u89C6\u4E3A\u7F51\u7EDC\u4E2D\u7684\u8BA1\u7B97\u8D44\u6E90"), _react.default.createElement(_articleWidget.Paragraph, null, "\u8D44\u4EA7"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u4EE3\u8868\u56FA\u5B9A\u8D44\u4EA7\u6216\u8005\u91D1\u878D\u8D44\u4EA7\u7684\u6240\u6709\u6743\uFF0C\u5982\u9EC4\u91D1\uFF0C\u4E0D\u52A8\u4EA7\uFF0C\u6C7D\u8F66\uFF0C \u77F3\u6CB9\uFF0C\u80FD\u6E90\u7B49\u7B49"), _react.default.createElement(_articleWidget.Paragraph, null, "\u4F7F\u7528\u6743"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u4EE3\u8868\u4E00\u79CD\u7269\u54C1\u7684\u4F7F\u7528\u6743\uFF0C\u4F8B\u5982\u8BBA\u575B\uFF0C\u7F51\u7AD9\uFF0C\u9152\u5E97\uFF0C\u79DF\u8D41\u6C7D\u8F66\u7B49\u7B49\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u6743\u76CA"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u4EE3\u8868\u4E00\u5BB6\u516C\u53F8\u7684\u80A1\u6743"), _react.default.createElement(_articleWidget.Paragraph, null, "\u6295\u7968\u6743"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u4EE3\u8868\u67D0\u4E2A\u673A\u6784\u7684\u6295\u7968\u6743"), _react.default.createElement(_articleWidget.Paragraph, null, "\u6536\u85CF\u54C1"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u4EE3\u8868\u827A\u672F\u6536\u85CF\u54C1"), _react.default.createElement(_articleWidget.Paragraph, null, "\u8EAB\u4EFD"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u4EE3\u7F16\u4E00\u79CD\u8EAB\u4EFD"), _react.default.createElement(_articleWidget.Paragraph, null, "\u8BC1\u660E"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u4EE3\u8868\u67D0\u4E9B\u5173\u7CFB\u7684\u8BC1\u660E\uFF0C\u7ED3\u5A5A\u8BC1\uFF0C\u51FA\u751F\u8BC1\uFF0C\u5927\u5B66\u5B66\u4F4D\u7B49\u7B49"), _react.default.createElement(_articleWidget.Paragraph, null, "\u5DE5\u5177"), _react.default.createElement(_articleWidget.Indentation, null, "Token\u53EF\u4EE5\u7528\u4E8E\u8BBF\u95EE\u67D0\u4E9B\u670D\u52A1\uFF0C\u6216\u8005\u7528\u4E8E\u652F\u4ED8"), _react.default.createElement(_articleWidget.Paragraph, null, "\u4E00\u79CDtoken\u5F80\u5F80\u5177\u6709\u4E0A\u8FF0\u7684\u591A\u4E2A\u529F\u80FD\uFF0C\u6709\u65F6\u5019\u8FD9\u4E9B\u529F\u80FD\u4E4B\u95F4\u96BE\u4EE5\u533A\u5206\uFF0C\u5E38\u5E38\u662F \u76F8\u4E92\u8054\u7CFB\u7684\u3002\u5C31\u50CF\u9A7E\u7167\uFF0C\u5B83\u8BC1\u660E\u4E86\u8BE5\u4EBA\u62E5\u6709\u9A7E\u9A76\u7684\u6280\u672F\uFF0C\u540C\u65F6\u4E5F\u662F\u8BE5\u4EBA\u7684\u8EAB\u4EFD \u8BC1\u660E\u3002\u5728\u7535\u5B50token\u7684\u4E16\u754C\u91CC\uFF0C\u8FD9\u4E9B\u529F\u80FD\u662F\u53EF\u4EE5\u72EC\u7ACB\u5F00\u53D1\u7684"), _react.default.createElement(_articleWidget.Abstract, null, "Token\u4E0E\u53EF\u66FF\u4EE3\u6027"), _react.default.createElement(_articleWidget.Paragraph, null, "\u7ECF\u6D4E\u5B66\u4E0A\uFF0C\u53EF\u66FF\u4EE3\u6027\u662F\u5546\u54C1\u7684\u5C5E\u6027\uFF0C\u5B83\u4F5C\u4E3A\u7279\u5B9A\u7684\u4E2A\u4F53\u662F\u53EF\u4EE5\u7528\u5176\u5B83\u7279\u5B9A\u7684\u4E2A\u4F53 \u53D6\u4EE3\u7684\u3002\u5982\u679C\u6BCF\u4E00\u4E2A\u7279\u5B9A\u7684token\uFF0C\u90FD\u53EF\u4EE5\u7528\u53E6\u5916\u4E00\u4E2Atoken\u6765\u66FF\u4EE3\uFF0C\u800C\u4EF7\u503C\u548C \u529F\u80FD\u6CA1\u6709\u53D1\u751F\u53D8\u5316\uFF0C\u90A3\u4E48\u8FD9\u79CDtoken\u662F\u53EF\u66FF\u4EE3\u6027\u7684\u3002\u5982\u679CToken\u7684\u5386\u53F2\u8F68\u8FF9\u53EF\u4EE5 \u88AB\u8FFD\u8E2A\uFF0C\u90A3\u4E48\u8FD9\u79CDtoken\u5C31\u4E0D\u662F\u53EF\u66FF\u4EE3\u6027\u7684\uFF0C\u4E0D\u540C\u5386\u53F2\u8F68\u8FF9\u7684token\uFF0C\u4EF7\u503C\u548C\u4F5C\u7528 \u4E5F\u8BB8\u4E0D\u76F8\u540C\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u4E0D\u53EF\u66FF\u4EE3token\u901A\u5E38\u4EE3\u8868\u552F\u4E00\u7684\u8D44\u4EA7\uFF0C\u5B83\u4EEC\u4E4B\u95F4\u4E0D\u662F\u5E73\u7B49\u7684\uFF0C\u56E0\u6B64\u4E0D\u80FD\u76F8\u4E92\u66FF\u4EE3\u3002 \u4F8B\u5982\uFF0C\u4EE3\u8868\u68B5\u9AD8\u4E00\u5E45\u753B\u7684token\uFF0C\u8DDF\u4EE3\u8868\u6BD5\u52A0\u7D22\u4E00\u5E45\u753B\u7684token\u662F\u4E0D\u7B49\u7684\uFF0C\u5373\u4F7F \u5B83\u4EEC\u90FD\u5C5E\u4E8E\u540C\u4E00\u4E2A\u827A\u672FToken\u7CFB\u7EDF\u3002\u8457\u540D\u7684Blockchain\u6E38\u620FCryptoKitty\u7684 \u67D0\u4E00\u53EA\u5BA0\u7269\uFF0C\u4E0E\u53E6\u5916\u4E00\u53EA\u5BA0\u7269\u662F\u4E0D\u53EF\u66FF\u6362\u7684\uFF0C\u5C3D\u7BA1\u5B83\u4EEC\u90FD\u5C5E\u4E8E\u8BE5\u6E38\u620F\u91CC\u7684\u6536\u85CF\u54C1\u3002 \u6BCF\u4E2A\u4E0D\u53EF\u66FF\u4EE3token\u90FD\u5BF9\u5E94\u4E00\u4E2A\u552F\u4E00\u7684ID\uFF0C\u4F8B\u5982\u4E00\u4E2A\u552F\u4E00\u7684\u54C8\u5E0C\u503C\u3002"), _react.default.createElement(_articleWidget.Abstract, null, "\u4EA4\u6613\u5BF9\u624B\u98CE\u9669"), _react.default.createElement(_articleWidget.Paragraph, null, "\u4EA4\u6613\u5BF9\u624B\u98CE\u9669\u662F\u6307\u4EA4\u6613\u4E2D\u7684\u53E6\u4E00\u65B9\u53EF\u80FD\u4E0D\u5C65\u884C\u4E49\u52A1\u3002\u591A\u4E8E\u4E24\u4E2A\u4EA4\u6613\u65B9\u7684\u4EA4\u6613\u53EF\u80FD \u9762\u4E34\u66F4\u5927\u7684\u98CE\u9669\u3002\u4E3E\u4E2A\u4F8B\u5B50\uFF0C\u524D\u4E0D\u4E45\u4F60\u628A\u4E00\u5757\u91D1\u5C5E\u5356\u5165\u7ED9\u67D0\u4EBA\uFF0C\u6B64\u523B\u6B63\u62FF\u7740\u4ED6\u5F00 \u7ED9\u4F60\u7684\u62BC\u91D1\u51ED\u8BC1\u3002\u6B64\u4EA4\u6613\u81F3\u5C11\u6709\u4E09\u65B9\uFF0C\u51FA\u552E\u8005\uFF0C\u8D2D\u4E70\u8005\uFF0C\u91D1\u5C5E\u6258\u7BA1\u8005\uFF0C\u5176\u4E2D\u4E00\u65B9 \u4FDD\u7BA1\u8FD9\u5757\u91D1\u5C5E\uFF0C\u5B83\u6210\u4E3A\u4E86\u6B64\u6B21\u4EA4\u6613\u7684\u5C65\u884C\u65B9\uFF0C\u589E\u52A0\u4E86\u4EA4\u6613\u98CE\u9669\u3002\u6258\u7BA1\u4EBA\u7684\u5230\u5E95\u6709 \u6CA1\u6709\u8FD9\u5757\u91D1\u5C5E\uFF1F\u5B83\u80FD\u8BA4\u53EF\u6211\u624B\u4E0A\u7684token\uFF0C\u628A\u91D1\u5C5E\u7ED9\u6211\u5417\uFF1F\u5728\u7535\u5B50token\u4EE3\u8868\u8D44\u4EA7 \u7684\u4EA4\u6613\u5E02\u573A\u91CC\uFF0C\u641E\u660E\u767D\u8C01\u62E5\u6709\u67D0\u4E2A\u8D44\u4EA7\u548C\u6F5C\u5728\u7684\u4EA4\u6613\u89C4\u5219\u662F\u975E\u5E38\u91CD\u8981\u7684\u3002"), _react.default.createElement(_articleWidget.Abstract, null, "Token\u7684\u5185\u90E8\u4EF7\u503C\u4E0E\u5916\u90E8\u4EF7\u503C"), _react.default.createElement(_articleWidget.Paragraph, null, "\u6709\u4E00\u4E9BToken\u4EE3\u8868\u7684\u7535\u5B50\u7269\u54C1\uFF0C\u5176\u4EF7\u503C\u662F\u5728blockchain\u5185\u90E8\u7684\uFF0C\u8FD9\u4E9B\u7535\u5B50\u7269\u54C1 \u7531blockchain\u7684\u4E00\u81F4\u6027\u89C4\u5219\u7BA1\u7406\uFF0C\u5C31\u50CFtoken\u672C\u8EAB\u4E00\u6837\u3002\u8FD9\u91CC\u6709\u4E00\u4E2A\u91CD\u8981\u7684\u610F\u601D\uFF0C token\u4EE3\u7801blockchain\u5185\u90E8\u8D44\u4EA7\u4E0D\u4F1A\u4EA7\u751F\u4EA4\u6613\u5BF9\u624B\u98CE\u9669\u3002\u4F8B\u5982\uFF0C\u4F60\u62E5\u6709CryptoKitty \u91CC\u7684\u67D0\u4E00\u53EA\u5BA0\u7269\uFF0C\u4E0D\u5B58\u5728\u7B2C\u4E09\u5173\u5E2E\u4F60\u6258\u7BA1\u8FD9\u53EA\u5BA0\u7269\uFF0C\u4F60\u76F4\u63A5\u62E5\u6709\u5B83\uFF0Cblockchain \u7684\u4E00\u81F4\u6027\u89C4\u5219\u8BA4\u4E3A\uFF0C\u4F60\u662F\u8BE5\u79C1\u94A5\u7684\u62E5\u6709\u8005\uFF0C\u7B49\u540C\u4E8E\u4F60\u662F\u8BE5\u79C1\u94A5\u63A7\u5236\u7684\u5BA0\u7269\u7684\u62E5\u6709\u8005\uFF0C \u4E0D\u9700\u8981\u7B2C\u4E09\u65B9\u6765\u505A\u8BA4\u8BC1\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u76F8\u5BF9\u7684\u662F\uFF0C\u6709\u4E00\u4E9Btoken\u4EE3\u8868\u7684\u662F\u5916\u90E8\u7684\u8D44\u4EA7\uFF0C\u6BD4\u5982\u623F\u5730\u4EA7\uFF0C\u516C\u53F8\u6295\u7968\u6743\uFF0C\u5546\u6807\u6743\uFF0C \u91D1\u6761\u7B49\uFF0C\u8FD9\u4E9B\u8D44\u4EA7\u7684\u6240\u6709\u6743\u4E0D\u5728blockchain\u5185\u90E8\uFF0C\u800C\u662F\u7531\u6CD5\u5F8B\uFF0C\u89C4\u5B9A\uFF0C\u653F\u7B56\u89C4\u5B9A \u7684\uFF0C\u4E0D\u662Fblockchain\u7684\u4E00\u81F4\u6027\u89C4\u5219\u51B3\u5B9A\u7684\u3002\u6362\u53E5\u8BDD\u8BF4\uFF0C\u53D1\u884C\u8FD9\u79CDtoken\u4F9D\u8D56\u4E8E\u73B0\u5B9E \u751F\u6D3B\u4E2D\u7684\u673A\u6784\uFF0C\u7EC4\u7EC7\uFF0C\u56E0\u6B64\uFF0C\u4F7F\u7528\u8FD9\u79CDtoken\u4F1A\u5B58\u5728\u4EA4\u6613\u98CE\u9669\uFF0C\u53D1\u884C\u8005\u53EF\u80FD\u4E3A\u4E0D\u4F1A \u4E3Atoken\u5151\u6362\u7B49\u4EF7\u7684\u8D44\u4EA7\uFF0C\u5177\u4F53\u7684\u89C4\u5219\u7531\u73B0\u5B9E\u4E16\u754C\u7684\u6CD5\u5F8B\uFF0C\u653F\u7B56\uFF0C\u5236\u5EA6\u63A7\u5236\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u6709\u4E00\u4E9Btoken\u80FD\u591F\u628Ablockchain\u5916\u90E8\u7684\u8D44\u4EA7\u8F6C\u5316\u4E3A\u5185\u90E8\u7BA1\u7406\u7684\u8D44\u4EA7\uFF0C\u4ECE\u800C\u79FB\u9664 \u4EA4\u6613\u98CE\u9669\u3002\u4E3E\u4E2A\u4F8B\u5B50\uFF0C\u5C06\u516C\u53F8\u7684\u80A1\u7968\u6743\uFF0C\u8F6C\u5316\u4E3ADAO\u7EC4\u7EC7\u5177\u6709\u6295\u7968\u6743\u7684token."), _react.default.createElement(_articleWidget.Abstract, null, "Token\u4F5C\u4E3A\u5DE5\u5177\uFF0C\u4F5C\u4E3A\u6743\u76CA"), _react.default.createElement(_articleWidget.Paragraph, null, "Ethereum\u4E0A\u51E0\u4E4E\u6240\u6709\u7684\u9879\u76EE\u90FD\u53D1\u578Btoken\uFF0C\u4F46\u662F\u4ED6\u4EEC\u771F\u7684\u9700\u8981\u5417\uFF1F\u4F7F\u7528Token\u6709 \u6CA1\u6709\u4E0D\u5229\u4E4B\u5904\u5462\uFF1F\u6216\u8005\u5C31\u50CF\u4EBA\u4E48\u6B22\u547C\u7684\uFF1A\u5C06\u6240\u6709\u4E1C\u897Ftoken\u5316\uFF1F\u539F\u5219\u4E0A\uFF0Ctoken\u662F \u4E00\u4E2A\u7BA1\u7406\u5DE5\u5177\uFF0C\u5B9E\u9645\u4E0A\uFF0Cblockchain\u5E73\u53F0\u6B63\u5728\u878D\u5165\u5230\u793E\u4F1A\u6846\u67B6\u4E4B\u4E2D\uFF0C\u6709\u5F88\u591A\u5730\u65B9 \u9700\u8981\u4E92\u76F8\u9002\u5E94\u8C03\u6574\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u5728\u4E00\u4E2Ablockchain\u9879\u76EE\u4E2D\uFF0Ctoken\u6709\u4E24\u79CD\u4E3B\u8981\u5C5E\u6027\uFF0C\u529F\u80FD\u6027\u7684token\u4E0E\u6743\u76CA\u6027\u7684 token\u3002\u6709\u65F6\u5019\u540C\u65F6\u662F\u529F\u80FD\u6027\u4E0E\u6743\u76CA\u6027\u7684\u3002\u529F\u80FD\u6027token\uFF0C\u4E00\u822C\u7528\u6765\u8BBF\u95EE\u67D0\u4E9B \u670D\u52A1\uFF0C\u4F7F\u7528\u67D0\u79CD\u5E94\u7528\uFF0C\u4F7F\u7528\u67D0\u79CD\u8D44\u6E90\u6240\u9700\u8981\u7684\u3002\u6743\u76CA\u6027\u7684token\uFF0C\u4E00\u822C\u4EE3\u8868\u67D0\u79CD \u673A\u6784\uFF0C\u67D0\u4E9B\u516C\u53F8\u6240\u6709\u6743\u7684\u5360\u6BD4\uFF0C\u4E5F\u53EF\u4EE5\u662F\u5229\u606F\u4E0E\u5206\u7EA2\u7684\u6240\u6709\u6743\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u529F\u80FD\u6027token\u4F1A\u7ED9\u521D\u521B\u516C\u53F8\u5E26\u6765\u5DE8\u5927\u7684\u98CE\u9669\u548C\u969C\u788D\u3002\u6BCF\u4E2A\u521B\u65B0\u90FD\u4EE3\u8868\u8FD9\u98CE\u9669\uFF0C\u63A5\u53D7 \u5E02\u573A\u7684\u6D17\u793C\uFF0C\u8D70\u5C11\u4EBA\u8D70\u7684\u8DEF\uFF0C\u5B64\u72EC\u7684\u8DEF\u3002\u5982\u679C\u8D70\u6280\u672F\u521B\u65B0\u7684\u8DEF\uFF0C\u6BD4\u5982\u5728P2P\u7F51\u7EDC \u4E0A\u5F00\u53D1\u5E94\u7528\u670D\u52A1\uFF0C\u66F4\u662F\u4E00\u6761\u5B64\u72EC\u5F97\u5F88\u7684\u8DEF\u3002\u53D1\u884C\u529F\u80FD\u6027\u7684token\uFF0C\u8BA9\u4EBA\u6C11\u63A5\u53D7 \u8FD9\u79CDtoken\u6765\u4F7F\u7528\u4F60\u7684\u670D\u52A1\uFF0C\u771F\u7684\u662F\u98CE\u9669\u5F88\u5927\uFF0C\u963B\u788D\u91CD\u91CD\u3002"), _react.default.createElement(_articleWidget.Abstract, null, "Ethereum\u4E0A\u7684token"), _react.default.createElement(_articleWidget.Paragraph, null, "Blockchain token\u5728Ethereum\u51FA\u73B0\u4E4B\u524D\u5DF2\u7ECF\u5B58\u5728\uFF0C\u6700\u65E9\u7684blockchain\u8D27\u5E01 \u6BD4\u7279\u5E01\u5C31\u662F\u4E00\u79CDtoken\u3002\u7136\u800C\uFF0CEthereum\u4E0A\u9996\u4E2Atoken\u6807\u51C6\u7684\u53D1\u5E03\uFF0C\u5BFC\u81F4\u4E86token \u7206\u53D1\u5F0F\u7684\u51FA\u73B0\u3002Ethereum\u4E0A\u7684token\u4E0D\u7B49\u4E8Eether, \u6BCF\u4E2A\u8D26\u6237\u62E5\u6709\u591A\u5C11ether\u662F \u534F\u8BAE\u5C42\u63A7\u5236\u7BA1\u7406\u7684\uFF0C\u800Ctoken\u7684\u6570\u76EE\u662F\u7531\u76F8\u5BF9\u5E94\u7684smart contract\u7BA1\u7406\u7684\u3002Token \u4E00\u65E6\u53D1\u578B\uFF0C\u76F8\u5BF9\u5E94\u7684smart contract\u63A7\u5236\u7740\u4E00\u5207\uFF0C\u5305\u62EC\u6240\u6709\u6743\uFF0C\u4F7F\u7528\u6743\u7B49\u7B49\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u9996\u4E2Atoken\u6807\u51C6\u7531Fabian Vogelsteller\u57282015\u5E74\u9000\u51FA\uFF0C\u540D\u4E3AERC20\u3002\u76EE\u524D\u7EDD \u5927\u90E8\u5206\u7684token\u90FD\u662F\u4F9D\u636EERC20\u6807\u51C6\u5F00\u53D1\u7684\u3002ERC20\u6807\u51C6\u5F00\u53D1\u7684token\u662F\u53EF\u66FF\u4EE3\u7684\uFF0C \u6BCF\u4E2Atoken\u7684\u4E00\u4E2A\u57FA\u672C\u5355\u5143\u4E0E\u5176\u5B83\u5355\u5143\u53EF\u4EE5\u4E92\u6362\uFF0C\u4E0D\u5B58\u5728\u7279\u6B8A\u6027\u3002ERC20\u5B9A\u4E49\u4E86\u4E00 \u7CFB\u5217\u7684\u63A5\u53E3\uFF0C\u8981\u6C42token\u5F00\u53D1\u5FC5\u987B\u5B9E\u73B0\u8FD9\u4E9B\u63A5\u53E3\uFF0C\u4ECE\u800C\u4F7F\u5404\u79CDtoken\u5728\u4F7F\u7528\u4E0A\u90FD\u662F \u4E00\u6837\u7684\u3002\u5177\u4F53\u6765\u8BF4\uFF0C\u5FC5\u987B\u5B9E\u73B0\u4E0B\u5217\u7684\u51FD\u6570\u548C\u4E8B\u4EF6\uFF1A"), _react.default.createElement(_articleWidget.Paragraph, null, "totalSuppy"), _react.default.createElement(_articleWidget.Indentation, null, "\u8FD4\u56DE\u5F53\u524D\u6240\u6709token\u7684\u6570\u76EE"), _react.default.createElement(_articleWidget.Paragraph, null, "balanceOf"), _react.default.createElement(_articleWidget.Indentation, null, "\u8F93\u5165\u5730\u5740\uFF0C\u8FD4\u56DE\u5BF9\u5E94\u7684token\u7684\u6570\u76EE"), _react.default.createElement(_articleWidget.Paragraph, null, "transfer"), _react.default.createElement(_articleWidget.Indentation, null, "\u8F93\u5165\u5730\u5740\u548C\u6570\u91CF\uFF0C\u4ECE\u53D1\u8D77\u8FD9\u4E2A\u4EA4\u6613\u7684\u5730\u5740\uFF0C\u5C06\u76F8\u5E94\u6570\u91CF\u7684token\u8F6C\u5230\u53C2\u6570\u5730\u5740"), _react.default.createElement(_articleWidget.Paragraph, null, "transferFrom"), _react.default.createElement("innerHeight", null, "\u8F93\u5165\u8F6C\u51FA\u5730\u5740\uFF0C\u8F6C\u5165\u5730\u5740\u548C\u6570\u91CF\uFF0C\u5C06token\u4ECE\u8F6C\u51FA\u5730\u5740\u8F6C\u5230\u8F6C\u5165\u5730\u5740"), _react.default.createElement(_articleWidget.Paragraph, null, "approve"), _react.default.createElement(_articleWidget.Indentation, null, "\u8F93\u5165\u5730\u5740\u548C\u6570\u91CF\uFF0C\u6279\u51C6\u8BE5\u5730\u5740\u4ECE\u81EA\u8EAB\u7684\u8D26\u6237\u8F6C\u79FB\u4E0D\u8D85\u8FC7\u6307\u5B9A\u6570\u76EE\u7684token"), _react.default.createElement(_articleWidget.Paragraph, null, "allowance"), _react.default.createElement(_articleWidget.Indentation, null, "\u8F93\u5165\u62E5\u6709\u8005\u5730\u5740\u548C\u4F7F\u7528\u8005\u5730\u5740\uFF0C\u8FD4\u56DE\u4F7F\u7528\u8005\u8FD8\u80FD\u4ECE\u62E5\u6709\u8005\u90A3\u91CC\u83B7\u5F97\u591A\u5C11token"), _react.default.createElement(_articleWidget.Paragraph, null, "Transfer"), _react.default.createElement(_articleWidget.Indentation, null, "\u8F6C\u8D26\u6210\u529F\u53D1\u51FA\u7684\u4E8B\u4EF6"), _react.default.createElement(_articleWidget.Paragraph, null, "Approval"), _react.default.createElement(_articleWidget.Indentation, null, "approve\u8C03\u7528\u6210\u529F\u89E6\u53D1\u7684\u4E8B\u4EF6"), _react.default.createElement(_articleWidget.Paragraph, null, "ERC20\u53EF\u9009\u62E9\u5B9E\u73B0\u7684\u51FD\u6570\u6709\u4EE5\u4E0B"), _react.default.createElement(_articleWidget.Paragraph, null, "name"), _react.default.createElement(_articleWidget.Indentation, null, "\u8FD4\u56DEtoken\u7684\u540D\u5B57"), _react.default.createElement(_articleWidget.Paragraph, null, "symbol"), _react.default.createElement(_articleWidget.Indentation, null, "\u8FD4\u56DE\u4EE3\u8868\u8BE5token\u7684\u7B26\u53F7"), _react.default.createElement(_articleWidget.Paragraph, null, "decimals"), _react.default.createElement(_articleWidget.Indentation, null, "\u5C0F\u6570\u4F4D\uFF0C\u4F8B\u5982\uFF0C\u8D26\u6237\u6570\u76EE\u662F1000\uFF0Cdecimals\u4E3A2\uFF0C\u5B9E\u9645\u662F 1000 / 100 = 10 token"), _react.default.createElement(_articleWidget.Abstract, null, "ERC20\u5B58\u5728\u7684\u95EE\u9898"), _react.default.createElement(_articleWidget.Paragraph, null, "ERC20\u6807\u51C6\u7684\u8BDE\u751F\uFF0C\u4F7F\u5F97token\u7206\u53D1\u5F0F\u51FA\u73B0\uFF0C\u5E7F\u6CDB\u7528\u4E8E\u65B0\u529F\u80FD\u7684\u5F00\u53D1\u4E0E\u7B79\u8D44\u3002 \u7136\u800C\u4E5F\u66B4\u9732\u9664\u4E86token\u81EA\u8EAB\u7684\u4E00\u4E9B\u95EE\u9898\u3002\u9996\u5148\uFF0C\u4E0D\u540C\u4E8Eether\uFF0Cether\u7684\u4F20\u8F93 \u53D1\u751F\u4E0E\u4E00\u4E2A\u4EA4\u6613\u4E4B\u4E2D\uFF0C\u76EE\u7684\u5730\u662F\u53E6\u5916\u4E00\u4E2A\u8D26\u6237\u5730\u5740\uFF0Ctoken\u7684\u4F20\u8F93\u53D1\u751F\u5728\u8FD0\u884C token\u7684contract\u7A0B\u5E8F\u72B6\u6001\u4E4B\u4E2D\uFF0C\u76EE\u7684\u5730\u4E5F\u662F\u8FD9\u4E2Acontract\u7684state\uFF0C\u4E0D\u662F token\u63A5\u53D7\u8005\u7684\u5730\u5740\u3002Token\u7684\u4ECE\u4E00\u4E2A\u4EBA\uFF0C\u8F6C\u79FB\u5230\u53E6\u5916\u4E00\u4E2A\u4EBA\uFF0C\u5E76\u6CA1\u6709\u4EA4\u6613 \u6D88\u606F\u53D1\u9001\u7ED9\u7B2C\u4E8C\u4E2A\u4EBA\uFF0C\u4EC5\u4EC5\u4FEE\u6539\u4E86\u7B2C\u4E8C\u4E2A\u4EBA\u5728token contract\u4E2D\u7684\u72B6\u6001\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "\u73B0\u5B9E\u751F\u6D3B\u4E2D\uFF0C\u4EBA\u4EEC\u4F1A\u56DE\u8DDF\u8E2A\u81EA\u5DF1\u5728\u6240\u6709contract\u4E2Dtoken\u7684\u8D44\u91D1\u72B6\u51B5\uFF0C\u9664\u4E86\u4E00\u4E9B \u5E38\u7528\u7684token\u5F97\u5230\u5173\u6CE8\uFF0C\u5176\u5B83\u7684\u5927\u90E8\u5206\u5C31\u50CF\u5783\u573E\u90AE\u4EF6\u4E00\u6837\u3002Token contract\u81EA\u52A8 \u4E3A\u7528\u6237\u4EEC\u521B\u5EFA\u7528\u6237\uFF0C\u662F\u4E3A\u4E86\u5438\u5F15\u4ED6\u4EEC\u4F7F\u7528\uFF0C\u5982\u679C\u4E00\u4E2A\u8D26\u53F7\u4F7F\u7528\u65F6\u95F4\u5F88\u957F\uFF0C\u5F88\u6709\u53EF\u80FD \u4E0E\u4E4B\u5173\u8054\u7740\u4E00\u5927\u63A8\u65E0\u7528\u7684token\u3002"), _react.default.createElement(_articleWidget.Paragraph, null, "Token\u7684\u884C\u4E3A\u4E0Eether\u4E5F\u4E0D\u540C\uFF0C\u5728contract\u4E2D\uFF0Cether\u901A\u8FC7send\u51FD\u6570\u53D1\u9001\uFF0C\u901A\u8FC7 payable\u51FD\u6570\u63A5\u6536;token\u4F7F\u7528contract\u5B9E\u73B0\u7684transfer, apporve\u7B49\u51FD\u6570 \u8F6C\u79FB\uFF0C\u4E0D\u4F1A\u89E6\u53D1\u81EA\u8EAB\u7684payable\u51FD\u6570\u3002\u53E6\u5916\uFF0Cether\u7684\u8F6C\u79FB\u9700\u8981\u7528ether\u6765\u652F\u4ED8 gas\uFF0C\u800C\u8F6C\u79FBtoken\u4E5F\u9700\u8981ether\u6765\u652F\u4ED8gas\uFF0C\u4E0D\u80FD\u7528token\u6765\u652F\u4ED8gas\uFF0C\u5728\u7528\u6237 \u4F53\u9A8C\u4E0A\u7565\u5FAE\u522B\u626D\u3002"), _react.default.createElement(_articleWidget.Abstract, null, "Token\u4E0EICO"), _react.default.createElement(_articleWidget.Paragraph, null, "\u6240\u6709\u6280\u672F\u521A\u521A\u5F00\u59CB\u7684\u9636\u6BB5\uFF0C\u7B2C\u4E00\u6279\u4EA7\u54C1\uFF0C\u516C\u53F8\uFF0C\u51E0\u4E4E\u90FD\u4F1A\u5931\u8D25\uFF0C\u6709\u4E00\u4E9B\u5931\u8D25\u7684 \u975E\u5E38\u58EE\u89C2\uFF0C\u76EE\u524D\u5F88\u591Atoken\u662F\u901A\u8FC7\u8BC8\u9A97\uFF0C\u4F20\u9500\uFF0C\u9493\u9C7C\u7B49\u624B\u6BB5\u9A97\u94B1\u7684\u3002\u5404\u79CD\u75AF\u72C2 ICO\uFF0C\u5173\u952E\u662F\u8BA9\u4EBA\u4EEC\u76F8\u4FE1\u5B83\u7684\u672A\u6765\u4E00\u7247\u5149\u660E\uFF0C\u7136\u800C\uFF0C\u6539\u53D8\u672A\u6765\u7684\uFF0C\u5C06\u4F1A\u662FICO\u4E0B\u9762 \u7684\u5E73\u53F0\u548C\u6807\u51C6\u3002"));
+    }
+  }]);
+
+  return ArticleToken;
+}(_react.default.Component);
+
+var _default = ArticleToken;
+exports.default = _default;
 },{"react":"../../node_modules/react/index.js","../article-widget":"../src/article-widget.js"}],"../src/config.js":[function(require,module,exports) {
 "use strict";
 
@@ -24715,6 +24770,8 @@ var _articleTransaction = _interopRequireDefault(require("./writings/article-tra
 
 var _articleSecurity = _interopRequireDefault(require("./writings/article-security"));
 
+var _articleToken = _interopRequireDefault(require("./writings/article-token"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var cfgMainIndex = [{
@@ -24722,7 +24779,10 @@ var cfgMainIndex = [{
   name: '前言'
 }, {
   id: 2,
-  name: 'Ethereum'
+  name: 'Ethereum基础'
+}, {
+  id: 3,
+  name: 'Ethereum进阶'
 }];
 exports.cfgMainIndex = cfgMainIndex;
 var cfgArticles = [{
@@ -24733,17 +24793,17 @@ var cfgArticles = [{
 }, {
   id: 2,
   mainIndex: 2,
-  name: 'Ethereum是什么',
+  name: '是什么',
   article: _articleWhat.default
 }, {
   id: 3,
   mainIndex: 2,
-  name: 'Ethereum基础',
+  name: '主要概念',
   article: _articleBasic.default
 }, {
   id: 4,
   mainIndex: 2,
-  name: 'Ethereum客户端',
+  name: '客户端',
   article: _articleClient.default
 }, {
   id: 5,
@@ -24757,9 +24817,14 @@ var cfgArticles = [{
   article: _articleTransaction.default
 }, {
   id: 7,
-  mainIndex: 2,
+  mainIndex: 3,
   name: 'Smart Contract安全',
   article: _articleSecurity.default
+}, {
+  id: 8,
+  mainIndex: 3,
+  name: 'Token',
+  article: _articleToken.default
 }];
 exports.cfgArticles = cfgArticles;
 
@@ -24795,7 +24860,7 @@ var getArticleById = function getArticleById(id) {
 };
 
 exports.getArticleById = getArticleById;
-},{"./writings/article-welcome":"../src/writings/article-welcome.js","./writings/article-what":"../src/writings/article-what.js","./writings/article-basic":"../src/writings/article-basic.js","./writings/article-client":"../src/writings/article-client.js","./writings/article-wallet":"../src/writings/article-wallet.js","./writings/article-transaction":"../src/writings/article-transaction.js","./writings/article-security":"../src/writings/article-security.js"}],"../src/macro.js":[function(require,module,exports) {
+},{"./writings/article-welcome":"../src/writings/article-welcome.js","./writings/article-what":"../src/writings/article-what.js","./writings/article-basic":"../src/writings/article-basic.js","./writings/article-client":"../src/writings/article-client.js","./writings/article-wallet":"../src/writings/article-wallet.js","./writings/article-transaction":"../src/writings/article-transaction.js","./writings/article-security":"../src/writings/article-security.js","./writings/article-token":"../src/writings/article-token.js"}],"../src/macro.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25279,7 +25344,7 @@ function (_React$Component) {
     value: function initArticle() {
       var timeout = 300;
       setTimeout(function () {
-        var cfg = (0, _config.getArticleById)(7);
+        var cfg = (0, _config.getArticleById)(8);
         app.eventMgr.dispatch(_macro.MacroEvent.SelectArticle, cfg);
       }, timeout);
     }
@@ -25476,7 +25541,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49665" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49637" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

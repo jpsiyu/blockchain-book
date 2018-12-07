@@ -5,20 +5,23 @@ import ArticleClient from './writings/article-client'
 import ArticleWallet from './writings/article-wallet'
 import ArticleTransaction from './writings/article-transaction'
 import ArticleSecurity from './writings/article-security'
+import ArticleToken from './writings/article-token'
 
 const cfgMainIndex = [
     { id: 1, name: '前言' },
-    { id: 2, name: 'Ethereum' },
+    { id: 2, name: 'Ethereum基础' },
+    { id: 3, name: 'Ethereum进阶' },
 ]
 
 const cfgArticles = [
     { id: 1, mainIndex: 1, name: '欢迎', article: ArticleWelcome },
-    { id: 2, mainIndex: 2, name: 'Ethereum是什么', article: ArticleWhat },
-    { id: 3, mainIndex: 2, name: 'Ethereum基础', article: ArticleBasic },
-    { id: 4, mainIndex: 2, name: 'Ethereum客户端', article: ArticleClient },
+    { id: 2, mainIndex: 2, name: '是什么', article: ArticleWhat },
+    { id: 3, mainIndex: 2, name: '主要概念', article: ArticleBasic },
+    { id: 4, mainIndex: 2, name: '客户端', article: ArticleClient },
     { id: 5, mainIndex: 2, name: '钱包', article: ArticleWallet },
     { id: 6, mainIndex: 2, name: '交易', article: ArticleTransaction },
-    { id: 7, mainIndex: 2, name: 'Smart Contract安全', article: ArticleSecurity},
+    { id: 7, mainIndex: 3, name: 'Smart Contract安全', article: ArticleSecurity},
+    { id: 8, mainIndex: 3, name: 'Token', article: ArticleToken},
 ]
 
 const getArticlesByIndex = (index) => {
