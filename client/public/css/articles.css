@@ -14,6 +14,10 @@
     justify-content: flex-start;
 }
 
+.sub-abstract{
+    padding: 12px 0;
+}
+
 .paragraph ul{
     padding: 0 30px;
 }

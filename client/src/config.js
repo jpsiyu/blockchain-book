@@ -6,6 +6,7 @@ import ArticleWallet from './writings/article-wallet'
 import ArticleTransaction from './writings/article-transaction'
 import ArticleSecurity from './writings/article-security'
 import ArticleToken from './writings/article-token'
+import ArticleDApp from './writings/article-dapp'
 
 const cfgMainIndex = [
     { id: 1, name: '前言' },
@@ -20,8 +21,9 @@ const cfgArticles = [
     { id: 4, mainIndex: 2, name: '客户端', article: ArticleClient },
     { id: 5, mainIndex: 2, name: '钱包', article: ArticleWallet },
     { id: 6, mainIndex: 2, name: '交易', article: ArticleTransaction },
-    { id: 7, mainIndex: 3, name: 'Smart Contract安全', article: ArticleSecurity},
-    { id: 8, mainIndex: 3, name: 'Token', article: ArticleToken},
+    { id: 7, mainIndex: 3, name: 'Smart Contract安全', article: ArticleSecurity },
+    { id: 8, mainIndex: 3, name: 'Token', article: ArticleToken },
+    { id: 9, mainIndex: 3, name: 'DApp', article: ArticleDApp },
 ]
 
 const getArticlesByIndex = (index) => {

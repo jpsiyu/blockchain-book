@@ -36,6 +36,18 @@ class Abstract extends React.Component {
     }
 }
 
+class SubAbstract extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return <div className='sub-abstract'>
+            <h3>{this.props.children}</h3>
+        </div>
+    }
+}
+
 class Indentation extends React.Component {
     constructor(props) {
         super(props)
@@ -60,4 +72,11 @@ class ExplainImage extends React.Component {
     }
 }
 
-export { Article, Abstract, Paragraph, Indentation, ExplainImage }
+export { 
+    Article, 
+    Abstract, 
+    SubAbstract,
+    Paragraph, 
+    Indentation, 
+    ExplainImage 
+}
