@@ -7,6 +7,8 @@ import ArticleTransaction from './writings/article-transaction'
 import ArticleSecurity from './writings/article-security'
 import ArticleToken from './writings/article-token'
 import ArticleDApp from './writings/article-dapp'
+import ArticleEVM from './writings/article-evm'
+import ArticleConsensus from './writings/article-consensus'
 
 const cfgMainIndex = [
     { id: 1, name: '前言' },
@@ -24,6 +26,8 @@ const cfgArticles = [
     { id: 7, mainIndex: 3, name: 'Smart Contract安全', article: ArticleSecurity },
     { id: 8, mainIndex: 3, name: 'Token', article: ArticleToken },
     { id: 9, mainIndex: 3, name: 'DApp', article: ArticleDApp },
+    { id: 10, mainIndex: 3, name: 'Ethereum虚拟机', article: ArticleEVM },
+    { id: 11, mainIndex: 3, name: '共识', article: ArticleConsensus },
 ]
 
 const getArticlesByIndex = (index) => {
