@@ -70,6 +70,14 @@
 }.left-dir{
     flex: 1;
     border-right: 5px black solid; 
+    display: flex;
+    flex-direction: column;
+}
+
+.left-dir-panel{
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
 }
 
 .left-dir-title{

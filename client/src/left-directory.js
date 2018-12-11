@@ -1,7 +1,6 @@
 import React from 'react'
 import { cfgMainIndex, getfirstMainIndex, getArticlesByIndex, getFirstArticle } from './config'
 import { DirectoryExpendItem } from './directory-item'
-import { MacroEvent } from './macro'
 
 class LeftDirectory extends React.Component {
     constructor(props) {
@@ -13,7 +12,9 @@ class LeftDirectory extends React.Component {
             <div className='left-dir-title'>
                 <h3>目录</h3>
             </div>
-            {this.renderMainIndex()}
+            <div className='left-dir-panel'>
+                {this.renderMainIndex()}
+            </div>
         </div>
     }
 

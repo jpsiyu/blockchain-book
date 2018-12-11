@@ -25619,8 +25619,6 @@ var _config = require("./config");
 
 var _directoryItem = require("./directory-item");
 
-var _macro = require("./macro");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -25659,7 +25657,9 @@ function (_React$Component) {
         className: "left-dir"
       }, _react.default.createElement("div", {
         className: "left-dir-title"
-      }, _react.default.createElement("h3", null, "\u76EE\u5F55")), this.renderMainIndex());
+      }, _react.default.createElement("h3", null, "\u76EE\u5F55")), _react.default.createElement("div", {
+        className: "left-dir-panel"
+      }, this.renderMainIndex()));
     }
   }, {
     key: "renderMainIndex",
@@ -25683,7 +25683,7 @@ function (_React$Component) {
 
 var _default = LeftDirectory;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","./config":"../src/config.js","./directory-item":"../src/directory-item.js","./macro":"../src/macro.js"}],"../src/index.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","./config":"../src/config.js","./directory-item":"../src/directory-item.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -25770,7 +25770,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49509" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50520" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
