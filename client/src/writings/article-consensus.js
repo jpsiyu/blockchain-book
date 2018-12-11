@@ -33,7 +33,81 @@ class ArticleConsensus extends React.Component {
 
             <Abstract>工作量证明共识模型</Abstract>
             <Paragraph>
-                
+                Blockchain的鼻祖Bitcoin，发明了共识算法，叫做工作量证明，PoW。许多认为，PoW是Bitcoin
+                最重要的支撑。PoW有更通俗的名称，挖矿，而挖矿一词混淆了共识的主要目的。人们通常认为挖矿就是
+                创造新的货币，真实的世界，挖矿就是取出宝贵的金属或者其它资源。实质上，挖矿，或者其它共识模型
+                的真正目的，是保护blockchain的安全，系统越来越分散，越来越多参与者的同时，保持对系统的控制。
+                新挖出的货币，是用来诱惑矿工为系统的安全做贡献的。达到目的得有合适的手段，奖励是手段，系统分
+                散化而保持安全是目的。PoW共识模型同时存在惩罚，参与挖矿要消耗能量。如果参与者不按规则行动，
+                损失的是投入到挖矿的电费。
+            </Paragraph>
+            <Paragraph>
+                Ethereum目前是使用PoW共识模型的blockchain，它使用PoW共识算法的目的也是一致的：在blockchain
+                分散化的同时提供安全的保护。Ethereum的PoW与Bitcoin的PoW有轻微的区别，它叫Ethash。
+            </Paragraph>
+
+            <Abstract>权益证明共识模型</Abstract>
+            <Paragraph>
+                PoW并不是第一个被提出的共识算法，PoW之前，许多研究人员根据金融权益提出了各种共识算法，现在
+                成为权益证明，PoS。从某些角度来看，PoW是PoS的一个可替代品。由于Bitcoin的成功，许多其它的
+                blockchain模仿Bitcoin使用PoW。目前对共识算法大量的研究，使得PoS得以复苏。Ethereum的
+                创立者打算将共识算法由PoW转换到PoS，因为PoW又一个弱点，成为难度炸弹，它导致挖矿的难度会
+                越来越大。目前Ethereum的共识算法是PoW，不久的将来将会切换为PoS，名字叫Casper。过去两年，
+                Casper替代Ethash的安排推迟了好几次。
+            </Paragraph>
+            <Paragraph>
+                PoS算法执行过程大致是这样子的：blockchain持续跟踪一组验证者，任何人都可以发送一笔保证金
+                成为验证者，对于下一个合法的块数据，认证者轮流建议和投票，认证人投票的权重由他们存放的保证
+                金决定。认证人又一个风险，如果他支持的块数据被其它大部分认证人拒绝，该认证人的保证金会被没
+                收。如果认证人的块数据被大家接受了，会根据该认证人保证金的比例给予一笔奖励。PoS通过系统的
+                奖励和惩罚，强迫认证人根据共识规则诚实办事。PoW和PoS最主要的区别是如何惩罚坏人，如果块
+                数据被拒绝，PoW下损失的是挖矿消耗的资源，而PoS下损失保证金。
+            </Paragraph>
+            
+            <Abstract>Ethash，Ethereum的PoW算法</Abstract>
+            <Paragraph>
+                Ethash是Ethereum的PoW算法，Ethash运行时，创建一大组数据，成为有向无环图DAG，根据DAG
+                进行分析。DAG最开始的大小是1G，然后慢慢变大，没过一段时间更新一次，大概是30,000个块数据，
+                125小时更新一次。DAG的目的，是让PoW算法的运行必须要维护一组很大的数据，这组数据还要频繁
+                读取更新。这会导致普通的ASCI硬件设备挖矿的速度比不上使用GPU挖矿的设备，防止某些大的ASCI
+                硬件制作商，或者拥有很多廉价ASCI设备的大公司成为垄断者，降低blockchain的安全保护。
+            </Paragraph>
+            <Paragraph>
+                消费级别的GPU更容易处理PoW算法，意味着可以让世界上更多的人参与挖矿的过程。更多的独立的个体，
+                挖矿的力量就越分散，避免了Bitcoin现在出现的情况，绝大部分的挖矿力量集中在几个巨大的挖矿中
+                心。使用GPU挖矿也导致了一些不好的影响，造成了2017年GPU供应短缺，价格飞涨，还有游戏玩家的
+                抗议。
+            </Paragraph>
+            <Paragraph>
+                对于Ethash对ASCI硬件的不友好，ASCI矿工的威胁目前大部分已经消失了，现在使用ASCI挖矿，需要
+                设计，制作，分布式架构昂贵的硬件。而且Ethereum正在打算把共识算法切换成PoS，许多ASCI矿工
+                可能会把目标转移到别的平台了。
+            </Paragraph>
+            
+            <Abstract>Casper：Ethereum的权益证明共识算法</Abstract>
+            <Paragraph>
+                Casper是Ethereum权益共识算法的名字，它目前仍然处于研究，开发状态。
+            </Paragraph>
+
+            <Abstract>共识算法的原则</Abstract>
+            <Paragraph>
+                共识算法的设计和改进原则可能通过下面这些问题得到更好的理解：
+                <ul>
+                    <li>谁可以修改过去，怎么修改？</li>
+                    <li>谁可以改变未来，怎么改变？</li>
+                    <li>作出这些修改，谁付出最大？</li>
+                    <li>作出这些修改，如果保证和增加分散化的力量？</li>
+                    <li>谁会知道这些修改改变了什么东西，怎么知道？</li>
+                </ul>
+            </Paragraph>
+
+            <Abstract>争议，竞争</Abstract>
+            <Paragraph>
+                现在你可能会问，为什么开发了这么多的共识算法？哪个是最好的？后一个问题的答案，是最近
+                几十年来，在分布式领域的研究核心。它完全根据你对最好的定义。似乎没有哪一个算法在各个
+                方面都是最好的。如果有人说，这个共识算法比那个更好，你应该问清楚，是哪一方面更好。是
+                不可修改性？是最终结果吗？是分散化程度吗？是消耗更少吗？目前还没有确定性的答案。目前
+                在blockchain的投资是巨大的，历史将会给我们答案！
             </Paragraph>
         </Article>
 
