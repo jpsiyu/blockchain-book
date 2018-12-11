@@ -22,6 +22,9 @@
 
     .bottom-dir-right{
         flex: 2;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
     }
 
     .bottom-dir-item{
@@ -32,7 +35,7 @@
     }
 
     .bottom-dir-itemname{
-        padding: 10px 0;
+        padding: 10px 3px;
    }
 
     .bottom-dir-article-item{

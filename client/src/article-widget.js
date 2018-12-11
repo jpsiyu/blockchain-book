@@ -24,6 +24,18 @@ class Paragraph extends React.Component {
     }
 }
 
+class RawText extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return <div className='raw-text'>
+            <p>{this.props.children}</p>
+        </div>
+    }
+}
+
 class Abstract extends React.Component {
     constructor(props) {
         super(props)
@@ -31,10 +43,23 @@ class Abstract extends React.Component {
 
     render() {
         return <div className='abstract'>
-            <h2>{this.props.children}</h2>
+            <p>{this.props.children}</p>
         </div>
     }
 }
+
+class List extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return <ul className='list'>
+            {this.props.children}
+        </ul>
+    }
+}
+
 
 class SubAbstract extends React.Component {
     constructor(props) {
@@ -43,7 +68,7 @@ class SubAbstract extends React.Component {
 
     render() {
         return <div className='sub-abstract'>
-            <h3>{this.props.children}</h3>
+            <p>{this.props.children}</p>
         </div>
     }
 }
@@ -72,11 +97,13 @@ class ExplainImage extends React.Component {
     }
 }
 
-export { 
-    Article, 
-    Abstract, 
+export {
+    Article,
+    Abstract,
     SubAbstract,
-    Paragraph, 
-    Indentation, 
-    ExplainImage 
+    Paragraph,
+    RawText,
+    Indentation,
+    ExplainImage,
+    List,
 }
