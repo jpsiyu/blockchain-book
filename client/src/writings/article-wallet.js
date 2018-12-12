@@ -16,7 +16,7 @@ class ArticleWallet extends React.Component {
                     钱包是存储和管理用户钥匙的系统。每一个钱包都有一个钥匙管理组件，对于某些钱包来说，
                     它只有这个组件，而另外一些钱包，功能强大得多，像浏览器一样，是Ethereum DApp的用户接口。
                     我们把钱包视为私钥的容器，私钥的管理系统。
-            </RawText>
+                </RawText>
             </Paragraph>
 
             <Paragraph>
@@ -26,7 +26,7 @@ class ArticleWallet extends React.Component {
                     这种设计是最简单便捷的。而从私密性来看，则是一场噩梦。任何人都可以轻松地追踪和关联你所有的交易。
                     相对而言，每一次交易都使用不同的私钥，不同的账户，隐私保护是最好的，但是钥匙的管理，备份非常复杂，
                     容易丢失钥匙。恰当的均衡很难，这正是优秀钱包所追求的。
-            </RawText>
+                </RawText>
                 <RawText>
                     很多人会误以为Ethereum钱包里面有ether或者token，实际上钱包里只有钥匙。
                     ether或者token，是记录在Blockchain之中的。用户通过使用私钥对交易签名的方式，
@@ -35,19 +35,19 @@ class ArticleWallet extends React.Component {
                     即可将资金转到对方的账户。所有人都可以对这个交易进行验证，所有人都可以知道这个账户有多少资金，
                     但是他们不知道该账户是属于哪个人的。实际应用当中，检查一个账户有多少资金是一个独立的操作，
                     无需经过钱包的钥匙验证。
-            </RawText>
+                </RawText>
                 <RawText>
                     总体上可以将钱包可以分为两大类，钥匙之间有关联的钱包和无关联的钱包。第一种是非确定性钱包，
                     每个私钥是根据随机数独立产生的，私钥间无任何关联，简称JBOK钱包，"Just a Bunch of Keys",
                     仅仅是一堆钥匙放在一起而已。第二种是确定性钱包，所有的私钥都是一个主钥匙根据算法派生的，
                     这个主钥匙又成为种子。这些派生的私钥互相之间有关联，可以根据种子计算出来。
                     确定性钱包又派生出几种不同的类型，最流行的是一种树状结构的派生方式，BIP32/44。
-            </RawText>
+                </RawText>
                 <RawText>
                     某些情况下，主钥匙也有可能丢失，例如手机丢了，或者掉进厕所了。为了应对这种事故，
                     确定性钱包通常将种子加密为一串单词，被称为钱包的助记词。根据这一串有序的助记词，
                     可以解密出主钥匙，从而派生出相应的私钥和公钥。因此，一定要把助记词备份到纸上，藏好。
-            </RawText>
+                </RawText>
             </Paragraph>
 
             <Paragraph>
@@ -58,7 +58,7 @@ class ArticleWallet extends React.Component {
                     每次进行交易都应该用一个新的地址。为了更新地址，非确定性的老式钱包，必须再次创建一个私钥，
                     同时对新的私钥进行备份。如果在备份之前，发生硬盘损坏，丢失，对应的账户就废了，
                     里面的资金和Contract都将永久封锁。这种设计让私钥的管理造成了很大的压力。
-            </RawText>
+                </RawText>
             </Paragraph>
 
             <Paragraph>
@@ -68,7 +68,7 @@ class ArticleWallet extends React.Component {
                     种子是根据某些数据随机产生的，用于派生私钥。根据种子来产生私钥的算法非常高效，
                     因此只需要对种子进行备份，就能确保所有的资金和Contract的安全。种子也很容易导入和导出，
                     使得私钥在钱包之间的迁移非常方便。
-            </RawText>
+                </RawText>
             </Paragraph>
 
             <Paragraph>
@@ -77,7 +77,7 @@ class ArticleWallet extends React.Component {
                     确定性钱包的设计目标是简化种子派生私钥的过程。目前最先进的设计是Bitcoin的BIP-32标准
                     所定义的层次式确定性钱包，简称HD钱包。HD钱包的设计是树状的，父亲私钥派生出孩子私钥，
                     孩子私钥派生出孙子私钥，以此类推。
-            </RawText>
+                </RawText>
                 <ExplainImage><img src='/images/hdwallet.png'></img></ExplainImage>
                 <RawText>
                     HD钱包相对于简单的非确定性钱包有几个关键的优势。首先，树状的设计在结构上有方便之处，
@@ -96,8 +96,8 @@ class ArticleWallet extends React.Component {
                 </RawText>
                 <RawText>
                     为了理解这种方法为什么如此流行，来看一个例子：
-                <ExplainImage><img src='/images/mnemonic.jpg' /></ExplainImage>
                 </RawText>
+                <ExplainImage><img src='/images/mnemonic.jpg' /></ExplainImage>
                 <RawText>
                     实际应用当中，抄错这一长串16进制数字的概率非常高，相反，抄写12个单词容易得多，
                     这些单词都是日常生活中最常用的。某些情况下，我们把其中的单词insect抄写成了inzect，
