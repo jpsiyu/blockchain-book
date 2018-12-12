@@ -21,6 +21,7 @@ class Entry extends React.Component {
                 return null
             }
         }
+        const displayValue = this.state.showDirectory ? 'block' : 'none'
         const title = this.state.articleCfg ? this.state.articleCfg.name : ''
 
         return <div className='entry'>
@@ -33,10 +34,9 @@ class Entry extends React.Component {
             <div className='e-bottom' onClick={this.onDirectoryClick.bind(this)}>
                 <p className='noselect'>目录</p>
             </div>
-            {this.state.showDirectory
-                ? <div className='e-panel'>  <BottomDirectory /> </div>
-                : null
-            }
+            <div className='e-panel' style={{ display: displayValue }}>
+                <BottomDirectory />
+            </div>
         </div>
     }
 
@@ -75,6 +75,7 @@ class Entry extends React.Component {
     }
 
     onDirectoryClick() {
+        console.log('click', this.state.showDirectory)
         this.setState({
             showDirectory: !this.state.showDirectory
         })

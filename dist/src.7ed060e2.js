@@ -25596,6 +25596,7 @@ function (_React$Component) {
         }
       };
 
+      var displayValue = this.state.showDirectory ? 'block' : 'none';
       var title = this.state.articleCfg ? this.state.articleCfg.name : '';
       return _react.default.createElement("div", {
         className: "entry"
@@ -25610,9 +25611,12 @@ function (_React$Component) {
         onClick: this.onDirectoryClick.bind(this)
       }, _react.default.createElement("p", {
         className: "noselect"
-      }, "\u76EE\u5F55")), this.state.showDirectory ? _react.default.createElement("div", {
-        className: "e-panel"
-      }, "  ", _react.default.createElement(_bottomDirectory.default, null), " ") : null);
+      }, "\u76EE\u5F55")), _react.default.createElement("div", {
+        className: "e-panel",
+        style: {
+          display: displayValue
+        }
+      }, _react.default.createElement(_bottomDirectory.default, null)));
     }
   }, {
     key: "componentDidMount",
@@ -25660,6 +25664,7 @@ function (_React$Component) {
   }, {
     key: "onDirectoryClick",
     value: function onDirectoryClick() {
+      console.log('click', this.state.showDirectory);
       this.setState({
         showDirectory: !this.state.showDirectory
       });
