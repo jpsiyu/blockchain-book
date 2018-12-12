@@ -14,12 +14,15 @@ class BottomDirectory extends React.Component {
     }
 
     render() {
-        return <div className='bottom-dir'>
-            <div className='bottom-dir-left'>
-                {this.renderMainIndex()}
-            </div>
-            <div className='bottom-dir-right'>
-                {this.renderArticleItem()}
+        return <div className='bottom-root'>
+            <div className='bottom-space' onClick={this.onSpaceClick.bind(this)}></div>
+            <div className='bottom-dir'>
+                <div className='bottom-dir-left'>
+                    {this.renderMainIndex()}
+                </div>
+                <div className='bottom-dir-right'>
+                    {this.renderArticleItem()}
+                </div>
             </div>
         </div>
     }
@@ -67,6 +70,10 @@ class BottomDirectory extends React.Component {
     receiveArticleEvent(args) {
         const cfg = args
         this.setState({ articleCfg: cfg })
+    }
+
+    onSpaceClick(){
+        app.eventMgr.dispatch(MacroEvent.SpaceClick)
     }
 }
 

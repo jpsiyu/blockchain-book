@@ -25148,7 +25148,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.MacroEvent = void 0;
 var MacroEvent = {
   SelectMainIndex: 'SelectMainIndex',
-  SelectArticle: 'SelectArticle'
+  SelectArticle: 'SelectArticle',
+  SpaceClick: 'SpaceClick'
 };
 exports.MacroEvent = MacroEvent;
 },{}],"../src/directory-item.js":[function(require,module,exports) {
@@ -25439,12 +25440,17 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", {
+        className: "bottom-root"
+      }, _react.default.createElement("div", {
+        className: "bottom-space",
+        onClick: this.onSpaceClick.bind(this)
+      }), _react.default.createElement("div", {
         className: "bottom-dir"
       }, _react.default.createElement("div", {
         className: "bottom-dir-left"
       }, this.renderMainIndex()), _react.default.createElement("div", {
         className: "bottom-dir-right"
-      }, this.renderArticleItem()));
+      }, this.renderArticleItem())));
     }
   }, {
     key: "renderMainIndex",
@@ -25509,6 +25515,11 @@ function (_React$Component) {
       this.setState({
         articleCfg: cfg
       });
+    }
+  }, {
+    key: "onSpaceClick",
+    value: function onSpaceClick() {
+      app.eventMgr.dispatch(_macro.MacroEvent.SpaceClick);
     }
   }]);
 
@@ -25611,12 +25622,14 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       app.eventMgr.subscribe(_macro.MacroEvent.SelectArticle, this, this.onSelectArticle.bind(this));
+      app.eventMgr.subscribe(_macro.MacroEvent.SpaceClick, this, this.onReceSpaceEvent.bind(this));
       this.initArticle();
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       app.eventMgr.unsubscribe(_macro.MacroEvent.SelectArticle, this);
+      app.eventMgr.unsubscribe(_macro.MacroEvent.SpaceClick, this);
     }
   }, {
     key: "initArticle",
@@ -25640,6 +25653,13 @@ function (_React$Component) {
           showDirectory: false
         });
       }, 300);
+    }
+  }, {
+    key: "onReceSpaceEvent",
+    value: function onReceSpaceEvent() {
+      this.setState({
+        showDirectory: false
+      });
     }
   }, {
     key: "onDirectoryClick",
@@ -25820,7 +25840,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50633" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58068" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -34,17 +34,21 @@ class Entry extends React.Component {
             <div className='e-bottom' onClick={this.onDirectoryClick.bind(this)}>
                 <p className='noselect'>目录</p>
             </div>
-            <div className='e-panel' style={{ display: displayValue }}><BottomDirectory /></div>
+            <div className='e-panel' style={{ display: displayValue }}>
+                <BottomDirectory />
+            </div>
         </div>
     }
 
     componentDidMount() {
         app.eventMgr.subscribe(MacroEvent.SelectArticle, this, this.onSelectArticle.bind(this))
+        app.eventMgr.subscribe(MacroEvent.SpaceClick, this, this.onReceSpaceEvent.bind(this))
         this.initArticle()
     }
 
     componentWillUnmount() {
         app.eventMgr.unsubscribe(MacroEvent.SelectArticle, this)
+        app.eventMgr.unsubscribe(MacroEvent.SpaceClick, this)
     }
 
     initArticle() {
@@ -62,6 +66,12 @@ class Entry extends React.Component {
             () => { this.setState({ showDirectory: false }) },
             300,
         )
+    }
+
+    onReceSpaceEvent() {
+        this.setState({
+            showDirectory: false
+        })
     }
 
     onDirectoryClick() {
