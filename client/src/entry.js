@@ -21,7 +21,7 @@ class Entry extends React.Component {
                 return null
             }
         }
-        const displayValue = this.state.showDirectory ? 'unset' : 'none'
+        const displayValue = this.state.showDirectory ? 'block' : 'none'
         const title = this.state.articleCfg ? this.state.articleCfg.name : ''
 
         return <div className='entry'>
