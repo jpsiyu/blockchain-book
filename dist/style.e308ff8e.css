@@ -250,10 +250,12 @@
     }
 
     .abstract p{
-        background-color: rgb(172, 132, 58);
+        background-color: rgb(202, 155, 68);
         color: white;
         padding: 5px 20px;
         font-size: 1rem;
+        min-width: 50%;
+        text-align: center;
     }
 
     .sub-abstract p{

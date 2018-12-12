@@ -80,7 +80,7 @@ class Indentation extends React.Component {
 
     render() {
         return <div className='indentation'>
-            <p>{this.props.children}</p>
+            <div>{this.props.children}</div>
         </div>
     }
 }
