@@ -19,14 +19,14 @@ const cfgMainIndex = [
 const cfgArticles = [
     { id: 1, mainIndex: 1, name: '欢迎', article: ArticleWelcome },
     { id: 2, mainIndex: 2, name: '是什么', article: ArticleWhat },
-    { id: 3, mainIndex: 2, name: '主要概念', article: ArticleBasic },
+    { id: 3, mainIndex: 2, name: '相关概念', article: ArticleBasic },
     { id: 4, mainIndex: 2, name: '客户端', article: ArticleClient },
     { id: 5, mainIndex: 2, name: '钱包', article: ArticleWallet },
     { id: 6, mainIndex: 2, name: '交易', article: ArticleTransaction },
     { id: 7, mainIndex: 3, name: 'Smart Contract安全', article: ArticleSecurity },
     { id: 8, mainIndex: 3, name: 'Token', article: ArticleToken },
     { id: 9, mainIndex: 3, name: 'DApp', article: ArticleDApp },
-    { id: 10, mainIndex: 3, name: 'Ethereum虚拟机', article: ArticleEVM },
+    { id: 10, mainIndex: 3, name: '虚拟机', article: ArticleEVM },
     { id: 11, mainIndex: 3, name: '共识', article: ArticleConsensus },
 ]
 

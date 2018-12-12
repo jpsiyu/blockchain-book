@@ -45,6 +45,7 @@
     }
 
     .bottom-dir-item-select{
+        border: 1px black solid;
         background-color: black;
         color: white;
     }

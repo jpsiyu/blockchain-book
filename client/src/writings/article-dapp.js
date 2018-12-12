@@ -14,8 +14,8 @@ class ArticleDApp extends React.Component {
                     要重新创造互联网的世界，直接称之为Web3。而smart contract是实现控制逻辑
                     与支付功能去中心的一种方式。Web3 DApp的目标是去中心化一切应用，包括存储，
                     信息传递，命名等等。如图：
-                <ExplainImage><img src='/images/dapp.jpg' /></ExplainImage>
                 </RawText>
+                <ExplainImage><img src='/images/dapp.jpg' /></ExplainImage>
             </Paragraph>
 
             <Paragraph>
