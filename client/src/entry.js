@@ -75,6 +75,7 @@ class Entry extends React.Component {
     }
 
     onDirectoryClick() {
+        console.log('click', this.state.showDirectory)
         this.setState({
             showDirectory: !this.state.showDirectory
         })
