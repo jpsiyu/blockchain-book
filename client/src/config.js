@@ -2,6 +2,7 @@ import ArticleWelcome from './writings/article-welcome'
 import ArticleWhat from './writings/article-what'
 import ArticleBasic from './writings/article-basic'
 import ArticleClient from './writings/article-client'
+import ArticleCrypography from './writings/article-crytography'
 import ArticleWallet from './writings/article-wallet'
 import ArticleTransaction from './writings/article-transaction'
 import ArticleSecurity from './writings/article-security'
@@ -21,13 +22,14 @@ const cfgArticles = [
     { id: 2, mainIndex: 2, name: '是什么', article: ArticleWhat },
     { id: 3, mainIndex: 2, name: '相关概念', article: ArticleBasic },
     { id: 4, mainIndex: 2, name: '客户端', article: ArticleClient },
-    { id: 5, mainIndex: 2, name: '钱包', article: ArticleWallet },
-    { id: 6, mainIndex: 2, name: '交易', article: ArticleTransaction },
-    { id: 7, mainIndex: 3, name: 'Smart Contract安全', article: ArticleSecurity },
-    { id: 8, mainIndex: 3, name: 'Token', article: ArticleToken },
-    { id: 9, mainIndex: 3, name: 'DApp', article: ArticleDApp },
-    { id: 10, mainIndex: 3, name: '虚拟机', article: ArticleEVM },
-    { id: 11, mainIndex: 3, name: '共识', article: ArticleConsensus },
+    { id: 5, mainIndex: 2, name: '密码学', article: ArticleCrypography },
+    { id: 6, mainIndex: 2, name: '钱包', article: ArticleWallet },
+    { id: 7, mainIndex: 2, name: '交易', article: ArticleTransaction },
+    { id: 8, mainIndex: 3, name: 'Smart Contract安全', article: ArticleSecurity },
+    { id: 9, mainIndex: 3, name: 'Token', article: ArticleToken },
+    { id: 10, mainIndex: 3, name: 'DApp', article: ArticleDApp },
+    { id: 11, mainIndex: 3, name: '虚拟机', article: ArticleEVM },
+    { id: 12, mainIndex: 3, name: '共识', article: ArticleConsensus },
 ]
 
 const getArticlesByIndex = (index) => {

@@ -234,6 +234,7 @@
 .list{
     padding: 0 30px;
     color: gray;
+    overflow: scroll;
 }
 
 .indentation{

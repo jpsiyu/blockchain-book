@@ -24565,6 +24565,67 @@ function (_React$Component) {
 
 var _default = ArticleClient;
 exports.default = _default;
+},{"react":"../../node_modules/react/index.js","../article-widget":"../src/article-widget.js"}],"../src/writings/article-crytography.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _articleWidget = require("../article-widget");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var ArticleCrytography =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ArticleCrytography, _React$Component);
+
+  function ArticleCrytography(props) {
+    _classCallCheck(this, ArticleCrytography);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ArticleCrytography).call(this, props));
+  }
+
+  _createClass(ArticleCrytography, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_articleWidget.Article, null, _react.default.createElement(_articleWidget.Paragraph, null, _react.default.createElement(_articleWidget.RawText, null, "\u5BC6\u7801\u5B66\u662FEthereum\u7684\u57FA\u7840\u6280\u672F\u4E4B\u4E00\uFF0C\u53EF\u4EE5\u8BF4\u662F\u4E00\u5927\u5806\u6570\u5B66\u516C\u5F0F\u7684\u96C6\u5408\uFF0C\u5E7F\u6CDB\u5E94\u7528\u4E8E\u8BA1\u7B97\u673A\u5B89\u5168\u9886\u57DF\u3002 \u5728\u5E0C\u814A\u8BED\uFF0C\u5BC6\u7801\u5B66\u7684\u610F\u601D\u662F\u201C\u79D8\u5BC6\u7684\u5199\u4F5C\u201D\uFF0C\u6307\u7684\u662F\u52A0\u5BC6\u3002\u5F53\u4ECA\u5BC6\u7801\u5B66\u4E0D\u4EC5\u4EC5\u662F\u52A0\u5BC6\uFF0C\u5B83\u7684\u542B\u4E49\u5E7F\u6CDB\u5F97\u591A\u3002 \u4EBA\u4EEC\u80FD\u591F\u5728\u4E0D\u89E3\u5F00\u5BC6\u6587\u7684\u60C5\u51B5\u4E0B\uFF0C\u8BC1\u660E\u8BE5\u5BC6\u6587\u662F\u5426\u7531\u54EA\u4E2A\u4EBA\u52A0\u5BC6\uFF0C\u8FD9\u5C31\u662F\u7535\u5B50\u7B7E\u540D\u7684\u5E94\u7528\uFF1B \u4EBA\u4EEC\u80FD\u591F\u8BC1\u660E\u67D0\u4E2A\u6570\u636E\u662F\u5426\u5B8C\u597D\u7684\uFF0C\u672A\u88AB\u4FEE\u6539\u7684\uFF0C\u8FD9\u5C31\u662F\u7535\u5B50\u6307\u7EB9\uFF0C\u53C8\u53EB\u54C8\u5E0C\u7684\u5E94\u7528\u3002\u8FD9\u4E9B\u7528\u4E8E\u8BC1\u660E\u7684\u5BC6\u7801\u5B66\u5DE5\u5177\uFF0C \u5BF9Ethereum\uFF0C\u6216\u8005\u8BF4\u6240\u6709Blockchain\u5E73\u53F0\u7684\u8FD0\u4F5C\uFF0C\u662F\u6781\u4E3A\u91CD\u8981\u7684\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u503C\u5F97\u4E00\u63D0\u7684\u662F\uFF0C\u76EE\u524DEthereum\u534F\u8BAE\u5C42\u6CA1\u6709\u4EFB\u4F55\u4E00\u4E2A\u5730\u65B9\u4F7F\u7528\u4E86\u52A0\u5BC6\u3002\u8282\u70B9\u4E4B\u95F4\u7684\u4FE1\u606F\u4EA4\u6D41\uFF0C\u5305\u62EC\u4EA4\u6613\u4FE1\u606F\uFF0C \u90FD\u662F\u6CA1\u6709\u52A0\u5BC6\u7684\uFF0C\u4EFB\u4F55\u4EBA\u90FD\u53EF\u4EE5\u770B\u5230\u6D88\u606F\u7684\u5185\u5BB9\u3002\u56E0\u6B64\uFF0C\u6BCF\u4E2A\u4EBA\u90FD\u53EF\u4EE5\u9A8C\u8BC1\u72B6\u6001\u7684\u66F4\u65B0\u662F\u5426\u6B63\u786E\uFF0C\u4ECE\u800C\u8FBE\u6210\u5171\u8BC6\u3002 \u672A\u6765\uFF0C\u66F4\u52A0\u9AD8\u7EA7\u7684\u5BC6\u7801\u5B66\u5DE5\u5177\u5C06\u4F1A\u88AB\u4F7F\u7528\uFF0C\u50CF\u96F6\u77E5\u8BC6\u52A0\u5BC6\uFF0C\u540C\u6001\u52A0\u5BC6\u7B49\u5DE5\u5177\uFF0C\u4F1A\u5141\u8BB8\u4EBA\u4EEC\u5C06\u52A0\u5BC6\u540E\u7684\u6570\u636E\u5199\u5165Blockchain\uFF0C \u540C\u65F6\u4E00\u6837\u53EF\u4EE5\u8FBE\u6210\u5171\u8BC6\u3002")), _react.default.createElement(_articleWidget.Paragraph, null, _react.default.createElement(_articleWidget.Abstract, null, "\u94A5\u5319\u4E0E\u5730\u5740"), _react.default.createElement(_articleWidget.RawText, null, "Ethereum\u6709\u4E24\u79CD\u7C7B\u578B\u7684\u8D26\u6237\uFF1A\u5916\u90E8\u62E5\u6709\u4EBA\u8D26\u6237(EOA)\uFF0CContract\u8D26\u6237\u3002EOA\u8D26\u6237\u5BF9ether\u7684\u63A7\u5236\u6743\uFF0C \u662F\u901A\u8FC7\u7535\u5B50\u79C1\u94A5\uFF0CEthereum\u5730\u5740\uFF0C\u7535\u5B50\u7B7E\u540D\u786E\u5B9A\u7684\u3002\u79C1\u94A5\u662F\u4E0EEthereum\u4EA4\u4E92\u7684\u6838\u5FC3\u3002\u5B9E\u9645\u4E0A\uFF0C \u8D26\u6237\u5730\u5740\u7531\u79C1\u94A5\u76F4\u63A5\u6D3E\u751F\uFF0C\u4E00\u4E2A\u79C1\u94A5\u51B3\u5B9A\u4E86\u552F\u4E00\u7684Ethereum\u5730\u5740\uFF0C\u4E5F\u5C31\u662F\u6211\u4EEC\u901A\u5E38\u6240\u8BF4\u7684\u8D26\u6237\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u79C1\u94A5\u4E0D\u662F\u76F4\u63A5\u5728Ethereum\u7CFB\u7EDF\u4E2D\u4F7F\u7528\u7684\uFF0C\u5B83\u4EEC\u6C38\u8FDC\u4E5F\u4E0D\u4F1A\u5728Ethereum\u4E2D\u5B58\u50A8\uFF0C\u4F20\u8F93\u3002\u4E5F\u5C31\u662F\u8BF4\uFF0C\u79C1\u94A5\u5E94\u8BE5\u4FDD\u6301\u79C1\u5BC6\uFF0C \u4E0D\u4F1A\u5728\u6D88\u606F\u4E2D\u4F20\u9012\uFF0C\u4E0D\u4F1A\u8BB0\u5F55\u5728Blockchain\u4E2D\u3002\u5728\u7F51\u7EDC\u4E2D\u5B58\u50A8\uFF0C\u4F20\u8F93\u7684\u662F\u8D26\u6237\u5730\u5740\u548C\u7535\u5B50\u7B7E\u540D\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u4F7F\u7528\u548C\u63A7\u5236\u8D44\u91D1\u7531\u7535\u5B50\u7B7E\u540D\u5B8C\u6210\uFF0C\u7535\u5B50\u7B7E\u540D\u7531\u79C1\u94A5\u4EA7\u751F\uFF0C\u6DFB\u52A0\u5230Blockchain\u7684\u4EA4\u6613\u4FE1\u606F\uFF0C\u90FD\u5FC5\u987B\u9644\u52A0\u5408\u6CD5\u7684\u7535\u5B50\u7B7E\u540D\u3002 \u4EFB\u4F55\u6301\u6709\u79C1\u94A5\u7684\u4EBA\uFF0C\u90FD\u53EF\u4EE5\u63A7\u5236\u5BF9\u5E94\u8D26\u6237\u7684\u8D44\u91D1\u3002\u57FA\u4E8E\u516C\u94A5\u7684\u52A0\u5BC6\u7CFB\u7EDF\uFF0C\u94A5\u5319\u662F\u6210\u5BF9\u7684\uFF0C\u5206\u4E3A\u79C1\u94A5\u548C\u516C\u94A5\u3002 \u516C\u94A5\u7C7B\u4F3C\u94F6\u884C\u5361\u7684\u8D26\u53F7\u6570\u5B57\uFF0C\u79C1\u94A5\u7C7B\u4F3C\u767B\u9646\u8BE5\u8D26\u53F7\u7684PIN\u7801\u3002\u6574\u4E2A\u8D26\u53F7\u662F\u7531\u540E\u8005\u63A7\u5236\u7684\uFF0C\u524D\u8005\u7528\u4E8E\u552F\u4E00\u9274\u5B9A\u3002 Ethereum\u7684\u7528\u6237\u7EDD\u5927\u90E8\u5206\u90FD\u6CA1\u89C1\u8FC7\u8D26\u6237\u7684\u79C1\u94A5\uFF0C\u79C1\u94A5\u6216\u662F\u52A0\u5BC6\u540E\u5B58\u50A8\u5728\u672C\u5730\u6587\u4EF6\uFF0C\u6216\u662F\u7531\u94B1\u5305\u8F6F\u4EF6\u79D8\u5BC6\u7BA1\u7406\u3002")), _react.default.createElement(_articleWidget.Paragraph, null, _react.default.createElement(_articleWidget.Abstract, null, "\u516C\u94A5\u5BC6\u7801\u5B66\u4E0E\u52A0\u5BC6\u5E01"), _react.default.createElement(_articleWidget.RawText, null, "\u516C\u94A5\u5BC6\u7801\u5B66\uFF0C\u53C8\u79F0\u975E\u5BF9\u79F0\u5BC6\u7801\u5B66\uFF0C\u662F\u73B0\u4EE3\u4FE1\u606F\u5B89\u5168\u7684\u4E00\u4E2A\u6838\u5FC3\u7EC4\u6210\u3002\u8FD9\u4E2A\u5BC6\u94A5\u4EA4\u6362\u534F\u8BAE\uFF0C\u572819\u4E16\u7EAA70\u5E74\u4EE3\uFF0C \u7531Martin Hellman, Whitfield Diffie, RalphMerkle\u9996\u6B21\u53D1\u8868\uFF0C\u5728\u5F53\u65F6\u5F15\u8D77\u5DE8\u5927\u7684\u9707\u64BC\uFF0C \u6380\u8D77\u4E86\u7B2C\u4E00\u6B21\u5BC6\u7801\u5B66\u7814\u7A76\u70ED\u6F6E\u3002\u6B64\u524D\uFF0C\u5F3A\u5927\u7684\u5BC6\u7801\u5B66\u5DE5\u5177\u4EC5\u638C\u63E1\u5728\u653F\u5E9C\u624B\u4E2D\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u516C\u94A5\u5BC6\u7801\u5B66\u4F7F\u7528\u5F88\u72EC\u7279\u7684\u94A5\u5319\u786E\u4FDD\u4FE1\u606F\u5B89\u5168\uFF0C\u8FD9\u4E9B\u94A5\u5319\u662F\u6839\u636E\u6709\u7279\u6B8A\u5C5E\u6027\u7684\u6570\u5B66\u51FD\u6570\u8BA1\u7B97\u7684\uFF0C \u4F7F\u7528\u94A5\u5319\u52A0\u5BC6\u7684\u8FC7\u7A0B\u5F88\u5BB9\u6613\u8BA1\u7B97\uFF0C\u6839\u636E\u5BC6\u6587\u8BA1\u7B97\u660E\u6587\u7684\u8FC7\u7A0B\u65E0\u6BD4\u56F0\u96BE\u3002\u5BC6\u7801\u5B66\u5C31\u662F\u6839\u636E\u8FD9\u4E9B\u72EC\u7279\u7684\u51FD\u6570\uFF0C \u5BF9\u9700\u8981\u4FDD\u5BC6\u7684\u6570\u636E\u8FDB\u884C\u52A0\u5BC6\uFF0C\u4EA7\u751F\u5BC6\u6587\u548C\u7535\u5B50\u7B7E\u540D\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u4E3E\u4E2A\u4F8B\u5B50\uFF0C\u6C42\u4E24\u4E2A\u5927\u7D20\u6570\u76F8\u4E58\u7684\u7ED3\u679C\uFF0C\u5F88\u5BB9\u6613\u8BA1\u7B97\u3002\u5982\u679C\u7ED9\u51FA\u4E24\u4E2A\u5927\u7D20\u6570\u76F8\u4E58\u7684\u7ED3\u679C\uFF0C\u627E\u51FA\u5BF9\u5E94\u7684\u7D20\u6570\uFF0C \u90A3\u5C31\u96BE\u591A\u4E86\u30028,018,009\uFF0C\u662F\u4E24\u4E2A\u7D20\u6570\u7684\u4E58\u79EF\uFF0C\u4F60\u80FD\u627E\u51FA\u5BF9\u5E94\u7684\u4E24\u4E2A\u7D20\u56E0\u5B50\u5417\uFF1F\u5982\u679C\u4F60\u77E5\u9053\u5176\u4E2D\u4E00\u4E2A\u7D20\u6570\uFF0C \u90A3\u4E48\u5F88\u5BB9\u6613\u77E5\u9053\u53E6\u5916\u4E00\u4E2A\u3002\u8FD9\u91CC\u5176\u4E2D\u4E00\u4E2A\u662F2,003\uFF0C\u53E6\u5916\u4E00\u4E2A\u5C31\u662F8,018,009 / 2,003 = 4,003\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u5BC6\u7801\u5B66\u6709\u4E00\u7C7B\u66F4\u9AD8\u7EA7\u7684\u6570\u5B66\u51FD\u6570\u662F\u57FA\u4E8E\u692D\u5706\u66F2\u7EBF\u4E0A\u7684\u7B97\u672F\u8FD0\u7B97\u7684\u3002\u5728\u692D\u5706\u66F2\u7EBF\u7B97\u672F\u4E2D\uFF0C \u7D20\u6570\u7684\u6A21n\u4E58\u6CD5\u5BB9\u6613\u8BA1\u7B97\uFF0C\u53CD\u8FC7\u6765\u57FA\u672C\u4E0D\u53EF\u80FD\uFF0C\u8FD9\u5C31\u662F\u79BB\u6563\u5BF9\u6570\u95EE\u9898\u3002\u692D\u5706\u66F2\u7EBF\u52A0\u5BC6\u5E7F\u6CDB\u5E94\u7528\u4E8E\u73B0\u4EE3\u8BA1\u7B97\u673A\u7CFB\u7EDF\uFF0C \u4E5F\u662FEthereum\u79C1\u94A5\u52A0\u5BC6\u548C\u7535\u5B50\u7B7E\u540D\u7684\u57FA\u7840\u7B97\u6CD5\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u7535\u5B50\u7B7E\u540D\u53EF\u4EE5\u5BF9\u4EFB\u610F\u6570\u636E\u7B7E\u540D\u3002\u5BF9\u4E8EEthereum\u7684\u4EA4\u6613\u800C\u8A00\uFF0C\u8FDB\u884C\u7535\u5B50\u7B7E\u540D\u7684\u662F\u4EA4\u6613\u7684\u6240\u6709\u7EC6\u8282\u6570\u636E\u3002 \u5BC6\u7801\u5B66\u7684\u6570\u5B66\u516C\u5F0F\uFF0C\u8FD9\u91CC\u7528\u7684\u5C31\u662F\u692D\u5706\u66F2\u7EBF\u52A0\u5BC6\u516C\u5F0F\uFF0C\u4EE5\u4EA4\u6613\u6570\u636E\u548C\u79C1\u94A5\u4F5C\u4E3A\u8F93\u5165\uFF0C\u8F93\u51FA\u4E00\u4E32\u6570\u5B57\uFF0C \u8FD9\u4E32\u6570\u5B57\u53EA\u80FD\u7531\u8BE5\u4EA4\u6613\u6570\u636E\u548C\u79C1\u94A5\u8BA1\u7B97\u51FA\u6765\uFF0C\u5B83\u5C31\u53EB\u505A\u7535\u5B50\u7B7E\u540D\u3002Ethereum\u7684\u4EA4\u6613\u5FC5\u987B\u9644\u4E0A\u7535\u5B50\u7B7E\u540D\u3002 \u4EFB\u4F55\u4EBA\u90FD\u53EF\u4EE5\u628A\u7535\u5B50\u7B7E\u540D\u548C\u8D26\u6237\u5730\u5740\u4F5C\u4E3A\u53C2\u6570\uFF0C\u8F93\u5165\u692D\u5706\u66F2\u7EBF\u52A0\u5BC6\u516C\u5F0F\uFF0C\u9A8C\u8BC1\u4EA4\u6613\u662F\u5426\u5408\u6CD5\u3002 \u9A8C\u8BC1\u7684\u8FC7\u7A0B\u4E0D\u9700\u8981\u5BC6\u94A5\u53C2\u4E0E\uFF0C\u4F46\u53EF\u4EE5\u5224\u65AD\u662F\u5426\u662F\u8BE5\u5BC6\u94A5\u7B7E\u540D\u7684\u6570\u636E\uFF0C\u8FD9\u5C31\u662F\u516C\u94A5\u5BC6\u7801\u5B66\u7684\u9B45\u529B\u6240\u5728\u3002")), _react.default.createElement(_articleWidget.Paragraph, null, _react.default.createElement(_articleWidget.Abstract, null, "\u79C1\u94A5"), _react.default.createElement(_articleWidget.RawText, null, "\u79C1\u94A5\u5C31\u662F\u4E00\u4E32\u968F\u673A\u7684\u6570\u5B57\u3002\u79C1\u94A5\u7684\u6240\u6709\u6743\u548C\u63A7\u5236\u6743\uFF0C\u662F\u4F7F\u7528\u8D26\u6237\u8D44\u91D1\uFF0C\u4F7F\u7528\u8D26\u6237\u4E0AContract\u7684\u6700\u6839\u672C\u6743\u9650\u3002 \u79C1\u94A5\u5FC5\u987B\u7EDD\u5BF9\u4FDD\u5BC6\uFF0C\u5C06\u79C1\u94A5\u4EA4\u7ED9\u7B2C\u4E09\u65B9\uFF0C\u76F8\u5F53\u4E8E\u628A\u8D26\u6237\u7684\u8D44\u91D1\u548CContract\u7684\u63A7\u5236\u6743\u90FD\u4EA4\u7ED9\u4E86\u522B\u4EBA\u3002 \u5FC5\u987B\u5BF9\u79C1\u94A5\u5907\u4EFD\uFF0C\u9632\u6B62\u610F\u5916\u7684\u4E8B\u6545\uFF0C\u5BFC\u81F4\u79C1\u94A5\u4E22\u5931\uFF0C\u5BFC\u81F4\u8D44\u91D1\u548CContract\u7684\u63A7\u5236\u6743\u6C38\u8FDC\u7684\u5931\u53BB\u3002"), _react.default.createElement(_articleWidget.SubAbstract, null, "\u7528\u968F\u673A\u6570\u4EA7\u751F\u79C1\u94A5"), _react.default.createElement(_articleWidget.RawText, null, "\u521B\u5EFA\u79C1\u94A5\u6700\u91CD\u8981\u7684\u6B65\u9AA4\u662F\u786E\u5B9A\u968F\u673A\u6570\u6E90\u7684\u662F\u5B89\u5168\u7684\u3002\u521B\u5EFAEthereum\u7684\u79C1\u94A5\uFF0C\u53EF\u4EE5\u770B\u4F5C\u662F\u4ECE1\u52302^256\u7684\u8303\u56F4\u5185\u9009\u62E9\u4E00\u4E2A\u6570\u3002 \u5177\u4F53\u4F7F\u7528\u4EC0\u4E48\u51FD\u6570\u5E76\u4E0D\u91CD\u8981\uFF0C\u53EA\u8981\u5B83\u7684\u7ED3\u679C\u662F\u4E0D\u53EF\u9884\u6D4B\u7684\uFF0C\u4E0D\u786E\u5B9A\u7684\u3002Ethereum\u8F6F\u4EF6\u4F7F\u7528\u5E95\u5C42\u64CD\u4F5C\u7CFB\u7EDF\u7684\u968F\u673A\u6570\u4EA7\u751F\u5668\uFF0C \u521B\u5EFA256\u4E2A\u968F\u673A\u7684\u4F4D\u3002\u4E00\u822C\u6765\u8BF4\uFF0C\u7CFB\u7EDF\u968F\u673A\u6570\u4EA7\u751F\u5668\uFF0C\u9700\u8981\u7528\u6237\u8F93\u5165\u4E00\u4E32\u968F\u673A\u6570\u8FDB\u884C\u521D\u59CB\u5316\uFF0C \u56E0\u6B64\u4F1A\u8981\u6C42\u9F20\u6807\u8F93\u5165\uFF0C\u952E\u76D8\u8F93\u5165\uFF0C\u751A\u81F3\u662F\u58F0\u97F3\u8F93\u5165\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u79C1\u94A5\u7684\u521B\u5EFA\u8FC7\u7A0B\u662F\u5B8C\u5168\u7EBF\u4E0B\u6267\u884C\u7684\uFF0C\u4E0D\u8981\u5728Ethereum\u7F51\u7EDC\u4E2D\u505A\u4EFB\u4F55\u7684\u8BF7\u6C42\uFF0C\u4E0E\u4EFB\u4F55\u4EBA\u6CA1\u6709\u5173\u7CFB\u3002 \u56E0\u6B64\uFF0C\u4E3A\u4E86\u786E\u4FDD\u4F60\u4EA7\u751F\u7684\u79C1\u94A5\u4E0D\u4F1A\u8DDF\u522B\u4EBA\u4EA7\u751F\u7684\u4E00\u6837\uFF0C\u5FC5\u987B\u786E\u4FDD\u4EA7\u751F\u7684\u8FC7\u7A0B\u662F\u7EDD\u5BF9\u968F\u673A\u7684\u3002 \u5982\u679C\u4F60\u81EA\u5DF1\u9009\u62E9\u4E00\u4E32\u6570\u5B57\u4F5C\u4E3A\u79C1\u94A5\uFF0C\u5F88\u53EF\u80FD\u88AB\u4EBA\u4E5F\u4F1A\u4F7F\u7528\u8FD9\u4E32\u6570\u5B57\u4F5C\u4E3A\u79C1\u94A5\uFF0C\u90A3\u4E48\u4ED6\u4E5F\u53EF\u4EE5\u8BBF\u95EE\u4F60\u7684\u8D26\u6237\u4E86\u3002 \u4F7F\u7528\u6548\u679C\u4E0D\u597D\u7684\u968F\u673A\u6570\u4EA7\u751F\u5668\uFF0C\u7ED3\u679C\u66F4\u662F\u60B2\u5267\uFF0C\u4F8B\u5982\uFF0C\u8BB8\u591A\u7F16\u7A0B\u8BED\u8A00\u90FD\u6709rand\u51FD\u6570\uFF0C \u7528\u4E8E\u4EA7\u751F\u4F2A\u968F\u673A\u6570\uFF0C\u522B\u4EBA\u53EF\u4EE5\u8F7B\u677E\u5730\u8FD0\u7528\u8FD9\u4E2A\u51FD\u6570\uFF0C\u91CD\u590D\u79C1\u94A5\u7684\u521B\u5EFA\u8FC7\u7A0B\u3002\u79C1\u94A5\u5FC5\u987B\u4E0D\u80FD\u88AB\u731C\u5230\uFF0C \u5E78\u8FD0\u7684\u662F\uFF0C\u65E5\u5E38\u4F7F\u7528\u4E2D\u5E76\u4E0D\u9700\u8981\u8BB0\u4F4F\u8FD9\u4E2A\u79C1\u94A5\uFF0C\u6240\u4EE5\u5C3D\u53EF\u80FD\u786E\u4FDD\u968F\u673A\u5427\u3002")), _react.default.createElement(_articleWidget.Paragraph, null, _react.default.createElement(_articleWidget.Abstract, null, "\u516C\u94A5"), _react.default.createElement(_articleWidget.RawText, null, "Ethereum\u516C\u94A5\u662F\u692D\u5706\u66F2\u7EBF\u4E0A\u7684\u70B9\uFF0C\u79C1\u94A5\u548C\u516C\u94A5\u76F8\u5F53\u4E8E\u6EE1\u8DB3\u692D\u5706\u66F2\u7EBF\u6570\u5B66\u5173\u7CFB\u7684\u4E00\u7EC4(x, y)\u3002 \u516C\u94A5\u5B9E\u9645\u4E0A\u662F\u4E24\u4E2A\u6570\u62FC\u63A5\u5728\u4E00\u8D77\u5F62\u6210\u7684\uFF0C\u8FD9\u4E24\u4E2A\u6570\u662F\u692D\u5706\u66F2\u7EBF\u6570\u5B66\u51FD\u6570\u4EE5\u79C1\u94A5\u4F5C\u4E3A\u8F93\u5165\u7684\u8F93\u51FA\u503C\u3002 \u5177\u4F53\u7684\u8868\u8FBE\u5F0F\uFF1AK = k * G\uFF0C\u5C0F\u5199k\u662F\u79C1\u94A5\uFF0CG\u662F\u751F\u6210\u70B9\u5E38\u6570\uFF0C\u5927\u5199K\u662F\u516C\u94A5\uFF0C\u8FD9\u91CC\u7684*\u662F\u692D\u5706\u66F2\u7EBF\u4E58\u6CD5\uFF0C \u8DDF\u5E73\u5E38\u7684\u4E24\u4E2A\u6574\u6570\u76F8\u4E58\u7684\u4E58\u6CD5\u4E0D\u662F\u540C\u4E00\u4E2A\u4E1C\u897F\u3002"), _react.default.createElement(_articleWidget.SubAbstract, null, "\u692D\u5706\u66F2\u7EBF\u5BC6\u7801\u5B66\u89E3\u91CA"), _react.default.createElement(_articleWidget.RawText, null, "\u692D\u5706\u66F2\u7EBF\u5BC6\u7801\u5B66\u662F\u975E\u5BF9\u79F0\u5BC6\u7801\u5B66\uFF0C\u6216\u8005\u8BF4\u516C\u94A5\u5BC6\u7801\u5B66\u7684\u4E00\u79CD\uFF0C\u57FA\u4E8E\u692D\u5706\u66F2\u7EBF\u4E0A\u7684\u70B9\u76F8\u52A0\u548C\u76F8\u4E58\u7684\u79BB\u6563\u5BF9\u6570\u95EE\u9898\u3002 \u5982\u56FE\uFF1A"), _react.default.createElement(_articleWidget.ExplainImage, null, _react.default.createElement("img", {
+        src: "/images/curve.jpg"
+      })), _react.default.createElement(_articleWidget.RawText, null, "\u7531\u4E8E\u51FD\u6570\u7684\u53D6\u503C\u4E0D\u662F\u5168\u4F53\u5B9E\u6570\uFF0C\u5B9E\u9645\u4E0A\u662F\u4E00\u4E2A\u692D\u5706\u5F62\u72B6\u7684\u6563\u70B9\u56FE\uFF1A"), _react.default.createElement(_articleWidget.ExplainImage, null, _react.default.createElement("img", {
+        src: "/images/curve2.jpg"
+      })), _react.default.createElement(_articleWidget.RawText, null, "\u8FD9\u4E2A\u66F2\u7EBF\u7684\u5177\u4F53\u51FD\u6570\u516C\u5F0F\u4E3A\uFF1A"), _react.default.createElement(_articleWidget.ExplainImage, null, _react.default.createElement("img", {
+        src: "/images/formular.jpg"
+      }))), _react.default.createElement(_articleWidget.Paragraph, null, _react.default.createElement(_articleWidget.Abstract, null, "\u52A0\u5BC6\u54C8\u5E0C\u51FD\u6570"), _react.default.createElement(_articleWidget.RawText, null, "\u52A0\u5BC6\u54C8\u5E0C\u51FD\u6570\u7684\u5E94\u7528\u8D2F\u7A7F\u4E8EEthereum\uFF0C\u5B9E\u9645\u4E0A\uFF0C\u54C8\u5E0C\u51FD\u6570\u5E7F\u6CDB\u5E94\u7528\u4E8E\u51E0\u4E4E\u6240\u6709\u7684\u5BC6\u7801\u7CFB\u7EDF\u4E2D\u3002 \u5BC6\u7801\u5B66\u7814\u7A76\u8005Bruse Schneier\u66FE\u7ECF\u8BF4\u8FC7\uFF0C\u5355\u65B9\u5411\u54C8\u5E0C\u51FD\u6570\u5728\u73B0\u4EE3\u5BC6\u7801\u5B66\u505A\u7684\u5DE5\u4F5C\u6700\u591A\uFF0C \u6BD4\u52A0\u5BC6\u7B97\u6CD5\u591A\u5F97\u591A\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u7B80\u5355\u6765\u8BF4\uFF0C\u6240\u6709\u5C06\u4EFB\u610F\u5927\u5C0F\u7684\u8F93\u5165\u6620\u5C04\u5230\u56FA\u5B9A\u5927\u5C0F\u7684\u8F93\u51FA\u7684\u51FD\u6570\uFF0C\u90FD\u53EB\u54C8\u5E0C\u51FD\u6570\u3002 \u54C8\u5E0C\u51FD\u6570\u7684\u8F93\u5165\u53EB\u505A\u539F\u8C61\uFF0C\u6D88\u606F\uFF0C\u6216\u8005\u5C31\u53EB\u8F93\u5165\u6570\u636E\uFF0C\u8F93\u51FA\u53EB\u54C8\u5E0C\u503C\u3002\u52A0\u5BC6\u54C8\u5E0C\u51FD\u6570\u662F\u5176\u7279\u6B8A\u7684\u5B50\u7C7B\uFF0C \u7531\u4E8E\u5176\u81EA\u8EAB\u7684\u7279\u6027\uFF0C\u88AB\u7528\u6765\u4FDD\u969C\u5E73\u53F0\u7684\u5B89\u5168\uFF0C\u4F8B\u5982Ethereum\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u5BC6\u7801\u5B66\u7684\u54C8\u5E0C\u51FD\u6570\u662F\u5355\u5411\u7684\u54C8\u5E0C\u51FD\u6570\uFF0C\u5355\u5411\u610F\u5473\u7740\uFF0C\u4EC5\u4EC5\u77E5\u9053\u8F93\u51FA\u7684\u54C8\u5E0C\u503C\uFF0C\u662F\u4E0D\u80FD\u8BA1\u7B97\u51FA\u8F93\u5165\u7684\u3002 \u552F\u4E00\u627E\u5230\u8F93\u5165\u7684\u65B9\u6CD5\u662F\u66B4\u529B\u904D\u5386\u6240\u6709\u53EF\u80FD\u7684\u5019\u9009\u6570\u636E\uFF0C\u5224\u65AD\u5019\u9009\u6570\u636E\u7684\u54C8\u5E0C\u503C\u662F\u5426\u7B49\u4E8E\u76EE\u6807\u54C8\u5E0C\u503C\u3002 \u5982\u679C\u5019\u9009\u7684\u96C6\u5408\u662F\u8FD1\u4E4E\u65E0\u9650\u7684\uFF0C\u90A3\u4E48\u76F8\u5F53\u4E8E\u8BF4\uFF0C\u51E0\u4E4E\u4E0D\u53EF\u80FD\u627E\u51FA\u771F\u662F\u7684\u8F93\u5165\u3002\u5373\u4F7F\u4F60\u627E\u5230\u4E00\u4E2A\u5019\u9009\u6570\u636E\uFF0C \u8F93\u51FA\u7684\u7ED3\u679C\u7B49\u4E8E\u76EE\u6807\u54C8\u5E0C\u503C\uFF0C\u4E5F\u4E0D\u80FD\u786E\u5B9A\u5B83\u5C31\u662F\u771F\u662F\u7684\u8F93\u5165\uFF0C\u56E0\u4E3A\u54C8\u5E0C\u51FD\u6570\u662F\u591A\u5BF9\u4E00\u7684\u51FD\u6570\u3002 \u627E\u5230\u4E24\u4E2A\u4E0D\u540C\u7684\u8F93\u5165\uFF0C\u5177\u6709\u76F8\u540C\u7684\u54C8\u5E0C\u503C\uFF0C\u53EB\u505A\u627E\u5230\u54C8\u5E0C\u51B2\u7A81\uFF0C\u8D8A\u4F18\u79C0\u7684\u54C8\u5E0C\u51FD\u6570\uFF0C \u627E\u5230\u54C8\u5E0C\u51B2\u7A81\u7684\u673A\u4F1A\u8D8A\u7A00\u6709\u3002"), _react.default.createElement(_articleWidget.RawText, null, "\u52A0\u5BC6\u54C8\u5E0C\u51FD\u6570\u7684\u4E3B\u8981\u7279\u5F81\u5982\u4E0B\uFF1A"), _react.default.createElement(_articleWidget.SubAbstract, null, "\u786E\u5B9A\u6027"), _react.default.createElement(_articleWidget.Indentation, null, "\u76F8\u540C\u7684\u8F93\u5165\uFF0C\u5BF9\u5E94\u7684\u54C8\u5E0C\u503C\u662F\u552F\u4E00\u7684"), _react.default.createElement(_articleWidget.SubAbstract, null, "\u53EF\u9A8C\u8BC1"), _react.default.createElement(_articleWidget.Indentation, null, "\u54C8\u5E0C\u51FD\u6570\u975E\u5E38\u9AD8\u6548\uFF0C\u7EBF\u5F62\u590D\u6742\u5EA6"), _react.default.createElement(_articleWidget.SubAbstract, null, "\u4E0D\u76F8\u5173"), _react.default.createElement(_articleWidget.Indentation, null, "\u8F93\u5165\u7684\u5FAE\u5C0F\u53D8\u5316\uFF0C\u5BF9\u5E94\u54C8\u5E0C\u503C\u7684\u5DEE\u5F02\u662F\u5DE8\u5927\u7684"), _react.default.createElement(_articleWidget.SubAbstract, null, "\u4E0D\u53EF\u9006"), _react.default.createElement(_articleWidget.Indentation, null, "\u51E0\u4E4E\u4E0D\u53EF\u80FD\u6839\u636E\u54C8\u5E0C\u503C\u8BA1\u7B97\u51FA\u51FD\u6570\u8F93\u5165"), _react.default.createElement(_articleWidget.SubAbstract, null, "\u51B2\u7A81\u4FDD\u62A4"), _react.default.createElement(_articleWidget.Indentation, null, "\u4E0D\u53EF\u80FD\u6709\u4E24\u4E2A\u4E0D\u540C\u7684\u8F93\u5165\u4EA7\u751F\u76F8\u540C\u7684\u54C8\u5E0C\u503C"), _react.default.createElement(_articleWidget.RawText, null, "\u5728Ethereum\u4E2D\uFF0C\u4E3A\u4E86\u907F\u514D\u7B7E\u540D\u4F2A\u9020\uFF0C\u4F7F\u7528\u7684\u54C8\u5E0C\u51FD\u6570\u5FC5\u987B\u9632\u6B62\u54C8\u5E0C\u51B2\u7A81\u3002\u7531\u4E8E\u62E5\u6709\u4E0A\u8FF0\u7684\u7279\u6027\uFF0C \u52A0\u5BC6\u54C8\u5E0C\u51FD\u6570\u5E7F\u6CDB\u5E94\u7528\u4E8E\u5B89\u5168\u9886\u57DF\u7684\u5E94\u7528\uFF0C\u5982\uFF1A"), _react.default.createElement(_articleWidget.List, null, _react.default.createElement("li", null, "\u6570\u636E\u6307\u7EB9"), _react.default.createElement("li", null, "\u6D88\u606F\u5B8C\u6574\u6027\u68C0\u6D4B"), _react.default.createElement("li", null, "\u5DE5\u4F5C\u91CF\u8BC1\u660EPoW"), _react.default.createElement("li", null, "\u7CFB\u7EDF\u8BA4\u8BC1"), _react.default.createElement("li", null, "\u4F2A\u968F\u673A\u6570\u751F\u6210\u5668"), _react.default.createElement("li", null, "\u6D88\u606F\u59D4\u6258\uFF0C\u63D0\u4EA4-\u62AB\u9732\u673A\u5236"), _react.default.createElement("li", null, "\u552F\u4E00\u8EAB\u4EFD")), _react.default.createElement(_articleWidget.SubAbstract, null, "Ethereum\u7684\u52A0\u5BC6\u54C8\u5E0C\u51FD\u6570\uFF1AKeccak-256"), _react.default.createElement(_articleWidget.RawText, null, "Ethereum\u5728\u5F88\u591A\u5730\u65B9\u4F7F\u7528\u4E86\u52A0\u5BC6\u54C8\u5E0C\u51FD\u6570Keccak-256\u3002Keccak-256\u662F2007\u5E74\u5EA6SHA-3\u52A0\u5BC6\u54C8\u5E0C\u51FD\u6570\u7ADE\u8D5B\u7684\u80DC\u51FA\u8005\uFF0C \u57282015\u5E74\u6210\u4E3A\u8054\u90A6\u4FE1\u606F\u5904\u7406\u6807\u51C6\u4E4B\u4E00\u3002")), _react.default.createElement(_articleWidget.Paragraph, null, _react.default.createElement(_articleWidget.Abstract, null, "Ethereum\u5730\u5740"), _react.default.createElement(_articleWidget.Paragraph, null, _react.default.createElement(_articleWidget.RawText, null, "Ethereum\u5730\u5740\u662F\u8D26\u6237\u7684\u552F\u4E00\u6807\u8BC6\uFF0C\u7531\u516C\u94A5\u7ECF\u8FC7Keccak-256\u5355\u5411\u52A0\u5BC6\u54C8\u5E0C\u51FD\u6570\u8BA1\u7B97\u51FA\u6765\u3002 \u5730\u5740\u7684\u4EA7\u751F\u8FC7\u7A0B\u5982\u4E0B\uFF1A"), _react.default.createElement(_articleWidget.List, null, _react.default.createElement("li", null, "1. \u968F\u673A\u4EA7\u751F\u79C1\u94A5\uFF1Ak=f8f8a2f43c8376ccb0871305060d7b27b0554d2cc72bccf41b2705608452f315"), _react.default.createElement("li", null, "2. \u6839\u636E\u692D\u5706\u66F2\u7EBF\u516C\u5F0F\u5F97\u5230\u516C\u94A5\uFF1AK=6e145ccef1033dea239875dd00dfb4fee6e3348b84985c92f103444683bae07b83b5c38e5e..."), _react.default.createElement("li", null, "3. \u7528Keccak-256\u6C42\u54C8\u5E0C\u503C: Keccak256(K)=2a5bc342ed616b5ba5732269001d3f1ef827552ae1114027bd3ecf1f086ba0f9"), _react.default.createElement("li", null, "4. \u4FDD\u7559\u6700\u540E20\u4F4D\uFF1A001d3f1ef827552ae1114027bd3ecf1f086ba0f"), _react.default.createElement("li", null, "5. \u4E00\u822C0x\u5F00\u5934\u8868\u660E\u662F16\u8FDB\u5236\uFF1A0x001d3f1ef827552ae1114027bd3ecf1f086ba0f9")))));
+    }
+  }]);
+
+  return ArticleCrytography;
+}(_react.default.Component);
+
+var _default = ArticleCrytography;
+exports.default = _default;
 },{"react":"../../node_modules/react/index.js","../article-widget":"../src/article-widget.js"}],"../src/writings/article-wallet.js":[function(require,module,exports) {
 "use strict";
 
@@ -25022,6 +25083,8 @@ var _articleBasic = _interopRequireDefault(require("./writings/article-basic"));
 
 var _articleClient = _interopRequireDefault(require("./writings/article-client"));
 
+var _articleCrytography = _interopRequireDefault(require("./writings/article-crytography"));
+
 var _articleWallet = _interopRequireDefault(require("./writings/article-wallet"));
 
 var _articleTransaction = _interopRequireDefault(require("./writings/article-transaction"));
@@ -25072,35 +25135,40 @@ var cfgArticles = [{
 }, {
   id: 5,
   mainIndex: 2,
+  name: '密码学',
+  article: _articleCrytography.default
+}, {
+  id: 6,
+  mainIndex: 2,
   name: '钱包',
   article: _articleWallet.default
 }, {
-  id: 6,
+  id: 7,
   mainIndex: 2,
   name: '交易',
   article: _articleTransaction.default
 }, {
-  id: 7,
+  id: 8,
   mainIndex: 3,
   name: 'Smart Contract安全',
   article: _articleSecurity.default
 }, {
-  id: 8,
+  id: 9,
   mainIndex: 3,
   name: 'Token',
   article: _articleToken.default
 }, {
-  id: 9,
+  id: 10,
   mainIndex: 3,
   name: 'DApp',
   article: _articleDapp.default
 }, {
-  id: 10,
+  id: 11,
   mainIndex: 3,
   name: '虚拟机',
   article: _articleEvm.default
 }, {
-  id: 11,
+  id: 12,
   mainIndex: 3,
   name: '共识',
   article: _articleConsensus.default
@@ -25139,7 +25207,7 @@ var getArticleById = function getArticleById(id) {
 };
 
 exports.getArticleById = getArticleById;
-},{"./writings/article-welcome":"../src/writings/article-welcome.js","./writings/article-what":"../src/writings/article-what.js","./writings/article-basic":"../src/writings/article-basic.js","./writings/article-client":"../src/writings/article-client.js","./writings/article-wallet":"../src/writings/article-wallet.js","./writings/article-transaction":"../src/writings/article-transaction.js","./writings/article-security":"../src/writings/article-security.js","./writings/article-token":"../src/writings/article-token.js","./writings/article-dapp":"../src/writings/article-dapp.js","./writings/article-evm":"../src/writings/article-evm.js","./writings/article-consensus":"../src/writings/article-consensus.js"}],"../src/macro.js":[function(require,module,exports) {
+},{"./writings/article-welcome":"../src/writings/article-welcome.js","./writings/article-what":"../src/writings/article-what.js","./writings/article-basic":"../src/writings/article-basic.js","./writings/article-client":"../src/writings/article-client.js","./writings/article-crytography":"../src/writings/article-crytography.js","./writings/article-wallet":"../src/writings/article-wallet.js","./writings/article-transaction":"../src/writings/article-transaction.js","./writings/article-security":"../src/writings/article-security.js","./writings/article-token":"../src/writings/article-token.js","./writings/article-dapp":"../src/writings/article-dapp.js","./writings/article-evm":"../src/writings/article-evm.js","./writings/article-consensus":"../src/writings/article-consensus.js"}],"../src/macro.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25636,7 +25704,7 @@ function (_React$Component) {
     value: function initArticle() {
       var timeout = 300;
       setTimeout(function () {
-        var cfg = (0, _config.getArticleById)(1);
+        var cfg = (0, _config.getArticleById)(5);
         app.eventMgr.dispatch(_macro.MacroEvent.SelectArticle, cfg);
       }, timeout);
     }
@@ -25664,7 +25732,6 @@ function (_React$Component) {
   }, {
     key: "onDirectoryClick",
     value: function onDirectoryClick() {
-      console.log('click', this.state.showDirectory);
       this.setState({
         showDirectory: !this.state.showDirectory
       });
@@ -25841,7 +25908,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62549" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50899" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
