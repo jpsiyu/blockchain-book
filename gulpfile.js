@@ -33,5 +33,5 @@ const watchImg = done => {
 task('parcel-watch', run('parcel watch ./client/public/index.html'));
 task('parcel-build', run('parcel build ./client/public/index.html'));
 
-exports.watch = parallel('parcel-watch', watchImg)
+exports.watch = parallel('parcel-watch', copyImg, watchImg)
 exports.build = series(clean, copyImg, 'parcel-build')
