@@ -1,8 +1,10 @@
 .left-dir{
     flex: 1;
-    border-right: 5px black solid; 
     display: flex;
-    flex-direction: column;
+		flex-direction: column;
+		user-select: none;
+		background-color: white;
+		border-right: 5px solid rgba(240, 240, 240, 0.8);
 }
 
 .left-dir-panel{
@@ -20,7 +22,8 @@
 }
 
 .left-dir-item{
-    color: gray;
+		color: gray;
+		cursor: pointer;
 }
 
 .left-dir-item img{
@@ -54,7 +57,6 @@
 .left-dir-expend-select{
     background-color: seagreen;
     color: white;
-    border-radius: 0px 0px 10px 0px;
 }
 
 

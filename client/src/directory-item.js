@@ -10,7 +10,7 @@ class DirectoryMainItem extends React.Component {
     render() {
         const ifSelected = this.props.selected ? 'bottom-dir-item-select' : ''
         return <div className={`bottom-dir-item ${ifSelected}`} onClick={this.onMainClick.bind(this)}>
-            <p className='noselect bottom-dir-itemname'>{this.props.cfg.name}</p>
+            <p className='bottom-dir-itemname'>{this.props.cfg.name}</p>
         </div>
     }
 
@@ -27,7 +27,7 @@ class DirectoryArticleItem extends React.Component {
     render() {
         const ifSelected = this.props.selected ? 'bottom-dir-article-select' : ''
         return <div className={`bottom-dir-article-item ${ifSelected}`} onClick={this.onItemClick.bind(this)}>
-            <p className='noselect'>{this.props.cfg.name}</p>
+            <p>{this.props.cfg.name}</p>
         </div>
     }
 

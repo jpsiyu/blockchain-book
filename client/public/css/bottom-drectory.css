@@ -1,66 +1,60 @@
-.bottom-root{
-    display: none;
+.bottom-root {
+	display: none;
 }
 
-@media screen and (max-width: 768px){
-    .bottom-root{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .bottom-space{
-        flex: 2;
-    }
-
-    .bottom-dir{
-        flex: 3;
-        background-color: lightgray;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        border-top: 5px black solid;
-    }
-
-    .bottom-dir-left{
-        flex: 1;
-        border-right: 5px black solid;
-        overflow: scroll;
-        background-color: lightgray;
-    }
-
-    .bottom-dir-right{
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        overflow: scroll;
-    }
-
-    .bottom-dir-item{
-        margin-bottom: 3px;
-        color: gray;
-        white-space: nowrap;
-        overflow: scroll;
-    }
-
-    .bottom-dir-itemname{
-        padding: 10px 3px;
-   }
-
-    .bottom-dir-article-item{
-        color: gray;
-        padding: 5px 10px;
-        margin-bottom: 3px;
-    }
-
-    .bottom-dir-item-select{
-        border: 1px black solid;
-        background-color: black;
-        color: white;
-    }
-
-    .bottom-dir-article-select{
-        background-color: seagreen;
-        color: white;
-    }
+@media screen and (max-width: 768px) {
+	.bottom-root {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+	.bottom-space {
+		flex: 2;
+	}
+	.bottom-dir {
+		flex: 3;
+		bottom: 0;
+		background-color: white;
+		width: 100%;
+		display: flex;
+	}
+	.bottom-dir-left {
+		flex: 1;
+		border-right: 5px solid rgba(240, 240, 240, 0.8);
+		overflow: scroll;
+		padding: 10px;
+	}
+	.bottom-dir-right {
+		padding: 5px 0;
+		flex: 2;
+		display: flex;
+		flex-direction: column;
+		overflow: scroll;
+	}
+	.bottom-dir-item {
+		margin-bottom: 3px;
+		color: gray;
+		white-space: nowrap;
+		overflow: scroll;
+		user-select: none;
+		cursor: pointer;
+	}
+	.bottom-dir-itemname {
+		padding: 5px 10px;
+	}
+	.bottom-dir-article-item {
+		color: gray;
+		padding: 5px 10px;
+		user-select: none;
+		cursor: pointer;
+	}
+	.bottom-dir-item-select {
+		background-color: seagreen;
+		color: white;
+	}
+	.bottom-dir-article-select {
+		background-color: seagreen;
+		color: white;
+	}
 }
